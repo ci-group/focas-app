@@ -1,0 +1,68 @@
+Node version: v0.10.32
+
+Cordova version: 0.21.13
+
+Config.xml file: 
+
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="eu.focas.focas" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Focas</name>
+    <description>
+        The textbook of the future: a free, evolving, searchable and accessible collection of curated material about Collective Adaptive Systems at your fingertips.
+
+        The FoCAS app is a knowledge base about Collective Adaptive Systems (CAS). What is a CAS? Is a colony of bees a CAS? Is the internet a CAS? How can you build a CAS from a bunch of robots? Can a CAS learn? Are they dangerous? What can I  do with them? The app answers these and many other questions through a collection of papers, movies, presentations, demos, tutorials and references. Whether you’re a student looking for a definition, a researcher trying to widen your understanding of CAS research or just want to know a bit more about CASs, the material in the  app will help you find out what you need.
+
+        Download the app to have material ranging from introductory descriptions to cutting edge research papers available anytime, anywhere.
+
+        Features:
+            - It’s free!
+            - Searchable
+            - Material curated by experts
+            - Content regularly updated
+            - Includes demos, tutorials, videos, etc.
+    </description>
+    <author email="b.weel@vu.nl" href="http://focas.eu">
+        FoCAS | Fundamentals of Collective Adaptive Systems
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    
+    <platform name="ios">
+        <!-- iOS 7.0+ -->
+              <!-- iPhone / iPod Touch  -->
+              <icon src="res/ios/focas-60.png" width="60" height="60" />
+              <icon src="res/ios/focas-60@2x.png" width="120" height="120" />
+              <!-- iPad -->
+              <icon src="res/ios/focas-76.png" width="76" height="76" />
+              <icon src="res/ios/focas-76@2x.png" width="152" height="152" />
+              <!-- iOS 6.1 -->
+              <!-- Spotlight Icon -->
+              <icon src="res/ios/focas-40.png" width="40" height="40" />
+              <icon src="res/ios/focas-40@2x.png" width="80" height="80" />
+              <!-- iPhone / iPod Touch -->
+              <icon src="res/ios/focas-57.png" width="57" height="57" />
+              <icon src="res/ios/focas-57@2x.png" width="114" height="114" />
+              <!-- iPad -->
+              <icon src="res/ios/focas-72.png" width="72" height="72" />
+              <icon src="res/ios/focas-72@2x.png" width="144" height="144" />
+              <!-- iPhone Spotlight and Settings Icon -->
+              <icon src="res/ios/focas-29.png" width="29" height="29" />
+              <icon src="res/ios/focas-29@2x.png" width="58" height="58" />
+              <!-- iPad Spotlight and Settings Icon -->
+              <icon src="res/ios/focas-50.png" width="50" height="50" />
+              <icon src="res/ios/focas-50@2x.png" width="100" height="100" />
+    </platform>
+</widget>
+
+
+Plugins: 
+
+org.apache.cordova.file,org.apache.cordova.file-transfer
+
+Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
+
+iOS platform:
+
+Xcode 6.0.1
+Build version 6A317
+
