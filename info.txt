@@ -1,4 +1,4 @@
-Node version: v0.10.32
+Node version: v0.10.29
 
 Cordova version: 0.21.13
 
@@ -55,14 +55,7 @@ Config.xml file:
 </widget>
 
 
-Plugins: 
+No Plugins Currently Installed
 
-org.apache.cordova.file,org.apache.cordova.file-transfer
-
-Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
-
-iOS platform:
-
-Xcode 6.0.1
-Build version 6A317
+No Platforms Currently Installed
 
