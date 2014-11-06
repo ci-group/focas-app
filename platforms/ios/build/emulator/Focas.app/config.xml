@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="eu.focas.focas" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value=".25" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="TopActivityIndicator" value="gray" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
+    <icon height="60" src="res/ios/focas-60.png" width="60" />
+    <icon height="120" src="res/ios/focas-60@2x.png" width="120" />
+    <icon height="76" src="res/ios/focas-76.png" width="76" />
+    <icon height="152" src="res/ios/focas-76@2x.png" width="152" />
+    <icon height="40" src="res/ios/focas-40.png" width="40" />
+    <icon height="80" src="res/ios/focas-40@2x.png" width="80" />
+    <icon height="57" src="res/ios/focas-57.png" width="57" />
+    <icon height="114" src="res/ios/focas-57@2x.png" width="114" />
+    <icon height="72" src="res/ios/focas-72.png" width="72" />
+    <icon height="144" src="res/ios/focas-72@2x.png" width="144" />
+    <icon height="29" src="res/ios/focas-29.png" width="29" />
+    <icon height="58" src="res/ios/focas-29@2x.png" width="58" />
+    <icon height="50" src="res/ios/focas-50.png" width="50" />
+    <icon height="100" src="res/ios/focas-50@2x.png" width="100" />
+    <name>Focas</name>
+    <description>
+        The textbook of the future: a free, evolving, searchable and accessible collection of curated material about Collective Adaptive Systems at your fingertips.
+
+        The FoCAS app is a knowledge base about Collective Adaptive Systems (CAS). What is a CAS? Is a colony of bees a CAS? Is the internet a CAS? How can you build a CAS from a bunch of robots? Can a CAS learn? Are they dangerous? What can I  do with them? The app answers these and many other questions through a collection of papers, movies, presentations, demos, tutorials and references. Whether you’re a student looking for a definition, a researcher trying to widen your understanding of CAS research or just want to know a bit more about CASs, the material in the  app will help you find out what you need.
+
+        Download the app to have material ranging from introductory descriptions to cutting edge research papers available anytime, anywhere.
+
+        Features:
+            - It’s free!
+            - Searchable
+            - Material curated by experts
+            - Content regularly updated
+            - Includes demos, tutorials, videos, etc.
+    </description>
+    <author email="b.weel@vu.nl" href="http://focas.eu">
+        FoCAS | Fundamentals of Collective Adaptive Systems
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

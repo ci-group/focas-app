@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="eu.focas.focas" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <name>Focas</name>
+    <description>
+        The textbook of the future: a free, evolving, searchable and accessible collection of curated material about Collective Adaptive Systems at your fingertips.
+
+        The FoCAS app is a knowledge base about Collective Adaptive Systems (CAS). What is a CAS? Is a colony of bees a CAS? Is the internet a CAS? How can you build a CAS from a bunch of robots? Can a CAS learn? Are they dangerous? What can I  do with them? The app answers these and many other questions through a collection of papers, movies, presentations, demos, tutorials and references. Whether you’re a student looking for a definition, a researcher trying to widen your understanding of CAS research or just want to know a bit more about CASs, the material in the  app will help you find out what you need.
+
+        Download the app to have material ranging from introductory descriptions to cutting edge research papers available anytime, anywhere.
+
+        Features:
+            - It’s free!
+            - Searchable
+            - Material curated by experts
+            - Content regularly updated
+            - Includes demos, tutorials, videos, etc.
+    </description>
+    <author email="b.weel@vu.nl" href="http://focas.eu">
+        FoCAS | Fundamentals of Collective Adaptive Systems
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+</widget>

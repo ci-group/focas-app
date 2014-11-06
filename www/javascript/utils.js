@@ -24,25 +24,93 @@ function getURLParameter(sParam, sString)
     }
 }
 
-
-function embedVideo(file) {
-    var text = "";
-    text += "<video id='video-"+file+"' width='100%' controls autoplay>";
-    text += "<source src='video/"+file+"' type='video/mp4'>";
-    text += "<object data='video/"+file+"'>";
-    text += "<embed src='video/"+file+"'>";
-    text += "</object>";
-    text += "</video>";
-    
-    $("#video-embed").html(text);
-    
-    //$("video-"+file).bind('ended', function(){
-    //    revertImage(number);
-    //                       });
+function UrlExists(url)
+{
+    var response = $.ajax({
+          url: url,
+          type: 'HEAD',
+          async: false
+    }).status;
+    return response!=404;
 }
 
-function revertImage(number){
-    var text = "<img src='images/Robot_"+number+".jpg' width='320' height='240' onclick='embedVideo("+number+")'>";
+var Utilities = function() {
+    this.fileSystem;
     
-    document.getElementById('robot'+number).innerHTML = text;
-}
+    this.initialize =  function() {
+    };
+    
+    this.initFileSystem = function() {
+        if(this.fileSystemName == "") {
+            var dfd = new jQuery.Deferred();
+            var that = this;
+            
+            function onFileSystemSuccess (fileSystem) {
+                console.log(this.fileSystemName);
+                
+                dfd.notify(fileSystem);
+            };
+            
+            function fail (evt) {
+                console.log(evt.target.error.code);
+                dfd.rejectWith(evt);
+            };
+            
+            function setfileSystemName(data) {
+                that.fileSystem = data;
+            };
+            
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            
+            $.when(dfd).then(setfileSystemName);
+        }
+    }
+    
+    function embedVideo(file) {
+        var text = "";
+        text += "<video id='video-"+file+"' class='videoplayer' width='100%' controls autoplay>";
+        text += "<source src='video/"+file+"' type='video/mp4'>";
+        text += "<object data='video/"+file+"'>";
+        text += "<embed src='video/"+file+"'>";
+        text += "</object>";
+        text += "</video>";
+        
+        $("#video-embed").html(text);
+    }
+
+    
+    this.checkAndDownload = function (file, directory) {
+        this.initFileSystem();
+        if(!UrlExists(directory+file)){
+            var fileTransfer = new FileTransfer();
+            var uri = encodeURI(app.serverUrl+file);
+            var fileURL = "cdvfile://localhost/persistent/"+directory+file;
+            var success = false;
+            
+            fileTransfer.download(uri,
+                fileURL,
+                function(entry) {
+                    console.log("download complete: " + entry.fullPath);
+                    success = true;
+                },
+                function(error) {
+                    console.log("download error source " + error.source);
+                    console.log("download error target " + error.target);
+                    console.log("download error code " + error.code);
+                },
+                true,
+                {}
+            );
+            if(success){
+                return fileURL;
+            }else{
+                return false;
+            }
+        }else{
+            return true;
+        }
+    };
+};
+
+var utilities = new Utilities();
+utilities.initialize();

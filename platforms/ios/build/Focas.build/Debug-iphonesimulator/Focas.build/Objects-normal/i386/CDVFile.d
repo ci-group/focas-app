@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/Focas/Plugins/org.apache.cordova.file/CDVFile.m \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDV.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVViewController.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVDebug.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVTimer.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/build/emulator/include/Cordova/CDVJSON.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/Focas/Plugins/org.apache.cordova.file/CDVFile.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/Focas/Plugins/org.apache.cordova.file/CDVLocalFilesystem.h \
+  /Users/bweel/Documents/projects/FocasApp/platforms/ios/Focas/Plugins/org.apache.cordova.file/CDVAssetLibraryFilesystem.h
