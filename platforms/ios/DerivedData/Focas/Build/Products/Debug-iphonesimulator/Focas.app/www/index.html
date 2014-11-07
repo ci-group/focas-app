@@ -12,6 +12,10 @@
 	<link rel="stylesheet" href="themes/gray-blue-pink.css" />
 	<link rel="stylesheet" href="styles/jquery.mobile.icons-1.4.4.css" />
 	<link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.4.css" />
+    <link rel="stylesheet" href="styles/jquery-ui.css" />
+    <link rel="stylesheet" href="styles/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="styles/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
 	<div data-role="page" data-theme="a">
@@ -31,7 +35,15 @@
                 <h3>The book</h3>
             </div>
             
-            <div data-role="popup" id="cannotDownloadDialog" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+            <div data-role="popup" id="progress-dialog" data-overlay-theme="a" data-theme="a" data-dismissible="false" class="ui-corner-all" >
+                <div data-role="header" data-theme="a" class="ui-corner-top">
+                    <h1>Downloading</h1>
+                </div>
+                <div data-role="content" data-theme="a" id="progress-bar" class="ui-corner-bottom ui-content">
+                </div>
+            </div>
+            
+            <div data-role="popup" id="cannotDownloadDialog" data-overlay-theme="a" data-theme="a" data-dismissible="false" class="ui-corner-all" >
                 <div data-role="header" data-theme="a" class="ui-corner-top">
                     <h1>Could not download file.</h1>
                 </div>
@@ -54,7 +66,7 @@
     
     <div data-role="page" data-theme="a" id="pdf">
         <div data-role="header" data-position="inline" data-add-back-btn="true">
-            <h1>Video</h1>
+            <h1>Article</h1>
         </div>
         <div data-role="content" data-theme="a" id="pdf-embed">
             <object id="pdf-object" data="pdf/adaptive-collective-systems/adaptive-collective-systems.pdf" type="application/pdf">
@@ -62,31 +74,35 @@
     </div>
     
     <script src="javascript/jquery-1.11.1.js"></script>
+    <script src="javascript/jquery-ui.js"></script>
     <script src="javascript/jquery.mobile-1.4.4.js"></script>
     <script src="cordova.js"></script>
+    <script src="javascript/jCProgress-1.0.3.js"></script>
     <script src="javascript/utils.js"></script>
     <script src="javascript/index.js"></script>
     <script>
         $(document).bind("pageinit", function(){
                  $(".video").bind("vclick", function ( ) {
                       console.log("file: "+$(this).attr('data-file'));
-                      
-                      var fileUrl = utilities.checkAndDownload($(this).attr('data-file'),"video/");
-                      if(fileUrl){
-                          embedVideo($(this).attr('data-file'));
-                          $('body').pagecontainer("change","#video");
-                      }else{
-                          $("#cannotDownloadDialog").popup("open");
-                          return false;
-                      }
                                   
+                      utilities.checkAndDownload($(this).attr('data-file'),"video/",
+                         function(file, fileUrl) {
+                             utilities.embedVideo(file, fileUrl);
+                            $.mobile.pageContainer.pagecontainer("change","#video");
+                         },
+                         function() {
+                            $("#progress-dialog").on("popupafterclose", function () {
+                                 $("#cannotDownloadDialog").popup("open");
+                            });
+                            $( "#progress-dialog" ).popup("close");
+                          });
                  });
                  
                  $(".pdf").bind("vclick", function ( ) {
                         console.log("file: "+$(this).attr('data-file'));
                         $('pdf-object').attr('data',"pdf/"+$(this).attr('data-file'));
                         
-                        $('body').pagecontainer("change","#pdf");
+                        $.mobile.pageContainer.pagecontainer("change","#pdf");
                 });
          });
     </script>

@@ -1,113 +1,130 @@
-/*
- From: http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html
- 
- This is how you can use this function assuming the URL is,
- "http://dummy.com/?technology=jquery&blog=jquerybyexample".
- var tech = GetURLParameter('technology');
- var blog = GetURLParameter('blog');
- 
- In above code variable "tech" will have "jquery" as value and "blog" variable's will be "jquerybyexample".
-*/
-
-function getURLParameter(sParam, sString)
-{
-    var sPageURL = sString.split('?')[1];
-//    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++)
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam)
-        {
-            return sParameterName[1];
-        }
-    }
-}
-
-function UrlExists(url)
-{
-    var response = $.ajax({
-          url: url,
-          type: 'HEAD',
-          async: false
-    }).status;
-    return response!=404;
-}
-
 var Utilities = function() {
     this.fileSystem;
+    var downloadInProgress = false;
     
-    this.initialize =  function() {
+    this.UrlExists = function(url) {
+        var response = $.ajax({
+                              url: url,
+                              type: 'HEAD',
+                              async: false
+                              }).status;
+        return response!=404;
     };
     
-    this.initFileSystem = function() {
-        if(this.fileSystemName == "") {
-            var dfd = new jQuery.Deferred();
-            var that = this;
-            
-            function onFileSystemSuccess (fileSystem) {
-                console.log(this.fileSystemName);
-                
-                dfd.notify(fileSystem);
-            };
-            
-            function fail (evt) {
-                console.log(evt.target.error.code);
-                dfd.rejectWith(evt);
-            };
-            
-            function setfileSystemName(data) {
-                that.fileSystem = data;
-            };
-            
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-            
-            $.when(dfd).then(setfileSystemName);
-        }
-    }
+    this.initialize = function() {
+    };
+//    
+//    this.initFileSystem = function() {
+//        if(typeof this.fileSystem == 'undefined') {
+//            var dfd = new jQuery.Deferred();
+//            var that = this;
+//            
+//            function onFileSystemSuccess (fileSystem) {
+//                this.fileSystem = fileSystem;
+//                dfd.resolveWith(fileSystem);
+//            };
+//            
+//            function fail (evt) {
+//                console.log(evt.target.error.code);
+//                dfd.rejectWith(evt);
+//            };
+//            
+//            function setfileSystemName(data) {
+//                console.log("We got the file system!: " + data.root.name);
+//                that.fileSystem = data;
+//            };
+//            
+//            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+//            
+//            $.when(dfd).then(setfileSystemName);
+//        }
+//    }
     
-    function embedVideo(file) {
+    this.embedVideo = function(file, fileUrl) {
         var text = "";
         text += "<video id='video-"+file+"' class='videoplayer' width='100%' controls autoplay>";
-        text += "<source src='video/"+file+"' type='video/mp4'>";
-        text += "<object data='video/"+file+"'>";
-        text += "<embed src='video/"+file+"'>";
+        text += "<source src='"+fileUrl+"' type='video/mp4'>";
+        text += "<object data='"+fileUrl+"'>";
+        text += "<embed src='"+fileUrl+"'>";
         text += "</object>";
         text += "</video>";
         
         $("#video-embed").html(text);
-    }
+    };
 
     
-    this.checkAndDownload = function (file, directory) {
-        this.initFileSystem();
-        if(!UrlExists(directory+file)){
+    this.checkAndDownload = function (file, directory, onSuccess, onFailure) {
+//        this.initFileSystem();
+        if(downloadInProgress) {
+            return false;
+        }
+        var fileUrl = cordova.file.dataDirectory+directory+file;
+        if(!this.UrlExists(fileUrl)){
+            downloadInProgress = true;
+            
             var fileTransfer = new FileTransfer();
             var uri = encodeURI(app.serverUrl+file);
-            var fileURL = "cdvfile://localhost/persistent/"+directory+file;
-            var success = false;
+            
+            $( "#progress-dialog" ).popup("open");
+            if(typeof Utilities.progressCircle == 'undefined'){
+                Utilities.progressCircle = $('#progress-dialog-popup #progress-bar').cprogress({
+                        percent: 0, // starting position
+                        img1: 'images/v1.png', // background
+                        img2: 'images/v2.png', // foreground
+                        speed: 120, // speed (timeout)
+                        PIStep : 0.1, // every step foreground area is bigger about this val
+                        limit: 100,
+                        loop : false, //if true, no matter if limit is set, progressbar will be running
+                        showPercent : true //show hide percent
+                });
+            }else{
+                goToOptions = {
+                    limit: 100
+                };
+                Utilities.progressCircle.reset();
+            }
+
+            Utilities.progressCircle.start();
+            
+           fileTransfer.onprogress = function(progressEvent) {
+                if (progressEvent.lengthComputable) {
+                    goToOptions = {
+                        limit: Math.round((progressEvent.loaded / progressEvent.total) * 100)
+                    };
+                    Utilities.progressCircle.options(goToOptions);
+                } else {
+                    // indeterminate progress bar
+                    goToOptions = {
+                        loop: true,
+                        limit: 100
+                    };
+                    
+                    Utilities.progressCircle.options(goToOptions);
+                }
+            };
             
             fileTransfer.download(uri,
-                fileURL,
+                fileUrl,
                 function(entry) {
                     console.log("download complete: " + entry.fullPath);
-                    success = true;
+                  Utilities.progressCircle.stop();
+                  downloadInProgress = false;
+                    onSuccess(file, entry.nativeURL);
                 },
                 function(error) {
                     console.log("download error source " + error.source);
                     console.log("download error target " + error.target);
                     console.log("download error code " + error.code);
+                    console.log("download http code " + error.http_status);
+                      Utilities.progressCircle.stop();
+                      downloadInProgress = false;
+                      onFailure();
                 },
                 true,
                 {}
             );
-            if(success){
-                return fileURL;
-            }else{
-                return false;
-            }
         }else{
-            return true;
+            onSuccess(file, fileUrl);
         }
     };
 };

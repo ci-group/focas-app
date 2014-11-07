@@ -21,7 +21,15 @@
     <content src="index.html" />
     <access origin="*" />
     
+    <platform name="android">
+        <plugin name="File" value="org.apache.cordova.FileUtils" />
+        <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+    </platform>
+    
     <platform name="ios">
+        <plugin name="File" value="CDVFile" />
+        <plugin name="FileTransfer" value="CDVFileTransfer" />
+        
         <!-- iOS 7.0+ -->
               <!-- iPhone / iPod Touch  -->
               <icon src="res/ios/focas-60.png" width="60" height="60" />

@@ -19,6 +19,10 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        $.mobile.loader.prototype.options.text = "loading";
+        $.mobile.loader.prototype.options.textVisible = false;
+        $.mobile.loader.prototype.options.theme = "a";
+        $.mobile.loader.prototype.options.html = "";
     },
     
     serverUrl: "http://mac360.few.vu.nl/focas/download/"

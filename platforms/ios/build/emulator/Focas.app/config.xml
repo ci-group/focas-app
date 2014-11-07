@@ -26,6 +26,8 @@
     <feature name="FileTransfer">
         <param name="ios-package" value="CDVFileTransfer" />
     </feature>
+    <plugin name="File" value="CDVFile" />
+    <plugin name="FileTransfer" value="CDVFileTransfer" />
     <icon height="60" src="res/ios/focas-60.png" width="60" />
     <icon height="120" src="res/ios/focas-60@2x.png" width="120" />
     <icon height="76" src="res/ios/focas-76.png" width="76" />
