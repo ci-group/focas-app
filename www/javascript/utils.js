@@ -75,10 +75,10 @@ var Utilities = function () {
      * @param onSuccess - Callback for success
      * @param onFailure - Callback for failure
      */
-    this.downloadFile = function (file, fileUrl, onSuccess, onFailure) {
+    this.downloadFile = function (fileName, fileDirectory, onSuccess, onFailure) {
         var fileTransfer = new FileTransfer();
-        var uri = encodeURI(app.serverUrl + file);
-
+        var uri = encodeURI(app.serverUrl + fileName);
+        var tempFileUri = encodeURI(cordova.file.tempDirectory+fileName);
         this.showProgressDialog();
 
         // On progress update the progress dialog
@@ -102,13 +102,20 @@ var Utilities = function () {
 
         // Download the file using the cordova FileTransfer plugin
         fileTransfer.download(uri,
-            fileUrl,
+            tempFileUri,
             function (entry) {
                 console.log("download complete: " + entry.fullPath);
-                Utilities.progressCircle.stop();
-                downloadInProgress = false;
+                var dirEntry = window.resolveLocalFileSystemURL(fileDirectory);
+                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
+                    fileSystem.getFile(entry.nativeURL(), {}, function (fileEntry) {
+                            fileEntry.moveTo(dirEntry, fileName, function () {
+                                Utilities.progressCircle.stop();
+                                downloadInProgress = false;
 
-                onSuccess(file, entry.nativeURL);
+                                onSuccess(file, fileDirectory+fileName);
+                            }, onFailure);
+                        }, onFailure);
+                }, onFailure);
             },
             function (error) {
                 console.error("download error source " + error.source);
@@ -142,13 +149,13 @@ var Utilities = function () {
         }
         // cordova.file.dataDirectory points to permanent storage
         // that does not get synced with the cloud on iOS
-        var fileUrl = cordova.file.dataDirectory + directory + file;
+        var fileDirectory = cordova.file.dataDirectory + directory;
         if (!this.UrlExists(fileUrl)) {
             downloadInProgress = true;
 
-            this.downloadFile(file, fileUrl, onSuccess, onFailure);
+            this.downloadFile(file, fileDirectory, onSuccess, onFailure);
         } else {
-            onSuccess(file, fileUrl);
+            onSuccess(file, fileDirectory);
         }
     };
 };

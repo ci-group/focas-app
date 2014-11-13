@@ -34,18 +34,16 @@ var app = {
      */
     bindEvents: function () {
         $(document).on("pagecreate", "#main-page", this.onPageCreateMain);
+        $(document).on("pagecreate", this.activateHeaderAndFooter);
         $(document).on("pagebeforehide", "#video", this.onPageHideVideo);
-        $(document).on("pagecreate",this.addHeaderAndFooter);
-        $(document).on('pageshow',function(){
+        $(document).on('pageshow', function(){
             $('#main-content').height(app.getRealContentHeight());
         });
     },
 
-    addHeaderAndFooter: function () {
-        $(".header").load("header.html",function() {
-            $("[data-role=header], [data-role=footer]").toolbar();
-            $.mobile.resetActivePageHeight();
-        });
+    activateHeaderAndFooter: function () {
+        $("[data-role=header], [data-role=footer]").toolbar();
+        $.mobile.resetActivePageHeight();
     },
 
     /**
