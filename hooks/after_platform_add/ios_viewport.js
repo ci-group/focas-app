@@ -25,7 +25,9 @@ if(process.env.CORDOVA_PLATFORMS == "ios") {
         sys.puts(stdout);
     }
 
+    console.log("Injecting viewport fix");
     exec ('gsed -ie "/you can do so here./ a \\'+codeInject+'" platforms/ios/Focas/Classes/MainViewController.m',puts);
 
+    console.log("Injecting status bar style");
     exec ('gsed -ie "/- (void)viewDidLoad/ i \\'+codeInject2+'" platforms/ios/Focas/Classes/MainViewController.m',puts);
 }
