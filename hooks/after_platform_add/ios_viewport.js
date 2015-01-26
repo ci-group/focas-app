@@ -25,7 +25,7 @@ if(process.env.CORDOVA_PLATFORMS == "ios") {
         sys.puts(stdout);
     }
 
-    exec ('gsed -ie "/you can do so here/ a \\'+codeInject+'" platforms/ios/Focas/Classes/MainViewController.m',puts);
+    exec ('gsed -ie "/you can do so here./ a \\'+codeInject+'" platforms/ios/Focas/Classes/MainViewController.m',puts);
 
     exec ('gsed -ie "/- (void)viewDidLoad/ i \\'+codeInject2+'" platforms/ios/Focas/Classes/MainViewController.m',puts);
 }
