@@ -20,16 +20,21 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    
+
+    <preference name="orientation" value="landscape" />
+    <preference name="target-device" value="tablet" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
     <platform name="android">
         <plugin name="File" value="org.apache.cordova.FileUtils" />
         <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
     </platform>
-    
+
     <platform name="ios">
         <plugin name="File" value="CDVFile" />
         <plugin name="FileTransfer" value="CDVFileTransfer" />
-        
+
         <!-- iOS 7.0+ -->
               <!-- iPhone / iPod Touch  -->
               <icon src="res/ios/focas-60.png" width="60" height="60" />

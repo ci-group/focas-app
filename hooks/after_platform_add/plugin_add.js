@@ -4,8 +4,7 @@ console.log("Adding plugins to platform");
 
 var pluginlist = [
     "org.apache.cordova.file",
-    "org.apache.cordova.file-transfer",
-    "org.apache.cordova.file-system-roots"
+    "org.apache.cordova.file-transfer"
 ];
 
 // no need to configure below
@@ -19,6 +18,6 @@ function puts(error, stdout, stderr) {
 }
 
 pluginlist.forEach(function(plug) {
-	console.log("Adding plugin: "+plug);
+    console.log("Adding plugin: "+plug);
     exec("cordova plugin add " + plug, puts);
 });

@@ -1,21 +1,18 @@
 /*jslint browser:true, vars:true, plusplus: true, nomen: true */
-/*global  $, app, cordova, FileTransfer*/
+/*global  $, app, cordova, FileTransfer, template, LocalFileSystem */
 
 var Utilities = function () {
     var downloadInProgress = false;
 
-    this.initialize = function () {};
+    this.initialize = function () {
+
+    };
 
     /**
      * Check if a url exists
      */
-    this.UrlExists = function (url) {
-        var response = $.ajax({
-            url: url,
-            type: 'HEAD',
-            async: false
-        }).status;
-        return response != 404;
+    this.UrlExists = function (url, callbackNotFound, callbackFound) {
+        this.fileSystem.root.getFile(url, { create: false }, callbackFound, callbackNotFound);
     };
 
     /**
@@ -25,15 +22,18 @@ var Utilities = function () {
      * @fileUrl - Url of the video
      */
     this.embedVideo = function (file, fileUrl) {
-        var text = "";
-        text += "<video id='video-" + file + "' class='videoplayer' width='100%' controls autoplay>";
-        text += "<source src='" + fileUrl + "' type='video/mp4'>";
-        text += "<object data='" + fileUrl + "'>";
-        text += "<embed src='" + fileUrl + "'>";
-        text += "</object>";
-        text += "</video>";
+        $.getScript("templates/video.js",function() {
+            var text = template({
+                "item": {
+                    "type": "video",
+                    "name": file,
+                    "url": fileUrl,
+                    "id": file
+                }
+            });
 
-        $("#video-embed").html(text);
+            $("#video-embed").html(text);
+        });
     };
 
     /**
@@ -41,7 +41,10 @@ var Utilities = function () {
      * This assumes a jquery-mobile dialog in the page
      */
     this.showProgressDialog = function () {
-        $("#progress-dialog").popup("open");
+        this.insertDownloadDialog();
+        var popup = $("#progress-dialog").popup("open", {
+            "positionTo": "window"
+        });
         if (typeof Utilities.progressCircle == 'undefined') {
             Utilities.progressCircle = $('#progress-dialog-popup #progress-bar').cprogress({
                 percent: 0, // starting position
@@ -62,13 +65,41 @@ var Utilities = function () {
         }
 
         Utilities.progressCircle.start();
+
+        return popup;
+    };
+
+    this.insertDownloadDialog = function(){
+        if($("#progress-dialog").length === 0) {
+            var page = $("body").pagecontainer( "getActivePage" );
+            $.ajaxSetup({async:false});
+            $.get("inserts/downloadDialog.html", function (data) {
+                    $(page).append(data);
+                    $("#progress-dialog").popup();
+            });
+            $.ajaxSetup({async:true});
+        } else {
+            $("#progress-dialog").popup();
+        }
+    };
+
+    this.insertCouldNotDownloadDialog = function(){
+        if($("#cannot-download-dialog").length === 0) {
+            var page = $("body"); //.pagecontainer( "getActivePage" );
+            $.ajaxSetup({async:false});
+            $.get("inserts/couldNotDownloadDialog.html", function (data) {
+                $(page).append(data);
+                $("#cannot-download-dialog").popup();
+            });
+            $.ajaxSetup({async:true});
+        } else {
+            $("#cannot-download-dialog").popup();
+        }
     };
 
     /**
      * Downloads a file from app.serverUrl to local fileUrl
      * Shows a progress dialog while downloading @see showProgressDialog.
-     *
-     *
      *
      * @param file - the Filename to pass on to onSuccess
      * @param fileUrl - local url to download to
@@ -77,9 +108,9 @@ var Utilities = function () {
      */
     this.downloadFile = function (fileName, fileDirectory, onSuccess, onFailure) {
         var fileTransfer = new FileTransfer();
-        var uri = encodeURI(app.serverUrl + fileName);
+        var uri = encodeURI(app.serverUrl + fileDirectory + fileName);
         var tempFileUri = encodeURI(cordova.file.tempDirectory+fileName);
-        this.showProgressDialog();
+        var progressDialog = this.showProgressDialog();
 
         // On progress update the progress dialog
         fileTransfer.onprogress = function (progressEvent) {
@@ -100,22 +131,32 @@ var Utilities = function () {
             }
         };
 
+        progressDialog.popup("reposition",{
+            "positionTo": "window"
+        });
+
         // Download the file using the cordova FileTransfer plugin
         fileTransfer.download(uri,
             tempFileUri,
             function (entry) {
                 console.log("download complete: " + entry.fullPath);
-                var dirEntry = window.resolveLocalFileSystemURL(fileDirectory);
-                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
-                    fileSystem.getFile(entry.nativeURL(), {}, function (fileEntry) {
-                            fileEntry.moveTo(dirEntry, fileName, function () {
-                                Utilities.progressCircle.stop();
-                                downloadInProgress = false;
 
-                                onSuccess(file, fileDirectory+fileName);
-                            }, onFailure);
+                Utilities.progressCircle.stop();
+                downloadInProgress = false;
+
+                // cordova.file.dataDirectory points to permanent storage
+                // that does not get synced with the cloud on iOS
+                var parentDir = cordova.file.dataDirectory;
+                window.resolveLocalFileSystemURL(parentDir, function(parentDirEntry) {
+                    parentDirEntry.getDirectory(fileDirectory,{create: true}, function (dirEntry) {
+                        entry.moveTo(dirEntry, fileName, function (fileEntry) {
+                            onSuccess(fileName, fileEntry.nativeURL);
                         }, onFailure);
-                }, onFailure);
+                    }, onFailure);
+                },
+                function(error){
+                    console.log("ResolveLocalFileSystemURL error: " +error);
+                });
             },
             function (error) {
                 console.error("download error source " + error.source);
@@ -123,11 +164,13 @@ var Utilities = function () {
                 console.error("download error code " + error.code);
                 console.error("download http code " + error.http_status);
                 Utilities.progressCircle.stop();
+                $("#progress-dialog").popup( "close" );
                 downloadInProgress = false;
 
                 onFailure();
             },
             true, {});
+
     };
 
     /**
@@ -150,15 +193,23 @@ var Utilities = function () {
         // cordova.file.dataDirectory points to permanent storage
         // that does not get synced with the cloud on iOS
         var fileDirectory = cordova.file.dataDirectory + directory;
-        if (!this.UrlExists(fileUrl)) {
-            downloadInProgress = true;
+        var fileUrl = fileDirectory + file;
+        this.UrlExists(
+            fileUrl,
+            function (){
+                downloadInProgress = true;
 
-            this.downloadFile(file, fileDirectory, onSuccess, onFailure);
-        } else {
-            onSuccess(file, fileDirectory);
-        }
+                utilities.downloadFile(file, directory, onSuccess, onFailure);
+            },
+            onSuccess(file, fileUrl));
     };
 };
 
 var utilities = new Utilities();
-utilities.initialize();
+
+$(document).on("deviceready",  function() {
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
+        Utilities.prototype.fileSystem = null;
+        utilities.fileSystem = fileSystem;
+    });
+});

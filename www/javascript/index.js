@@ -18,7 +18,7 @@
  */
 
 /*jslint browser:true */
-/*global  $, utilities*/
+/*global  $, utilities, template*/
 
 var app = {
     // Application Constructor
@@ -34,44 +34,92 @@ var app = {
      */
     bindEvents: function () {
         $(document).on("pagecreate", "#main-page", this.onPageCreateMain);
+        $(document).on("pagecreate", this.onPageCreate);
         $(document).on("pagecreate", this.activateHeaderAndFooter);
         $(document).on("pagebeforehide", "#video", this.onPageHideVideo);
-        $(document).on('pageshow', function(){
-            $('#main-content').height(app.getRealContentHeight());
-        });
-    },
-
-    activateHeaderAndFooter: function () {
-        $("[data-role=header], [data-role=footer]").toolbar();
-        $.mobile.resetActivePageHeight();
     },
 
     /**
      * Bind events for the content list to the page.
      */
     onPageCreateMain: function () {
-        $(".video").bind("vclick", function () {
-//            console.log("file: " + $(this).attr('data-file'));
+        var self = this;
+        $.ajaxSetup({async:false});
+        $.getJSON("content.json",function(data) {
+            self.content = data;
+            $.getScript("templates/navigation.js",function(){
+                var text = template(self.content);
+                $("#navigation").html(text).enhanceWithin();
+                $("#navigation ul.ui-listview li a").removeClass("ui-btn-icon-right").removeClass("ui-icon-carat-r");
+                $("#navigation ul.ui-listview li a").addClass("ui-btn-icon-left").addClass("ui-icon-carat-l");
+            });
+            $.getScript("templates/page.js",function(){
+                var text = template(self.content);
+                $("body").append(text).enhanceWithin();
+            });
+        });
+        $.ajaxSetup({async:true});
 
-            utilities.checkAndDownload($(this).attr('data-file'), "video/",
+        $(".video").bind("vclick",
+            function () {
+                utilities.checkAndDownload($(this).attr('data-file'), "video/",
                 function (file, fileUrl) {
                     utilities.embedVideo(file, fileUrl);
                     $.mobile.pageContainer.pagecontainer("change", "#video");
                 },
-                function () {
+                function (error) {
+                    console.log("Error occured during download: " + error);
+                    utilities.insertCouldNotDownloadDialog();
+                    if($("#progress-dialog").is(":visible")) {
+                        $("#progress-dialog").on("popupafterclose", function () {
+                            $("#cannot-download-dialog").popup("open", {
+                                "positionTo": "window"
+                            });
+                        });
+                        $("#progress-dialog").popup("close");
+                    }else{
+                        $("#cannot-download-dialog").popup("open", {
+                            "positionTo": "window"
+                        });
+                    }
+                });
+            });
+
+        $(".article").bind("vclick", function () {
+            utilities.insertCouldNotDownloadDialog();
+            $("#cannot-download-dialog").popup("open", {
+                "positionTo": "window"
+            });
+
+/*
+            utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
+            function (file, fileUrl) {
+                $('pdf-object').attr('data', fileUrl);
+                $.mobile.pageContainer.pagecontainer("change", "#pdf");
+            },
+            function (error) {
+                console.log("Error occured during download: " + error);
+                utilities.insertCouldNotDownloadDialog();
+                $("#cannot-download-dialog").popup("open");
+//                if($("#progress-dialog").is(":visible")) {
                     $("#progress-dialog").on("popupafterclose", function () {
-                        $("#cannotDownloadDialog").popup("open");
+                        $("#cannot-download-dialog").popup("open", {
+                            "positionTo": "window"
+                        });
                     });
                     $("#progress-dialog").popup("close");
-                });
+//                }else{
+//                    $("#cannot-download-dialog").popup("open", {
+//                        "positionTo": "window"
+//                    });
+//                }
+            });
+*/
         });
+    },
 
-        $(".pdf").bind("vclick", function () {
-//            console.log("file: " + $(this).attr('data-file'));
-            $('pdf-object').attr('data', "pdf/" + $(this).attr('data-file'));
+    onPageCreate: function () {
 
-            $.mobile.pageContainer.pagecontainer("change", "#pdf");
-        });
     },
 
     /**
@@ -81,25 +129,6 @@ var app = {
         // There should be only 1 video player at a time...
         var video = $('.videoplayer')[0];
         video.pause();
-    },
-
-    getRealContentHeight: function () {
-        var header = $("div[data-role='header']:visible");
-        var footer = $("div[data-role='footer']:visible");
-        var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
-        var viewport_height = $(window).height();
-
-        var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
-        if(header.hasClass("ui-header-fixed")) {
-            content_height += 1;
-        }
-        if(footer.hasClass("ui-footer-fixed")) {
-           content_height += 1;
-        }
-        if((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
-            content_height -= (content.outerHeight() - content.height());
-        }
-        return content_height;
     },
 
     /**

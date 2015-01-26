@@ -1,0 +1,234 @@
+/*** Global Settings ***/
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fff;
+    background-color: #000000;
+}
+.landscape, .landscape .ui-page, .portrait, .portrait .ui-page {
+    min-height: 100%;
+}
+h2 {
+    background-color: rgb(77, 77, 77);
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: normal;
+    display: inline-block;
+}
+.ui-page {
+    padding: 0;
+}
+
+/*** Main Page ***/
+.ui-body h2 {
+    margin: 0px;
+}
+
+.logo {
+    background-color: white;
+    padding: 1em;
+}
+.logo img {
+    width: 100%;
+}
+.ui-main {
+    padding: 0;
+}
+
+/*** Main structure layout ***/
+.ui-grid-b > .ui-block-a, .ui-grid-b > .ui-block-b, .ui-grid-b > .ui-block-c {
+    width: 33%;
+}
+.ui-text .ui-body {
+    background-color: black;
+    font-size: small;
+    font-weight: lighter;
+    text-align: justify;
+    overflow: auto;
+    color: white;
+    border: none;
+}
+.ui-column-left {
+    display: inline-block;
+    height: 100%;
+}
+.ui-column-right {
+    background: url(../images/breakfast.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.ui-block-a {
+    min-height: 100%;
+}
+
+/*** Header and Footer ***/
+.ui-header, .ui-footer {
+    border: none;
+}
+.ui-header .ui-link {
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    border: none;
+    text-decoration: underline !important;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: none;
+}
+.ui-page-theme-a .ui-header {
+    padding: 0;
+}
+.ui-page-theme-a .ui-header.cas {
+    background-color: rgb(111, 124, 178);
+    background-color: rgba(111, 124, 178, 0.7);
+}
+.ui-page-theme-a .ui-header.controllability {
+    background-color: rgb(89, 160, 68);
+    background-color: rgba(89, 160, 68, 0.8);
+}
+.ui-page .ui-header h1.ui-title {
+    font-size: 3em;
+    margin: 0;
+    padding: 6px 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: left;
+}
+.ui-footer .ui-grid-a {
+    padding: 8px;
+}
+
+
+/*** Item Lists ***/
+.item {
+    color: #fff;
+    margin: 1px 2px 12px 2px;
+    padding: 16px;
+    background-color: white;
+    color: #333;
+}
+div.ui-grid-c .item:first-child {
+    background-color: #444;
+    color: white;
+}
+.item h3 {
+    margin: 0;
+}
+
+
+/**     NAVIGATION     **/
+.ui-content .ui-listview {
+    margin: 0;
+}
+.ui-content .ui-listview li {
+    margin: 0.75em 0;
+}
+.ui-content .ui-listview li a {
+    border: none;
+    font-size: 18px;
+}
+.ui-content .ui-listview li > .color-0 {
+    background-color: rgb(111, 124, 178);
+    background-color: rgba(111, 124, 178, 0.8);
+}
+.ui-content .ui-listview li > .color-1 {
+    background-color: rgb(89, 160, 68);
+    background-color: rgba(89, 160, 68, 0.8);
+}
+.ui-content .ui-listview li > .color-2 {
+    background-color: rgb(215, 8, 97);
+    background-color: rgba(215, 8, 97, 0.8);
+}
+.ui-content .ui-listview li > .color-3 {
+    background-color: rgb(48, 136, 130);
+    background-color: rgba(48, 136, 130, 0.8);
+}
+.ui-content .ui-listview li > .color-4 {
+    background-color: rgb(166, 185, 37);
+    background-color: rgba(166, 185, 37, 0.8);
+}
+.ui-content .ui-listview li > .color-5 {
+    background-color: rgb(205, 47, 37);
+    background-color: rgba(205, 47, 37, 0.8);
+}
+.ui-content .ui-listview li > .color-6 {
+    background-color: rgb(61, 153, 193);
+    background-color: rgba(61, 153, 193, 0.8);
+}
+.ui-content .ui-listview li > .color-7 {
+    background-color: rgb(53, 116, 51);
+    background-color: rgba(53, 116, 51, 0.8);
+}
+.ui-content .ui-listview li > .color-8 {
+    background-color: rgb(245, 127, 24);
+    background-color: rgba(245, 127, 24, 0.8);
+}
+.ui-content .ui-listview .ui-first-child {
+    margin-top: 0;
+    border-top: none;
+}
+.ui-content .ui-listview .ui-last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li > .ui-btn {
+    border: none;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+}
+
+/*** Search Box ***/
+.ui-footer .ui-input-search {
+    margin: 0 1em;
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000000;
+}
+/*
+.ui-input-text input, .ui-input-search input {
+background-color: white;
+}
+*/
+.ui-input-text, .ui-input-search {
+    border: none;
+}
+
+/*** Download dialogs ***/
+.dialog-popup {
+    min-width: 270px;
+}
+.dialog-popup .progress-bar {
+    width: 105px;
+    height: 105px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dialog-popup h1 {
+    color: #fff;
+    text-align: center;
+}
+.dialog-popup .content {
+    padding: 15px;
+}
+.jCProgress {
+    position: absolute;
+    z-index: 9999999;
+    /*  margin-top:-15px; /* offset from the center */
+}
+.jCProgress > .percent {
+    font: 18px/27px'BebasRegular', Arial, sans-serif;
+    color: #ebebeb;
+    text-shadow: 1px 1px 1px #1f1f1f;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 22px;
+    text-align: center;
+    width: 60px;
+}

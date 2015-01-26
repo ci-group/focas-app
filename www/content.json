@@ -1,0 +1,52 @@
+{
+    "categories" : [
+        {"id": "cas", "name": "CAS in Nature"},
+        {"id": "controllability", "name": "Controllability"},
+        {"id": "ethics", "name":  "Ethical & Legal Issues"},
+        {"id": "evosystems", "name":  "Evolutionary Systems"},
+        {"id": "instances", "name":  "Instances of CAS"},
+        {"id": "localglobal", "name":  "Local-Global Properties of CAS"},
+        {"id": "modelling", "name":  "Modelling of CAS"},
+        {"id": "humanintheloop", "name":  "Putting the Human in the Loop"},
+        {"id": "realworldapps", "name":  "Real-World Applications"}
+    ],
+    "pages": [
+        {
+            "id": "cas",
+            "name": "CAS in Nature",
+            "description": "<p>In this category we focus on collecting all the materials related to complex organization in natural systems. An eukaryote cell, a butterly, a tulip, a football team or the society will live in are all examples of such adaptive collective systems. Each of them can be affected by the environment and is structured in a more or less complex fashion.</p><p>Adaptive collective systems are prominent in nature. Many biologists, ethologists, chemists, physicists, computer scientists, historians (to name a few disciplines) share a common interest for such systems, though from different perspectives, with different tools and different questions. Indeed, adaptation in collective systems can be observed at multiple levels, from molecules to societies, and at multiple time-scales, from the time it takes for a cell to die, for a seed to grow into a tree, for a fertilized egg to turn into a full grown organism, or for a society to rise and fall.</p><p>A mesmerizing fact is that highly complex behaviors observed at the level of a group can arise from very simple interactions between its elements. For example, group formation in animals such as schools of fishes, flock of birds or herd of mammals can be explained with very simple behaviors at the level of individuals. Similarly, the evolution of altruistic cooperation in animals can be explained with very basic mathematics highlighting the critical influence of relatedness between individuals on cooperation behaviors.</p><p>Of course, adaptive collective systems are not flawless: the existence of evolutionary dead-ends (ie. species extinction) and collapsing societies demonstrate if need be that complex systems in nature are not doomed to succeed, whatever this means (though survival is usually what we imply).</p>",
+            "items": [
+                {
+                    "title": "Hierarchical group dynamics in pigeon flocks",
+                    "type": "article",
+                    "url": "/cas/HierarchyPigeons_NatureLetters.pdf",
+                    "name": "HierarchyPigeons_NatureLetters.pdf",
+                    "year": "2010",
+                    "author": "Nagy et al."
+                },
+                {
+                    "title": "Simulating dynamical features of escape panic",
+                    "type": "article",
+                    "url": "/cas/EscapePanic_LettersToNature.pdf",
+                    "name": "EscapePanic_LettersToNature.pdf",
+                    "year": "2000",
+                    "author": "Helbing et al."
+                },
+                {
+                    "title": "The Genetic Evolution of Social Behavior",
+                    "type": "article",
+                    "url": "/cas/The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "year": "1964",
+                    "author": "Hamilton"
+                }
+            ]
+        },
+        {
+            "id": "controllability",
+            "name": "Controllability",
+            "description": "<p>In general, a system is controllable if it can be driven from any given state to any other desired state through manipulating a number of “knobs”, i.e., input parameters. Controllability depends on two system properties. First, the <b>system architecture</b>, that is, the abstract network spanned by the possible interactions between the components (units, agents) of the system. Second, the <b>system drivers</b>, that include the local rules (a.k.a. policies or strategies or controllers) that determine the behavior of the individual units, as well as global rules that specify system behavior on a higher level, e.g., the frequency of interactions. The fundamental challenge in controlling (adaptive) collective systems is caused by the fact that the effect of controllable system parameters (e.g., links between units or behavioral rules) on system behavior is, in general, unknown.  Worse yet, the system architecture and/or the drivers may not be fully known and they may change over time.</p>",
+            "items": []
+        }
+    ]
+}

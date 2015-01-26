@@ -26,8 +26,21 @@ Config.xml file:
     </author>
     <content src="index.html" />
     <access origin="*" />
-    
+
+    <preference name="orientation" value="landscape" />
+    <preference name="target-device" value="tablet" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
+    <platform name="android">
+        <plugin name="File" value="org.apache.cordova.FileUtils" />
+        <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+    </platform>
+
     <platform name="ios">
+        <plugin name="File" value="CDVFile" />
+        <plugin name="FileTransfer" value="CDVFileTransfer" />
+
         <!-- iOS 7.0+ -->
               <!-- iPhone / iPod Touch  -->
               <icon src="res/ios/focas-60.png" width="60" height="60" />
@@ -59,10 +72,10 @@ Plugins:
 
 org.apache.cordova.file,org.apache.cordova.file-transfer
 
-Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
+
 
 iOS platform:
 
-Xcode 6.0.1
-Build version 6A317
+Xcode 6.1.1
+Build version 6A2008a
 
