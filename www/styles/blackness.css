@@ -32,6 +32,7 @@
 
 html {
     font-size: 100%;
+    text-rendering: optimizeLegibility;
 }
 body,
 input,

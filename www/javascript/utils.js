@@ -74,7 +74,7 @@ var Utilities = function () {
             var page = $("body").pagecontainer( "getActivePage" );
             $.ajaxSetup({async:false});
             $.get("inserts/downloadDialog.html", function (data) {
-                    $(page).append(data);
+                    $(page).append(data).enhanceWithin();
                     $("#progress-dialog").popup();
             });
             $.ajaxSetup({async:true});
@@ -88,7 +88,7 @@ var Utilities = function () {
             var page = $("body"); //.pagecontainer( "getActivePage" );
             $.ajaxSetup({async:false});
             $.get("inserts/couldNotDownloadDialog.html", function (data) {
-                $(page).append(data);
+                $(page).append(data).enhanceWithin();
                 $("#cannot-download-dialog").popup();
             });
             $.ajaxSetup({async:true});
@@ -164,7 +164,6 @@ var Utilities = function () {
                 console.error("download error code " + error.code);
                 console.error("download http code " + error.http_status);
                 Utilities.progressCircle.stop();
-                $("#progress-dialog").popup( "close" );
                 downloadInProgress = false;
 
                 onFailure();
@@ -196,12 +195,14 @@ var Utilities = function () {
         var fileUrl = fileDirectory + file;
         this.UrlExists(
             fileUrl,
-            function (){
+            function () {
                 downloadInProgress = true;
 
                 utilities.downloadFile(file, directory, onSuccess, onFailure);
             },
-            onSuccess(file, fileUrl));
+            function() {
+                onSuccess(file, fileUrl);
+            });
     };
 };
 

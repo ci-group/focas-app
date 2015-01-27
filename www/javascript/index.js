@@ -60,7 +60,7 @@ var app = {
         });
         $.ajaxSetup({async:true});
 
-        $(".video").bind("vclick",
+        $(".video").off().on("click",
             function () {
                 utilities.checkAndDownload($(this).attr('data-file'), "video/",
                 function (file, fileUrl) {
@@ -85,13 +85,13 @@ var app = {
                 });
             });
 
-        $(".article").bind("vclick", function () {
-            utilities.insertCouldNotDownloadDialog();
-            $("#cannot-download-dialog").popup("open", {
-                "positionTo": "window"
-            });
+        $(".article").off().on("click", function () {
+//            utilities.insertCouldNotDownloadDialog();
+//            $("#cannot-download-dialog").popup("open", {
+//                "positionTo": "window"
+//            });
 
-/*
+
             utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
             function (file, fileUrl) {
                 $('pdf-object').attr('data', fileUrl);
@@ -101,20 +101,20 @@ var app = {
                 console.log("Error occured during download: " + error);
                 utilities.insertCouldNotDownloadDialog();
                 $("#cannot-download-dialog").popup("open");
-//                if($("#progress-dialog").is(":visible")) {
+                if($("#progress-dialog").is(":visible")) {
                     $("#progress-dialog").on("popupafterclose", function () {
                         $("#cannot-download-dialog").popup("open", {
                             "positionTo": "window"
                         });
                     });
                     $("#progress-dialog").popup("close");
-//                }else{
-//                    $("#cannot-download-dialog").popup("open", {
-//                        "positionTo": "window"
-//                    });
-//                }
+                }else{
+                    $("#cannot-download-dialog").popup("open", {
+                        "positionTo": "window"
+                    });
+                }
             });
-*/
+
         });
     },
 
