@@ -18,7 +18,7 @@
 
 <body data-theme="a">
     <div data-role="page" data-theme="a" id="main-page">
-        <div data-role="header" data-id="header" data-position="fixed" data-theme="a">
+        <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
                 <span class="ui-btn-text">Home</span>
             </a>
@@ -56,19 +56,39 @@
             </div>
             <!-- /grid-a -->
         </div>
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-                    <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    <form name="search-form" method="get" action="#search-page" id="search" data-ajax="false">
+                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    </form>
                 </div>
                 <div class="ui-block-b">
                 </div>
             </div>
         </div>
     </div>
+        
+    <div data-role="popup" id="progress-dialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" class="dialog-popup">
+        <div data-role="header" data-theme="b">
+            <h1 data-role="title">Downloading</h1>
+        </div>
+        <div data-role="content" data-theme="b" id="progress-bar" class="progress-bar ui-content">
+        </div>
+    </div>
+
+    <div data-role="popup" id="cannot-download-dialog" data-overlay-theme="e" data-theme="e" data-dismissible="false">
+        <div data-role="header" data-theme="e">
+            <h1 data-role="title">Could not download file.</h1>
+        </div>
+        <div data-role="content" data-theme="e" class="ui-content">
+            <p>This file cannot be downloaded from the server. Please try again later.</p>
+            <a data-role="button" data-rel="back" data-theme="e">Ok</a>
+        </div>
+    </div>
 
     <div data-role="page" data-theme="a" id="video">
-        <div data-role="header" data-id="header" data-position="fixed" data-theme="a">
+        <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
                 <span class="ui-btn-text">Home</span>
             </a>
@@ -82,10 +102,14 @@
         <div data-role="content" data-theme="a" id="video-embed">
         </div>
 
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-                    <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+<!--
+                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
+                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    </form>
+-->
                 </div>
                 <div class="ui-block-b">
                 </div>
@@ -94,7 +118,7 @@
     </div>
 
     <div data-role="page" data-theme="a" id="pdf">
-        <div data-role="header" data-id="header" data-position="fixed" data-theme="a">
+        <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
                 <span class="ui-btn-text">Home</span>
             </a>
@@ -109,10 +133,48 @@
             <object id="pdf-object" data="pdf/adaptive-collective-systems/adaptive-collective-systems.pdf" type="application/pdf">
         </div>
 
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-                    <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+<!--
+                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
+                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    </form>
+-->
+                </div>
+                <div class="ui-block-b">
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div data-role="page" data-theme="a" id="search-page">
+        <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
+                <span class="ui-btn-text">Home</span>
+            </a>
+            <span class="ui-title"></span>
+            <a href="#about" data-role="link" class="ui-link">About</a>
+        </div>
+
+        <div data-role="content" data-theme="a" id="search-overview">
+<!--
+            <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
+                <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+            </form>
+-->
+            <div id="results">
+            </div>
+        </div>
+
+        <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <div class="ui-grid-a">
+                <div class="ui-block-a ui-alt-icon">
+<!--
+                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
+                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    </form>
+-->
                 </div>
                 <div class="ui-block-b">
                 </div>
@@ -125,6 +187,7 @@
     <script src="cordova.js"></script>
     <script src="javascript/jCProgress-1.0.3.js"></script>
     <script src="javascript/jade-runtime.js"></script>
+    <script src="javascript/Fuse.js"></script>
     <script src="javascript/utils.js"></script>
     <script src="javascript/index.js"></script>
 </body>

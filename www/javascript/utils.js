@@ -11,8 +11,8 @@ var Utilities = function () {
     /**
      * Check if a url exists
      */
-    this.UrlExists = function (url, callbackNotFound, callbackFound) {
-        this.fileSystem.root.getFile(url, { create: false }, callbackFound, callbackNotFound);
+    this.UrlExists = function (url, callbackFound, callbackNotFound) {
+        window.resolveLocalFileSystemURL (url, callbackFound, callbackNotFound);
     };
 
     /**
@@ -41,10 +41,7 @@ var Utilities = function () {
      * This assumes a jquery-mobile dialog in the page
      */
     this.showProgressDialog = function () {
-        this.insertDownloadDialog();
-        var popup = $("#progress-dialog").popup("open", {
-            "positionTo": "window"
-        });
+        var popup = $("#progress-dialog").popup("open");
         if (typeof Utilities.progressCircle == 'undefined') {
             Utilities.progressCircle = $('#progress-dialog-popup #progress-bar').cprogress({
                 percent: 0, // starting position
@@ -67,34 +64,6 @@ var Utilities = function () {
         Utilities.progressCircle.start();
 
         return popup;
-    };
-
-    this.insertDownloadDialog = function(){
-        if($("#progress-dialog").length === 0) {
-            var page = $("body").pagecontainer( "getActivePage" );
-            $.ajaxSetup({async:false});
-            $.get("inserts/downloadDialog.html", function (data) {
-                    $(page).append(data).enhanceWithin();
-                    $("#progress-dialog").popup();
-            });
-            $.ajaxSetup({async:true});
-        } else {
-            $("#progress-dialog").popup();
-        }
-    };
-
-    this.insertCouldNotDownloadDialog = function(){
-        if($("#cannot-download-dialog").length === 0) {
-            var page = $("body"); //.pagecontainer( "getActivePage" );
-            $.ajaxSetup({async:false});
-            $.get("inserts/couldNotDownloadDialog.html", function (data) {
-                $(page).append(data).enhanceWithin();
-                $("#cannot-download-dialog").popup();
-            });
-            $.ajaxSetup({async:true});
-        } else {
-            $("#cannot-download-dialog").popup();
-        }
     };
 
     /**
@@ -195,13 +164,13 @@ var Utilities = function () {
         var fileUrl = fileDirectory + file;
         this.UrlExists(
             fileUrl,
+            function() {
+                onSuccess(file, fileUrl);
+            },
             function () {
                 downloadInProgress = true;
 
                 utilities.downloadFile(file, directory, onSuccess, onFailure);
-            },
-            function() {
-                onSuccess(file, fileUrl);
             });
     };
 };

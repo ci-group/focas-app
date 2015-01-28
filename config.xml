@@ -25,6 +25,8 @@
     <preference name="target-device" value="tablet" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    
+    <preference name="BackupWebStorage" value="local" /> <!-- do not backup to iCloud -->
 
     <platform name="android">
         <plugin name="File" value="org.apache.cordova.FileUtils" />

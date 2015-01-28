@@ -1,0 +1,5 @@
+h2= Results
+for item, index in items
+    div(class="item "+item.type, data-file=item.url data-id=item.id)
+        h3= item.title
+        span= item.author + " | " + item.year

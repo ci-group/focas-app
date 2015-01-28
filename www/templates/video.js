@@ -4,7 +4,7 @@ try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (item, undefined) {
+;var locals_for_with = (locals || {});(function (item) {
 var jade_indent = [];
 jade_debug.unshift({ lineno: 0, filename: "www/templates//video.jade" });
 jade_debug.unshift({ lineno: 1, filename: "www/templates//video.jade" });
@@ -25,7 +25,7 @@ jade_debug.shift();
 jade_debug.shift();
 buf.push("\n</video>");
 jade_debug.shift();
-jade_debug.shift();}.call(this,"item" in locals_for_with?locals_for_with.item:typeof item!=="undefined"?item:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+jade_debug.shift();}.call(this,"item" in locals_for_with?locals_for_with.item:typeof item!=="undefined"?item:undefined));;return buf.join("");
 } catch (err) {
   jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "video(id='video-'+item.id, class='videoplayer', width='100%', controls, autoplay)\n    source(src=item.url, type='video/mp4')\n    object(data=item.url)\n        embed(src=item.url)\n");
 }

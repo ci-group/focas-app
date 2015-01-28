@@ -1,6 +1,6 @@
 for page in pages
     div(data-role="page", data-theme="a", id=page.id, data-title=page.name)
-        div(data-role="header", data-id="header",data-position="fixed", data-theme="a")
+        div(data-role="header", data-id="header",data-position="fixed", data-tap-toggle="false", data-theme="a")
             a(href="#main-page", data-role="button", data-corners="false", data-iconpos="notext", data-theme="a", data-inline="true", data-icon="home", title="Home", class="ui-nodisc-icon")
                 span.ui-btn-text= Home
             span.ui-title
@@ -19,7 +19,7 @@ for page in pages
                             div(class="item "+item.type, data-file=item.url data-id=item.id)
                                 h3= item.title
                                 span= item.author + " | " + item.year
-        div(data-role="footer", data-id="footer", data-position="fixed", data-theme="a")
+        div(data-role="footer", data-id="footer", data-position="fixed", data-tap-toggle="false", data-theme="a")
             div.ui-grid-a
                 div(class="ui-block-a ui-alt-icon")
                     input(type="search", name="search", id="search-basic", value="", placeholder="Search...")
