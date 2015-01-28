@@ -24,6 +24,13 @@ var App = function () {
     this.initialize = function () {
         App.prototype.content = [];
         App.prototype.items = null;
+        App.prototype.serverUrl = "";
+        
+        /**
+         * This url is used to download content from
+         */
+        this.serverUrl = "http://mac360.few.vu.nl/focas/download/";
+        
         var self = this;
         $.ajaxSetup({async : false});
         $.getJSON("content.json", function (data) {
@@ -175,11 +182,6 @@ var App = function () {
         var video = $('.videoplayer')[0];
         video.pause();
     };
-
-    /**
-     * This url is used to download content from
-     */
-    var serverUrl = "http://mac360.few.vu.nl/focas/download/";
 };
 
 var app = new App();

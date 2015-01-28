@@ -86,6 +86,40 @@
             <a data-role="button" data-rel="back" data-theme="e">Ok</a>
         </div>
     </div>
+    
+    <div data-role="page" data-theme="a" id="search-page">
+        <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
+                <span class="ui-btn-text">Home</span>
+            </a>
+            <span class="ui-title"></span>
+            <a href="#about" data-role="link" class="ui-link">About</a>
+        </div>
+
+        <div data-role="content" data-theme="a" id="search-overview">
+<!--
+            <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
+                <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+            </form>
+-->
+            <div id="results">
+            </div>
+        </div>
+
+        <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+            <div class="ui-grid-a">
+                <div class="ui-block-a ui-alt-icon">
+<!--
+                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
+                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    </form>
+-->
+                </div>
+                <div class="ui-block-b">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div data-role="page" data-theme="a" id="video">
         <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -131,40 +165,6 @@
         </div>
         <div data-role="content" data-theme="a" id="pdf-embed" class="main-content">
             <object id="pdf-object" data="pdf/adaptive-collective-systems/adaptive-collective-systems.pdf" type="application/pdf">
-        </div>
-
-        <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <div class="ui-grid-a">
-                <div class="ui-block-a ui-alt-icon">
-<!--
-                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
-                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
-                    </form>
--->
-                </div>
-                <div class="ui-block-b">
-                </div>
-            </div>
-        </div>
-    </div>
-        
-    <div data-role="page" data-theme="a" id="search-page">
-        <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
-            <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
-                <span class="ui-btn-text">Home</span>
-            </a>
-            <span class="ui-title"></span>
-            <a href="#about" data-role="link" class="ui-link">About</a>
-        </div>
-
-        <div data-role="content" data-theme="a" id="search-overview">
-<!--
-            <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
-                <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
-            </form>
--->
-            <div id="results">
-            </div>
         </div>
 
         <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">

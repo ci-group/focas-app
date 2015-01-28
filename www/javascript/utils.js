@@ -12,7 +12,7 @@ var Utilities = function () {
      * Check if a url exists
      */
     this.UrlExists = function (url, callbackFound, callbackNotFound) {
-        window.resolveLocalFileSystemURL (url, callbackFound, callbackNotFound);
+        window.resolveLocalFileSystemURL(url, callbackFound, callbackNotFound);
     };
 
     /**
@@ -22,7 +22,7 @@ var Utilities = function () {
      * @fileUrl - Url of the video
      */
     this.embedVideo = function (file, fileUrl) {
-        $.getScript("templates/video.js",function() {
+        $.getScript("templates/video.js", function () {
             var text = template({
                 "item": {
                     "type": "video",
@@ -42,7 +42,7 @@ var Utilities = function () {
      */
     this.showProgressDialog = function () {
         var popup = $("#progress-dialog").popup("open");
-        if (typeof Utilities.progressCircle == 'undefined') {
+        if (typeof Utilities.progressCircle === 'undefined') {
             Utilities.progressCircle = $('#progress-dialog-popup #progress-bar').cprogress({
                 percent: 0, // starting position
                 img1: 'images/v1.png', // background
@@ -78,7 +78,7 @@ var Utilities = function () {
     this.downloadFile = function (fileName, fileDirectory, onSuccess, onFailure) {
         var fileTransfer = new FileTransfer();
         var uri = encodeURI(app.serverUrl + fileDirectory + fileName);
-        var tempFileUri = encodeURI(cordova.file.tempDirectory+fileName);
+        var tempFileUri = encodeURI(cordova.file.tempDirectory + fileName);
         var progressDialog = this.showProgressDialog();
 
         // On progress update the progress dialog
@@ -100,10 +100,6 @@ var Utilities = function () {
             }
         };
 
-        progressDialog.popup("reposition",{
-            "positionTo": "window"
-        });
-
         // Download the file using the cordova FileTransfer plugin
         fileTransfer.download(uri,
             tempFileUri,
@@ -116,14 +112,14 @@ var Utilities = function () {
                 // cordova.file.dataDirectory points to permanent storage
                 // that does not get synced with the cloud on iOS
                 var parentDir = cordova.file.dataDirectory;
-                window.resolveLocalFileSystemURL(parentDir, function(parentDirEntry) {
-                    parentDirEntry.getDirectory(fileDirectory,{create: true}, function (dirEntry) {
+                window.resolveLocalFileSystemURL(parentDir, function (parentDirEntry) {
+                    parentDirEntry.getDirectory(fileDirectory, {create: true}, function (dirEntry) {
                         entry.moveTo(dirEntry, fileName, function (fileEntry) {
                             onSuccess(fileName, fileEntry.nativeURL);
                         }, onFailure);
                     }, onFailure);
                 },
-                function(error){
+                function (error) {
                     console.log("ResolveLocalFileSystemURL error: " +error);
                 });
             },
@@ -176,10 +172,3 @@ var Utilities = function () {
 };
 
 var utilities = new Utilities();
-
-$(document).on("deviceready",  function() {
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSystem) {
-        Utilities.prototype.fileSystem = null;
-        utilities.fileSystem = fileSystem;
-    });
-});
