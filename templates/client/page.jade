@@ -1,0 +1,19 @@
+for page in pages
+    div(data-role="page", data-theme="a", id=page.id, data-title=page.name)
+        include ../includes/header.jade
+        
+        div.header(data-role="header" role="banner" class=page.id)
+            h1= page.name
+        div.main(data-role="content" role="main")
+            div.ui-grid-a
+                div.ui-block-a
+                    div.ui-text.ui-column-left
+                        div.ui-body
+                            !=page.description
+                div.ui-block-b
+                    div.ui-grid-c
+                        for item, index in page.items
+                            div(class="item "+item.type, data-file=item.url data-id=item.id)
+                                h3= item.title
+                                span= item.author + " | " + item.year
+        include ../includes/footer.jade

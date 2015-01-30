@@ -1,0 +1,34 @@
+html
+    head
+        meta(charset="utf-8")
+        // Mobile viewport
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+
+        title FoCAS | Fundamentals of Collective Adaptive Systems
+        meta(name="keywords", content="")
+
+        link(rel="stylesheet", href="styles/blackness.css")
+        link(rel="stylesheet", href="styles/jquery.mobile.icons.min.css")
+        link(rel="stylesheet", href="styles/jquery.mobile.structure-1.4.5.css")
+        link(rel="stylesheet", href="styles/index.css")
+
+    body(data-theme="a")
+        include ../includes/main-page.jade
+
+        include ../includes/search-page.jade
+
+        include ../includes/pdf-reader.jade
+
+        include ../includes/video-player.jade
+
+        include ../includes/popups.jade
+
+        script(src="javascript/jquery-2.1.3.js")
+        script(src="javascript/jquery.mobile-1.4.5.js")
+        script(src="cordova.js")
+        script(src="javascript/jCProgress-1.0.3.js")
+        script(src="javascript/jade-runtime.js")
+        script(src="javascript/Fuse.js")
+        script(src="javascript/utils.js")
+        script(src="javascript/index.js")

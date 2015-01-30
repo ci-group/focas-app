@@ -1,0 +1,10 @@
+div(data-role="page", data-theme="a", id="search-page")
+    include header.jade
+
+    div(data-role="content", data-theme="a", id="search-overview", class="ui-text")
+        form(name="search-form", method="get", class="search", data-ajax="false")
+            input(type="search", name="search", id="search-search", value="", placeholder="Search...")
+        
+        div(id="results", class="ui-body")
+        
+    include footer.jade
