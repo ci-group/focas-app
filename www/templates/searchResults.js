@@ -4,12 +4,15 @@ try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (Results, items, undefined) {
+;var locals_for_with = (locals || {});(function (undefined, items) {
 var jade_indent = [];
 jade_debug.unshift({ lineno: 0, filename: "www/templates//searchResults.jade" });
 jade_debug.unshift({ lineno: 1, filename: "www/templates//searchResults.jade" });
-buf.push("\n<h2>" + (jade.escape(null == (jade_interp = Results) ? "" : jade_interp)));
+buf.push("\n<h2>");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
+jade_debug.unshift({ lineno: 1, filename: jade_debug[0].filename });
+buf.push("Results");
+jade_debug.shift();
 jade_debug.shift();
 buf.push("</h2>");
 jade_debug.shift();
@@ -75,8 +78,8 @@ jade_debug.shift();
 }).call(this);
 
 jade_debug.shift();
-jade_debug.shift();}.call(this,"Results" in locals_for_with?locals_for_with.Results:typeof Results!=="undefined"?Results:undefined,"items" in locals_for_with?locals_for_with.items:typeof items!=="undefined"?items:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+jade_debug.shift();}.call(this,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined,"items" in locals_for_with?locals_for_with.items:typeof items!=="undefined"?items:undefined));;return buf.join("");
 } catch (err) {
-  jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "h2= Results\nfor item, index in items\n    div(class=\"item \"+item.type, data-file=item.url data-id=item.id)\n        h3= item.title\n        span= item.author + \" | \" + item.year");
+  jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "h2 Results\nfor item, index in items\n    div(class=\"item \"+item.type, data-file=item.url data-id=item.id)\n        h3= item.title\n        span= item.author + \" | \" + item.year\n");
 }
 }

@@ -4,7 +4,7 @@ try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (categories, undefined) {
+;var locals_for_with = (locals || {});(function (undefined, categories) {
 var jade_indent = [];
 jade_debug.unshift({ lineno: 0, filename: "www/templates//navigation.jade" });
 jade_debug.unshift({ lineno: 1, filename: "www/templates//navigation.jade" });
@@ -69,7 +69,7 @@ jade_debug.shift();
 jade_debug.shift();
 buf.push("\n</div>");
 jade_debug.shift();
-jade_debug.shift();}.call(this,"categories" in locals_for_with?locals_for_with.categories:typeof categories!=="undefined"?categories:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+jade_debug.shift();}.call(this,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined,"categories" in locals_for_with?locals_for_with.categories:typeof categories!=="undefined"?categories:undefined));;return buf.join("");
 } catch (err) {
   jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "div.ui-column-right\n    ul(data-role=\"listview\")\n        for category, index in categories\n            li\n                a(class=\"color-\"+index, href=\"#\"+category.id, data-role=\"link\")= category.name\n");
 }

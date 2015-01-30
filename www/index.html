@@ -59,8 +59,11 @@
         <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-                    <form name="search-form" method="get" action="#search-page" id="search" data-ajax="false">
-                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    <form name="search-form" method="get" class="search" data-ajax="false">
+                        <div data-role="controlgroup" data-type="horizontal">
+                            <input type="search" name="search" class="search-basic" data-wrapper-class="controlgroup-textinput ui-btn" value="" placeholder="Search..." />
+                            <input type="submit" name="submit" value="Search" data-icon="search" data-iconpos="notext" data-corners="false" data-mini="true" class="ui-nodisc-icon" />
+                        </div>
                     </form>
                 </div>
                 <div class="ui-block-b">
@@ -68,7 +71,7 @@
             </div>
         </div>
     </div>
-        
+
     <div data-role="popup" id="progress-dialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" class="dialog-popup">
         <div data-role="header" data-theme="b">
             <h1 data-role="title">Downloading</h1>
@@ -86,7 +89,7 @@
             <a data-role="button" data-rel="back" data-theme="e">Ok</a>
         </div>
     </div>
-    
+
     <div data-role="page" data-theme="a" id="search-page">
         <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon">
@@ -96,24 +99,22 @@
             <a href="#about" data-role="link" class="ui-link">About</a>
         </div>
 
-        <div data-role="content" data-theme="a" id="search-overview">
-<!--
-            <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
-                <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+        <div data-role="content" data-theme="a" id="search-overview" class="ui-text">
+            <form name="search-form" method="get" class="search" data-ajax="false">
+                <input type="search" name="search" id="search-search" value="" placeholder="Search..." />
+                <input type="submit" name="submit" value="Search" data-icon="search" />
             </form>
--->
-            <div id="results">
+            <div id="results" class="ui-body">
             </div>
         </div>
 
         <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-<!--
-                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
-                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    <form name="search-form" method="get" class="search" data-ajax="false">
+                        <input type="search" name="search" class="search-basic" value="" placeholder="Search..." />
+                        <input type="submit" name="submit" value="Search" data-icon="search" />
                     </form>
--->
                 </div>
                 <div class="ui-block-b">
                 </div>
@@ -139,11 +140,10 @@
         <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-<!--
-                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
-                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    <form name="search-form" method="get" class="search" data-ajax="false">
+                        <input type="search" name="search" class="search-basic" value="" placeholder="Search..." />
+                        <input type="submit" name="submit" value="Search" data-icon="search" />
                     </form>
--->
                 </div>
                 <div class="ui-block-b">
                 </div>
@@ -170,11 +170,10 @@
         <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
             <div class="ui-grid-a">
                 <div class="ui-block-a ui-alt-icon">
-<!--
-                    <form name="search-form" method="get" action="#search" class="search" data-ajax="false">
-                        <input type="search" name="search" id="search-basic" value="" placeholder="Search..." />
+                    <form name="search-form" method="get" class="search" data-ajax="false">
+                        <input type="search" name="search" class="search-basic" value="" placeholder="Search..." />
+                        <input type="submit" name="submit" value="Search" data-icon="search" data-inline="true" data-iconpos="notext" class="ui-nodisc-icon" />
                     </form>
--->
                 </div>
                 <div class="ui-block-b">
                 </div>

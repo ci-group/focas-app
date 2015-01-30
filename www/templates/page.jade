@@ -22,5 +22,6 @@ for page in pages
         div(data-role="footer", data-id="footer", data-position="fixed", data-tap-toggle="false", data-theme="a")
             div.ui-grid-a
                 div(class="ui-block-a ui-alt-icon")
-                    input(type="search", name="search", id="search-basic", value="", placeholder="Search...")
+                    form(name="search-form", method="get", class="search", data-ajax="false")
+                        input(type="search", name="search", class="search-basic", value="", placeholder="Search...")
             div.ui-block-b

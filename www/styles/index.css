@@ -25,7 +25,7 @@ h2 {
 
 /*** Main Page ***/
 .ui-body h2 {
-    margin: 0px;
+    margin: 0;
 }
 
 .logo {
@@ -184,13 +184,6 @@ div.ui-grid-c .item:first-child {
     padding: 1em 2.5em;
 }
 
-/*** Search Box ***/
-.ui-footer .ui-input-search {
-    margin: 0 1em;
-    background-color: #ffffff;
-    border-color: #000000;
-    color: #000000;
-}
 /*
 .ui-input-text input, .ui-input-search input {
 background-color: white;
@@ -231,4 +224,32 @@ background-color: white;
     margin-left: 22px;
     text-align: center;
     width: 60px;
+}
+
+/*** Search Page ***/
+#results h2 {
+    margin: 5px 2px;
+}
+
+/*** Search Box ***/
+.ui-footer .ui-controlgroup .ui-input-search {
+    margin: 0 1em;
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000000;
+}
+
+.ui-footer .ui-controlgroup .ui-input-search:hover {
+    background-color: #ffffff;
+}
+/*
+.ui-footer .ui-controlgroup-controls .ui-btn-icon-notext {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+*/
+
+.controlgroup-textinput{
+    padding-top:.22em;
+    padding-bottom:.22em;
 }

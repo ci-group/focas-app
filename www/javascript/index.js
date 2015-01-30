@@ -25,17 +25,17 @@ var App = function () {
         App.prototype.content = [];
         App.prototype.items = null;
         App.prototype.serverUrl = "";
-        
+
         /**
          * This url is used to download content from
          */
         this.serverUrl = "http://mac360.few.vu.nl/focas/download/";
-        
+
         var self = this;
         $.ajaxSetup({async : false});
         $.getJSON("content.json", function (data) {
             self.content = data;
-            
+
             $.each(data.pages,function (id, page) {
                 if (self.items === null) {
                     self.items = page.items;
@@ -45,7 +45,7 @@ var App = function () {
             });
         });
         $.ajaxSetup({async : true});
-        
+
         this.bindEvents();
     };
 
@@ -81,33 +81,38 @@ var App = function () {
             $("body").append(text).enhanceWithin();
         });
         $.ajaxSetup({async : true});
-        
+
         app.bindDownloadOnClick();
-        
-        $("#search").off().on("submit", function (event) {
-            
-//            event.preventDefault();
-            
+
+        $(".search").off().on("submit", function (event) {
+
+            event.preventDefault();
+
             var options = {
-                keys: ['author', 'title'],   // keys to search in
-//                id: 'name'                   // return a list of identifiers only
+                keys: ['author', 'title', 'year'],   // keys to search in
             };
-            
-            
+
+
             var searchTerm = this.search.value;
             var f = new Fuse(app.items, options);
             var result = f.search(searchTerm);
-            
+
             $.ajaxSetup({async : false});
             $.getScript("templates/searchResults.js", function () {
                 var text = template({"items" : result});
                 $("#search-overview div#results").html(text).enhanceWithin();
+                $(".search input").each(function() {
+                    $(this).attr("value", searchTerm);
+                });
+
+                app.bindDownloadOnClick();
+
                 $.mobile.pageContainer.pagecontainer("change", "#search-page");
             });
             $.ajaxSetup({async : true});
         });
     };
-    
+
     this.bindDownloadOnClick = function () {
         $(".video").off().on("click",
             function () {
@@ -149,7 +154,7 @@ var App = function () {
                 });
         });
     };
-    
+
     this.getRealContentHeight = function () {
         var header = $("div[data-role='header']:visible");
         var footer = $("div[data-role='footer']:visible");
