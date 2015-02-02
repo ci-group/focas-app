@@ -4,7 +4,7 @@ try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (Home, pages, undefined) {
+;var locals_for_with = (locals || {});(function (pages, undefined, Home) {
 var jade_indent = [];
 jade_debug.unshift({ lineno: 0, filename: "templates/client/page.jade" });
 jade_debug.unshift({ lineno: 1, filename: "templates/client/page.jade" });
@@ -423,7 +423,7 @@ jade_debug.shift();
 }).call(this);
 
 jade_debug.shift();
-jade_debug.shift();}.call(this,"Home" in locals_for_with?locals_for_with.Home:typeof Home!=="undefined"?Home:undefined,"pages" in locals_for_with?locals_for_with.pages:typeof pages!=="undefined"?pages:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+jade_debug.shift();}.call(this,"pages" in locals_for_with?locals_for_with.pages:typeof pages!=="undefined"?pages:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined,"Home" in locals_for_with?locals_for_with.Home:typeof Home!=="undefined"?Home:undefined));;return buf.join("");
 } catch (err) {
   jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "for page in pages\n    div(data-role=\"page\", data-theme=\"a\", id=page.id, data-title=page.name)\n        include ../includes/header.jade\n        \n        div.header(data-role=\"header\" role=\"banner\" class=page.id)\n            h1= page.name\n        div.main(data-role=\"content\" role=\"main\")\n            div.ui-grid-a\n                div.ui-block-a\n                    div.ui-text.ui-column-left\n                        div.ui-body\n                            !=page.description\n                div.ui-block-b\n                    div.ui-grid-c\n                        for item, index in page.items\n                            div(class=\"item \"+item.type, data-file=item.url data-id=item.id)\n                                h3= item.title\n                                span= item.author + \" | \" + item.year\n        include ../includes/footer.jade\n");
 }

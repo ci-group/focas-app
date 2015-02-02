@@ -70,7 +70,11 @@
       <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-role="link" class="ui-link">About</a></div>
       <div data-role="header" data-add-back-btn="true"><span class="ui-title"></span></div>
       <div data-role="content" data-theme="a" id="pdf-embed" class="main-content">
-        <object id="pdf-object" data="" type="application/pdf"></object>
+        <div>
+          <button id="prev">Previous</button>
+          <button id="next">Next</button>&nbsp; &nbsp;<span>Page:<span id="page_num">10 /</span><span id="page_count">14</span></span>
+        </div>
+        <canvas id="pdf-object"></canvas>
       </div>
       <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
         <div class="ui-grid-a">

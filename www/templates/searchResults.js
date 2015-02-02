@@ -4,7 +4,7 @@ try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (items, undefined) {
+;var locals_for_with = (locals || {});(function (undefined, items) {
 var jade_indent = [];
 jade_debug.unshift({ lineno: 0, filename: "templates/client/searchResults.jade" });
 jade_debug.unshift({ lineno: 1, filename: "templates/client/searchResults.jade" });
@@ -78,7 +78,7 @@ jade_debug.shift();
 }).call(this);
 
 jade_debug.shift();
-jade_debug.shift();}.call(this,"items" in locals_for_with?locals_for_with.items:typeof items!=="undefined"?items:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
+jade_debug.shift();}.call(this,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined,"items" in locals_for_with?locals_for_with.items:typeof items!=="undefined"?items:undefined));;return buf.join("");
 } catch (err) {
   jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "h2 Results\nfor item, index in items\n    div(class=\"item \"+item.type, data-file=item.url data-id=item.id)\n        h3= item.title\n        span= item.author + \" | \" + item.year\n");
 }

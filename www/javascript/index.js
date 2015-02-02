@@ -61,7 +61,7 @@ var App = function () {
         $(document).on("pagecreate", this.activateHeaderAndFooter);
         $(document).on("pagebeforehide", "#video", this.onPageHideVideo);
         $(document).on('pageshow', function () {
-            $('.ui-page-active').height(app.getRealContentHeight());
+//            $('.ui-page-active').height(app.getRealContentHeight());
         });
     };
 
@@ -122,35 +122,20 @@ var App = function () {
                         $.mobile.pageContainer.pagecontainer("change", "#video");
                     },
                     function (error) {
-                        console.log("Error occured during download: " + error);
-                        if ($("#progress-dialog").is(":visible")) {
-                            $("#progress-dialog").on("popupafterclose", function () {
-                                $("#cannot-download-dialog").popup("open");
-                            });
-                            $("#progress-dialog").popup("close");
-                        } else {
-                            $("#cannot-download-dialog").popup("open");
-                        }
+                        utilities.showCouldNotDownloadDialog(error);
                     });
             });
 
         $(".article").off().on("click", function () {
             utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
                 function (file, fileUrl) {
-                    $('pdf-object').attr('data', fileUrl);
-                    $.mobile.pageContainer.pagecontainer("change", "#pdf");
+                    if ($("#progress-dialog").is(":visible")) {
+                        $("#progress-dialog").popup("close");
+                    }
+                    window.open(fileUrl, '_blank', 'toolbarposition=top,location=no,closebuttoncaption=Close');
                 },
                 function (error) {
-                    console.log("Error occured during download: " + error);
-                    $("#cannot-download-dialog").popup("open");
-                    if ($("#progress-dialog").is(":visible")) {
-                        $("#progress-dialog").on("popupafterclose", function () {
-                            $("#cannot-download-dialog").popup("open");
-                        });
-                        $("#progress-dialog").popup("close");
-                    } else {
-                        $("#cannot-download-dialog").popup("open");
-                    }
+                   utilities.showCouldNotDownloadDialog(error);
                 });
         });
     };

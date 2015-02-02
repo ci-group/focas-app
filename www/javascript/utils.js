@@ -36,6 +36,18 @@ var Utilities = function () {
         });
     };
 
+    this.showCouldNotDownloadDialog = function (error) {
+        console.log("Error occured during download: " + error);
+        if ($("#progress-dialog").is(":visible")) {
+            $("#progress-dialog").on("popupafterclose", function () {
+                $("#cannot-download-dialog").popup("open");
+            });
+            $("#progress-dialog").popup("close");
+        } else {
+            $("#cannot-download-dialog").popup("open");
+        }
+    };
+
     /**
      * Show the progress dialog.
      * This assumes a jquery-mobile dialog in the page
@@ -78,12 +90,20 @@ var Utilities = function () {
     this.downloadFile = function (fileName, fileDirectory, onSuccess, onFailure) {
         var fileTransfer = new FileTransfer();
         var uri = encodeURI(app.serverUrl + fileDirectory + fileName);
-        var tempFileUri = encodeURI(cordova.file.tempDirectory + fileName);
-        var progressDialog = this.showProgressDialog();
+        var tempDirectory;
+        if(device.platform === "iOS") {
+            tempDirectory = cordova.file.tempDirectory;
+        }else if(device.platform === "Android") {
+            tempDirectory = cordova.file.cacheDirectory;
+        }
+        var tempFileUri = encodeURI(tempDirectory + fileName);
+
+        this.showProgressDialog();
 
         // On progress update the progress dialog
         fileTransfer.onprogress = function (progressEvent) {
             var goToOptions;
+
             if (progressEvent.lengthComputable) {
                 goToOptions = {
                     limit: Math.round((progressEvent.loaded / progressEvent.total) * 100)

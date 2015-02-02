@@ -232,24 +232,12 @@ background-color: white;
 }
 
 /*** Search Box ***/
-.ui-footer .ui-controlgroup .ui-input-search {
+.ui-footer .ui-input-search {
     margin: 0 1em;
     background-color: #ffffff;
     border-color: #000000;
     color: #000000;
 }
-
-.ui-footer .ui-controlgroup .ui-input-search:hover {
-    background-color: #ffffff;
-}
-/*
-.ui-footer .ui-controlgroup-controls .ui-btn-icon-notext {
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
-}
-*/
-
-.controlgroup-textinput{
-    padding-top:.22em;
-    padding-bottom:.22em;
+.ui-footer form {
+    margin: 0;
 }

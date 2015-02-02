@@ -23,15 +23,22 @@
 
     <preference name="orientation" value="landscape" />
     <preference name="target-device" value="tablet" />
+
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
-    
+
     <preference name="BackupWebStorage" value="local" /> <!-- do not backup to iCloud -->
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
 
     <platform name="android">
         <plugin name="File" value="org.apache.cordova.FileUtils" />
         <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
     </platform>
+
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
 
     <platform name="ios">
         <plugin name="File" value="CDVFile" />
