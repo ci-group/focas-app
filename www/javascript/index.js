@@ -18,7 +18,7 @@
  */
 
 /*jslint browser:true */
-/*global  $, utilities, template, Fuse*/
+/*global  $, utilities, template, Fuse, device */
 var App = function () {
     // Application Constructor
     this.initialize = function () {
@@ -57,12 +57,7 @@ var App = function () {
      */
     this.bindEvents = function () {
         $(document).on("pagecreate", "#main-page", this.onPageCreateMain);
-        $(document).on("pagecreate", this.onPageCreate);
-        $(document).on("pagecreate", this.activateHeaderAndFooter);
         $(document).on("pagebeforehide", "#video", this.onPageHideVideo);
-        $(document).on('pageshow', function () {
-//            $('.ui-page-active').height(app.getRealContentHeight());
-        });
     };
 
     /**
@@ -132,36 +127,16 @@ var App = function () {
                     if ($("#progress-dialog").is(":visible")) {
                         $("#progress-dialog").popup("close");
                     }
-                    window.open(fileUrl, '_blank', 'toolbarposition=top,location=no,closebuttoncaption=Close');
+                    if(device.platform === "iOS") {
+                        window.open(fileUrl, '_blank', 'toolbarposition=top,location=no,closebuttoncaption=Close');
+                    }else if(device.platform === "Android") {
+                        window.plugins.fileOpener.open(fileUrl);
+                    }
                 },
                 function (error) {
                    utilities.showCouldNotDownloadDialog(error);
                 });
         });
-    };
-
-    this.getRealContentHeight = function () {
-        var header = $("div[data-role='header']:visible");
-        var footer = $("div[data-role='footer']:visible");
-        var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
-        var viewport_height = $(window).height();
-
-        var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
-        if (header.hasClass("ui-header-fixed")) {
-            content_height += 1;
-        }
-        if (footer.hasClass("ui-footer-fixed")) {
-            content_height += 1;
-        }
-        if ((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
-            content_height -= (content.outerHeight() - content.height());
-        }
-        return content_height;
-    };
-
-
-    this.onPageCreate = function () {
-
     };
 
     /**

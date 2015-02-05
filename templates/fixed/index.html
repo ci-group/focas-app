@@ -14,26 +14,24 @@
   </head>
   <body data-theme="a">
     <div data-role="page" data-theme="a" id="main-page">
-      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-role="link" class="ui-link">About</a></div>
+      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-corners="false" data-iconpos="notext" data-theme="a" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-mini="true">About</a></div>
       <div role="main" data-role="content" data-form="ui-page-theme-a" class="ui-main main-content">
-        <div class="header">
-          <div class="ui-grid-a">
-            <div class="ui-block-a">
-              <div class="ui-text ui-column-left">
-                <div class="logo"><img src="images/focas-web-logo.png"/></div>
-                <div class="ui-body ui-body-a">
-                  <h2>Preface</h2>
-                  <p>This App is a collective adaptive textbook on Collective Adaptive Systems. It is collective, because it is based on the contributions of a group of experts. It is adaptive, because its contents are not finalized, but are continually extended and adjusted. In Section X you can find information on how you can become a contributor.</p></p>
-                  <p>Why then, is this a textbook? Although the form of this App is unconventional for a textbook, its function is the usual one: it provides an introduction to a scientific / technical field called Collective Adaptive Systems (CAS). The target audience includes students, PhD students and researchers in all areas that are concerned with some aspects of CAS. Inherently to the novel form, this textbook is not finalized because it is constantly evolving.</p>
-                  <p>This App offers contents of various types and levels. Content types include scientific publications, presentations, tutorials, videos, interactive demo software, and links to miscellaneous external material, such as books or relevant websites. Importantly, the whole content of the App is not loaded immediately, but is retrieved from the Internet as you go. This ensures that local copies do not become unnecessarily big, but it implies that an Internet connection is necessary for optimal usage.</p>
-                  <div data-file="focas-promo-film.mp4" data-id="focas-promo-film" class="item video">
-                    <h3>Focas Promotional Film</h3>
-                  </div>
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <div class="ui-text ui-column-left">
+              <div class="logo"><img src="images/focas-web-logo.png"/></div>
+              <div class="ui-body ui-body-a">
+                <h2>Preface</h2>
+                <p>This App is a collective adaptive textbook on Collective Adaptive Systems. It is collective, because it is based on the contributions of a group of experts. It is adaptive, because its contents are not finalized, but are continually extended and adjusted. In Section X you can find information on how you can become a contributor.</p>
+                <p>Why then, is this a textbook? Although the form of this App is unconventional for a textbook, its function is the usual one: it provides an introduction to a scientific / technical field called Collective Adaptive Systems (CAS). The target audience includes students, PhD students and researchers in all areas that are concerned with some aspects of CAS. Inherently to the novel form, this textbook is not finalized because it is constantly evolving.</p>
+                <p>This App offers contents of various types and levels. Content types include scientific publications, presentations, tutorials, videos, interactive demo software, and links to miscellaneous external material, such as books or relevant websites. Importantly, the whole content of the App is not loaded immediately, but is retrieved from the Internet as you go. This ensures that local copies do not become unnecessarily big, but it implies that an Internet connection is necessary for optimal usage.</p>
+                <div data-file="focas-promo-film.mp4" data-id="focas-promo-film" class="item video">
+                  <h3>Focas Promotional Film</h3>
                 </div>
               </div>
             </div>
-            <div id="navigation" class="ui-block-b"></div>
           </div>
+          <div id="navigation" class="ui-block-b"></div>
         </div>
       </div>
       <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -44,11 +42,11 @@
             </form>
           </div>
         </div>
-        <div class="ui-block-b"></div>
+        <div class="ui-block-b"></div><a href="#glossary" data-role="button" data-icon="arrow-u" data-transition="slideup" data-rel="popup" class="ui-btn-right">Glossary</a>
       </div>
     </div>
     <div data-role="page" data-theme="a" id="search-page">
-      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-role="link" class="ui-link">About</a></div>
+      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-corners="false" data-iconpos="notext" data-theme="a" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-mini="true">About</a></div>
       <div data-role="content" data-theme="a" id="search-overview" class="ui-text">
         <form name="search-form" method="get" data-ajax="false" class="search">
           <input type="search" name="search" id="search-search" value="" placeholder="Search..."/>
@@ -63,11 +61,11 @@
             </form>
           </div>
         </div>
-        <div class="ui-block-b"></div>
+        <div class="ui-block-b"></div><a href="#glossary" data-role="button" data-icon="arrow-u" data-transition="slideup" data-rel="popup" class="ui-btn-right">Glossary</a>
       </div>
     </div>
     <div data-role="page" data-theme="a" id="pdf">
-      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-role="link" class="ui-link">About</a></div>
+      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-corners="false" data-iconpos="notext" data-theme="a" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-mini="true">About</a></div>
       <div data-role="header" data-add-back-btn="true"><span class="ui-title"></span></div>
       <div data-role="content" data-theme="a" id="pdf-embed" class="main-content">
         <div>
@@ -84,11 +82,11 @@
             </form>
           </div>
         </div>
-        <div class="ui-block-b"></div>
+        <div class="ui-block-b"></div><a href="#glossary" data-role="button" data-icon="arrow-u" data-transition="slideup" data-rel="popup" class="ui-btn-right">Glossary</a>
       </div>
     </div>
     <div data-role="page" data-theme="a" id="video">
-      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-role="button" data-corners="false" data-iconpos="notext" data-theme="a" data-inline="true" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-role="link" class="ui-link">About</a></div>
+      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-corners="false" data-iconpos="notext" data-theme="a" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-mini="true">About</a></div>
       <div data-role="header" data-add-back-btn="true"><span class="ui-title"></span></div>
       <div data-role="content" data-theme="a" id="video-embed"></div>
       <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -99,8 +97,73 @@
             </form>
           </div>
         </div>
-        <div class="ui-block-b"></div>
+        <div class="ui-block-b"></div><a href="#glossary" data-role="button" data-icon="arrow-u" data-transition="slideup" data-rel="popup" class="ui-btn-right">Glossary</a>
       </div>
+    </div>
+    <div data-role="page" data-theme="a" id="about">
+      <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a"><a href="#main-page" data-corners="false" data-iconpos="notext" data-theme="a" data-icon="home" title="Home" class="ui-nodisc-icon"><span class="ui-btn-text"></span></a><span class="ui-title"></span><a href="#about" data-mini="true">About</a></div>
+      <div data-role="content" data-theme="a" id="about" class="ui-text">
+        <div class="ui-body">
+          <h2>About</h2>
+          <p><i>The textbook of the future: a free, evolving, searchable and accessible collection of curated material about Collective Adaptive Systems at your fingertips.</i></p>
+          <p>The FoCAS app is a knowledge base about Collective Adaptive Systems (CAS). What is a CAS? Is a colony of bees a CAS? Is the internet a CAS? How can you build a CAS from a bunch of robots? Can a CAS learn? Are they dangerous? What can I do with them? The app answers these and many other questions through a collection of papers, movies, presentations, demos, tutorials and references.</p>
+          <p>Whether you’re a student looking for a definition, a researcher trying to widen your understanding of CAS research or just want to know a bit more about CASs, the material in the app will help you find out what you need.</p>
+          <p>This app allows you to have material ranging from introductory descriptions to cutting edge research papers available anytime, anywhere.</p>
+          <label>Features:</label>
+          <ul>
+            <li>It’s free!</li>
+            <li>Searchable</li>
+            <li>Material curated by experts</li>
+            <li>Content regularly updated</li>
+            <li>Includes demos, tutorials, videos, etc.</li>
+          </ul>
+        </div>
+      </div>
+      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+        <div class="ui-grid-a">
+          <div class="ui-block-a ui-alt-icon">
+            <form name="search-form" method="get" data-ajax="false" class="search">
+              <input type="search" name="search" value="" placeholder="Search..." class="search-basic"/>
+            </form>
+          </div>
+        </div>
+        <div class="ui-block-b"></div><a href="#glossary" data-role="button" data-icon="arrow-u" data-transition="slideup" data-rel="popup" class="ui-btn-right">Glossary</a>
+      </div>
+    </div>
+    <div data-role="popup" id="glossary" data-theme="a" class="ui-content">
+      <form class="ui-filterable">
+        <input data-type="search" id="glossary-search"/>
+      </form>
+      <table data-filter="true" data-input="#glossary-search" class="ui-responsive">
+        <thead>
+          <tr>
+            <th data-priority="persist"></th>
+            <th data-priority="none"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cyber-physical systems</td>
+            <td>A system of collaborating computational elements controlling physical entities.</td>
+          </tr>
+          <tr>
+            <td>Collective robotics</td>
+            <td>Systems in which many robots work as one team, group or swarm to achieve a common goal or global behaviour</td>
+          </tr>
+          <tr>
+            <td>Autonomic computing systems</td>
+            <td>Computing systems that are able to manage themselves autonomously according to an administrator’s goal.</td>
+          </tr>
+          <tr>
+            <td>Smart City</td>
+            <td>An urban environment characterised by a set of information and communication technology infrastructures enabling efficient usage of shared resources and advanced services to individuals and communities.</td>
+          </tr>
+          <tr>
+            <td>Socio-technical systems</td>
+            <td>Large-scale, technology-intensive distributed systems involving collectives of heterogeneous (human and machine) elements, characterized by a deep integration of technological and social aspects.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div data-role="popup" id="progress-dialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" class="dialog-popup">
       <div data-role="header" data-theme="b">

@@ -36,10 +36,6 @@
         <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
     </platform>
 
-    <feature name="StatusBar">
-        <param name="ios-package" value="CDVStatusBar" onload="true" />
-    </feature>
-
     <platform name="ios">
         <plugin name="File" value="CDVFile" />
         <plugin name="FileTransfer" value="CDVFileTransfer" />

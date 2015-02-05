@@ -27,7 +27,7 @@ jade_debug.unshift({ lineno: 4, filename: "templates/client/navigation.jade" });
 buf.push("\n    <li>");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.unshift({ lineno: 5, filename: "templates/client/navigation.jade" });
-buf.push("<a" + (jade.attr("href", "#"+category.id, true, false)) + " data-role=\"link\"" + (jade.cls(["color-"+index], [true])) + ">" + (jade.escape(null == (jade_interp = category.name) ? "" : jade_interp)));
+buf.push("<a" + (jade.attr("href", "#"+category.id, true, false)) + " data-role=\"link\"" + (jade.cls(["color-"+category.color], [true])) + ">" + (jade.escape(null == (jade_interp = category.name) ? "" : jade_interp)));
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.shift();
 buf.push("</a>");
@@ -48,7 +48,7 @@ jade_debug.unshift({ lineno: 4, filename: "templates/client/navigation.jade" });
 buf.push("\n    <li>");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.unshift({ lineno: 5, filename: "templates/client/navigation.jade" });
-buf.push("<a" + (jade.attr("href", "#"+category.id, true, false)) + " data-role=\"link\"" + (jade.cls(["color-"+index], [true])) + ">" + (jade.escape(null == (jade_interp = category.name) ? "" : jade_interp)));
+buf.push("<a" + (jade.attr("href", "#"+category.id, true, false)) + " data-role=\"link\"" + (jade.cls(["color-"+category.color], [true])) + ">" + (jade.escape(null == (jade_interp = category.name) ? "" : jade_interp)));
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.shift();
 buf.push("</a>");
@@ -71,6 +71,6 @@ buf.push("\n</div>");
 jade_debug.shift();
 jade_debug.shift();}.call(this,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined,"categories" in locals_for_with?locals_for_with.categories:typeof categories!=="undefined"?categories:undefined));;return buf.join("");
 } catch (err) {
-  jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "div.ui-column-right\n    ul(data-role=\"listview\")\n        for category, index in categories\n            li\n                a(class=\"color-\"+index, href=\"#\"+category.id, data-role=\"link\")= category.name\n");
+  jade.rethrow(err, jade_debug[0].filename, jade_debug[0].lineno, "div.ui-column-right\n    ul(data-role=\"listview\")\n        for category, index in categories\n            li\n                a(class=\"color-\"+category.color, href=\"#\"+category.id, data-role=\"link\")= category.name\n");
 }
 }

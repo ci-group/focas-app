@@ -1,5 +1,5 @@
 /*jslint browser:true, vars:true, plusplus: true, nomen: true */
-/*global  $, app, cordova, FileTransfer, template, LocalFileSystem */
+/*global  $, app, cordova, FileTransfer, template, device */
 
 var Utilities = function () {
     var downloadInProgress = false;
@@ -25,7 +25,6 @@ var Utilities = function () {
         $.getScript("templates/video.js", function () {
             var text = template({
                 "item": {
-                    "type": "video",
                     "name": file,
                     "url": fileUrl,
                     "id": file
@@ -87,7 +86,7 @@ var Utilities = function () {
      * @param onSuccess - Callback for success
      * @param onFailure - Callback for failure
      */
-    this.downloadFile = function (fileName, fileDirectory, onSuccess, onFailure) {
+    this.downloadFile = function (fileName, fileDirectory, parentDirectory, onSuccess, onFailure) {
         var fileTransfer = new FileTransfer();
         var uri = encodeURI(app.serverUrl + fileDirectory + fileName);
         var tempDirectory;
@@ -124,18 +123,15 @@ var Utilities = function () {
         fileTransfer.download(uri,
             tempFileUri,
             function (entry) {
-                console.log("download complete: " + entry.fullPath);
+                console.log("download complete: " + entry.toNativeURL());
 
                 Utilities.progressCircle.stop();
                 downloadInProgress = false;
 
-                // cordova.file.dataDirectory points to permanent storage
-                // that does not get synced with the cloud on iOS
-                var parentDir = cordova.file.dataDirectory;
-                window.resolveLocalFileSystemURL(parentDir, function (parentDirEntry) {
+                window.resolveLocalFileSystemURL(parentDirectory, function (parentDirEntry) {
                     parentDirEntry.getDirectory(fileDirectory, {create: true}, function (dirEntry) {
                         entry.moveTo(dirEntry, fileName, function (fileEntry) {
-                            onSuccess(fileName, fileEntry.nativeURL);
+                            onSuccess(fileName, fileEntry.toNativeURL());
                         }, onFailure);
                     }, onFailure);
                 },
@@ -174,10 +170,20 @@ var Utilities = function () {
             // prevent all instances of double downloads
             return;
         }
-        // cordova.file.dataDirectory points to permanent storage
-        // that does not get synced with the cloud on iOS
-        var fileDirectory = cordova.file.dataDirectory + directory;
-        var fileUrl = fileDirectory + file;
+        var parentDirectory;
+        if(device.platform === "iOS") {
+            // cordova.file.dataDirectory points to permanent storage
+            // that does not get synced with the cloud on iOS
+            parentDirectory= cordova.file.dataDirectory;
+        }else if(device.platform === "Android") {
+            // cordova.file.externalDataDirectory points to
+            // permanent storage on the SD-card or large internal memory
+            // that is accessible for other applications (needed to read
+            // pdf's on android
+            parentDirectory = cordova.file.externalDataDirectory;
+        }
+
+        var fileUrl = parentDirectory + directory + file;
         this.UrlExists(
             fileUrl,
             function() {
@@ -186,7 +192,7 @@ var Utilities = function () {
             function () {
                 downloadInProgress = true;
 
-                utilities.downloadFile(file, directory, onSuccess, onFailure);
+                utilities.downloadFile(file, directory, parentDirectory, onSuccess, onFailure);
             });
     };
 };
