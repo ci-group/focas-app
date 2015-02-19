@@ -1,5 +1,12 @@
 div(data-role="header", data-id="header",data-position="fixed", data-tap-toggle="false", data-theme="a")
-    a(href="#main-page", data-corners="false",  data-iconpos="notext", data-theme="a", data-icon="home", title="Home", class="ui-nodisc-icon")
-        span.ui-btn-text= Home
+    div(data-role="controlgroup", data-type="horizontal",  class="ui-mini ui-btn-left")
+        a(href="", data-role="button", data-corners="false", data-icon="back", data-rel="back", data-direction="reverse", data-mini="true", title="Back", class="ui-nodisc-icon") Back
+        a(href="#main-page", data-role="button", data-corners="false", data-icon="home", title="Home", data-mini="true", class="ui-nodisc-icon") Home
+        a(href="#about", data-role="button", data-corners="false", data-icon="info", data-mini="true", title="About", class="ui-nodisc-icon") About
+        a(href="#glossary", data-role="button", data-transition="slideup" data-rel="popup", data-corners="false", data-icon="tag", data-mini="true", title="Glossary", class="ui-nodisc-icon", data-position-to=".ui-page-active .ui-footer") Glossary
     span.ui-title
-    a(href="#about", data-mini="true") About
+    div(data-role="controlgroup", data-type="horizontal",  class="ui-mini ui-btn-right")
+        form(name="search-form", method="get", class="search", data-ajax="false")
+            input(type="search", name="search", id="search-search", value="", placeholder="Search...", data-wrapper-class="controlgroup-textinput ui-btn")
+            a(href="", data-corners="false", data-role="button", data-iconpos="notext", data-icon="search", title="Search", class="ui-nodisc-icon header-search-button")
+                span.ui-btn-text= Search

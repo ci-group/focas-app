@@ -21,25 +21,125 @@
                     "title": "Hierarchical group dynamics in pigeon flocks",
                     "type": "article",
                     "url": "HierarchyPigeons_NatureLetters.pdf",
-                    "name": "HierarchyPigeons_NatureLetters.pdf",
+                    "name": "HierarchyPigeons_NatureLetters",
                     "year": "2010",
-                    "author": "Nagy et al."
+                    "author": "Nagy et al.",
+                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
+                    "image": "Pigeon.jpg",
+                    "featured": "true"
                 },
                 {
                     "title": "Simulating dynamical features of escape panic",
                     "type": "article",
                     "url": "EscapePanic_LettersToNature.pdf",
-                    "name": "EscapePanic_LettersToNature.pdf",
+                    "name": "EscapePanic_LettersToNature",
                     "year": "2000",
-                    "author": "Helbing et al."
+                    "author": "Helbing et al.",
+                    "description": "",
+                    "image": ""
                 },
                 {
                     "title": "The Genetic Evolution of Social Behavior",
                     "type": "article",
                     "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
                     "year": "1964",
-                    "author": "Hamilton"
+                    "author": "Hamilton",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "Hierarchical group dynamics in pigeon flocks",
+                    "type": "article",
+                    "url": "HierarchyPigeons_NatureLetters.pdf",
+                    "name": "HierarchyPigeons_NatureLetters",
+                    "year": "2010",
+                    "author": "Nagy et al.",
+                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
+                    "image": "Pigeon.jpg",
+                    "featured": "true"
+                },
+                {
+                    "title": "Simulating dynamical features of escape panic",
+                    "type": "article",
+                    "url": "EscapePanic_LettersToNature.pdf",
+                    "name": "EscapePanic_LettersToNature",
+                    "year": "2000",
+                    "author": "Helbing et al.",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "The Genetic Evolution of Social Behavior",
+                    "type": "article",
+                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
+                    "year": "1964",
+                    "author": "Hamilton",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "Hierarchical group dynamics in pigeon flocks",
+                    "type": "article",
+                    "url": "HierarchyPigeons_NatureLetters.pdf",
+                    "name": "HierarchyPigeons_NatureLetters",
+                    "year": "2010",
+                    "author": "Nagy et al.",
+                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
+                    "image": "Pigeon.jpg",
+                    "featured": "true"
+                },
+                {
+                    "title": "Simulating dynamical features of escape panic",
+                    "type": "article",
+                    "url": "EscapePanic_LettersToNature.pdf",
+                    "name": "EscapePanic_LettersToNature",
+                    "year": "2000",
+                    "author": "Helbing et al.",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "The Genetic Evolution of Social Behavior",
+                    "type": "article",
+                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
+                    "year": "1964",
+                    "author": "Hamilton",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "Hierarchical group dynamics in pigeon flocks",
+                    "type": "article",
+                    "url": "HierarchyPigeons_NatureLetters.pdf",
+                    "name": "HierarchyPigeons_NatureLetters",
+                    "year": "2010",
+                    "author": "Nagy et al.",
+                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
+                    "image": "Pigeon.jpg",
+                    "featured": "true"
+                },
+                {
+                    "title": "Simulating dynamical features of escape panic",
+                    "type": "article",
+                    "url": "EscapePanic_LettersToNature.pdf",
+                    "name": "EscapePanic_LettersToNature",
+                    "year": "2000",
+                    "author": "Helbing et al.",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "The Genetic Evolution of Social Behavior",
+                    "type": "article",
+                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
+                    "year": "1964",
+                    "author": "Hamilton",
+                    "description": "",
+                    "image": ""
                 }
             ]
         },
