@@ -18,7 +18,7 @@
  */
 
 /*jslint browser:true */
-/*global  $, utilities, template, Fuse, device */
+/*global  $, utilities, template, Fuse, device, cordova */
 var App = function () {
     // Application Constructor
     this.initialize = function () {
@@ -88,12 +88,18 @@ var App = function () {
             }
         });
 
-        $(".item").off().on("click",function() {
+        $(".item-container").off().on("click",function() {
             var id = $(this).attr("data-id");
-            $(".description-active").removeClass("description-active").hide();
-            $(".arrow-active").removeClass("arrow-active").hide();
-            $("#description-"+id).show().addClass("description-active");
-            $("#button-"+id+" div.arrow-left").show().addClass("arrow-active");
+            if ($("#description-"+id).is(":visible")){
+                $(".ui-page-active .description-active").removeClass("description-active").hide();
+                $(".ui-page-active .item-container.item-active").removeClass("item-active");
+                $(".ui-page-active .page-description").show().addClass("description-active");
+            } else {
+                $(".ui-page-active .description-active").removeClass("description-active").hide();
+                $(".ui-page-active .item-container.item-active").removeClass("item-active");
+                $("#description-"+id).show().addClass("description-active");
+                $("#button-"+id).addClass("item-active");
+            }
         });
 
         $(".search").off().on("submit", function (event) {
@@ -128,28 +134,28 @@ var App = function () {
     };
 
     this.bindDownloadOnClick = function () {
-        $(".video").off().on("click",
-            function () {
-                var type = $(this).attr('data-type');
-                if(type === "local") {
-                    var file = $(this).attr('data-file'),
-                        fileUrl = "content/video/"+file;
+        $(document).on("click", ".video-opener", function () {
+            var type = $(this).attr('data-type');
+            var poster = $(this).attr('data-poster');
+            if(device.platform === "iOS"  && type === "local") {
+                var file = $(this).attr('data-file');
+                var fileUrl = "content/video/"+file;
 
-                    utilities.embedVideo(file, fileUrl);
-                    $.mobile.pageContainer.pagecontainer("change", "#video");
-                } else {
-                    utilities.checkAndDownload($(this).attr('data-file'), "video/",
-                        function (file, fileUrl) {
-                            utilities.embedVideo(file, fileUrl);
-                            $.mobile.pageContainer.pagecontainer("change", "#video");
-                        },
-                        function (error) {
-                            utilities.showCouldNotDownloadDialog(error);
-                        });
-                }
-            });
+                utilities.embedVideo(file, fileUrl, poster);
+                $.mobile.pageContainer.pagecontainer("change", "#video");
+            } else {
+                utilities.checkAndDownload($(this).attr('data-file'), "video/",
+                    function (file, fileUrl) {
+                        utilities.embedVideo(file, fileUrl, poster);
+                        $.mobile.pageContainer.pagecontainer("change", "#video");
+                    },
+                    function (error) {
+                        utilities.showCouldNotDownloadDialog(error);
+                    });
+            }
+        });
 
-        $(document).on("click", ".article", function () {
+        $(document).on("click", ".article-opener", function () {
             utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
                 function (file, fileUrl) {
                     if ($("#progress-dialog").is(":visible")) {
@@ -164,6 +170,17 @@ var App = function () {
                 function (error) {
                    utilities.showCouldNotDownloadDialog(error);
                 });
+        });
+
+        $(document).on("click", ".link-opener", function () {
+            var url = $(this).attr('data-file');
+            if(device.platform === "iOS") {
+                window.open(url, '_system');
+            }else if(device.platform === "Android") {
+                window.plugins.fileOpener.open(url);
+            }else if(device.platform === "browser") {
+                window.open(url, '_blank');
+            }
         });
     };
 
@@ -204,13 +221,15 @@ var App = function () {
     };
 
     this.onPageShow = function () {
-        $('.ui-main').height(app.getRealContentHeight());
-
-        var activePage = $.mobile.activePage.attr("id");
-        if(activePage === "main-page"){
-            $(".ui-page-active .ui-header a[data-rel='back']").css("display","none");
+        var activePageId = $.mobile.activePage.attr("id");
+        var activePageMain = $("#"+activePageId+" .ui-main");
+        if(!activePageMain.attr("style")) {
+            activePageMain.height(app.getRealContentHeight());
+        }
+        if(activePageId === "main-page"){
+            $.mobile.activePage.find(".ui-header a[data-rel='back']").css("display","none");
         }else{
-            $(".ui-page-active .ui-header a[data-rel='back']").css("display","inline-block");
+            $.mobile.activePage.find(".ui-header a[data-rel='back']").css("display","inline-block");
         }
     };
 };

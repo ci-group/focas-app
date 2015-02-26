@@ -1,10 +1,10 @@
 for page in pages
-    div(data-role="page", data-theme="a", id=page.id, data-title=page.name)
+    div(class="background-"+page.color data-role="page", data-theme="a", id=page.id, data-title=page.name)
         include ../includes/header.jade
 
         div.header(data-role="header" role="banner" class=page.id+" color-"+page.color)
             h1= page.name
-        div(class="ui-main background-"+page.color data-role="content" role="main")
+        div(class="ui-main" data-role="content" role="main")
             div.ui-grid-e
                 div.ui-block-a
                     div.ui-text.ui-column-left
@@ -18,7 +18,7 @@ for page in pages
                                         div(class="description-image")
                                             img(src="content/images/"+item.image)
                                     p= item.description
-                                    div(class="item "+item.type, data-file=item.url data-id=item.name)
+                                    div(class="item "+item.type+"-opener", data-file=item.url data-id=item.name, data-poster=item.image)
                                         h3 Open
                 div(class="ui-block-b")
                     div.ui-grid-c
@@ -26,9 +26,8 @@ for page in pages
                             - var featured = ""
                             if item.featured
                                 - featured = "featured"
-                            div(class="item-container "+featured, id="button-"+item.name)
-                                div(class="item "+featured, data-id=item.name)
+                            div(class="item-container "+featured+" icon-right "+item.type, data-id=item.name, id="button-"+item.name)
+                                div(class="item "+featured)
                                     h3= item.title
                                     span= item.author + " | " + item.year
-                                div.arrow-left
         include ../includes/footer.jade

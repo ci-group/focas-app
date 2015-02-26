@@ -29,8 +29,8 @@
               <div class="logo"><img src="images/focas-web-logo.png"/></div>
               <div class="ui-body ui-body-a">
                 <h2>Preface</h2>
-                <div data-file="focas-promo-film.mp4" data-id="focas-promo-film" data-type="local" class="item frontpage video">
-                  <h3>Focas Promotional Film</h3><img src="content/video/focas-promo-film.jpg"/>
+                <div data-file="focas-promo-film.mp4" data-id="focas-promo-film" data-poster="focas-promo-film.jpg" data-type="local" class="item frontpage video-opener">
+                  <h3>Focas Promotional Film</h3><img src="content/images/focas-promo-film.jpg"/>
                 </div>
                 <p>This App is a collective adaptive textbook on Collective Adaptive Systems. It is collective, because it is based on the contributions of a group of experts. It is adaptive, because its contents are not finalized, but are continually extended and adjusted. In Section X you can find information on how you can become a contributor.</p>
                 <p>Why then, is this a textbook? Although the form of this App is unconventional for a textbook, its function is the usual one: it provides an introduction to a scientific / technical field called Collective Adaptive Systems (CAS). The target audience includes students, PhD students and researchers in all areas that are concerned with some aspects of CAS. Inherently to the novel form, this textbook is not finalized because it is constantly evolving.</p>
@@ -41,7 +41,9 @@
           <div id="navigation" class="ui-block-b"></div>
         </div>
       </div>
-      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a"></div>
+      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+        <p>FoCAS is a Future and Emerging Technologies Proactive Initiative, funded by the European Commission under FP7</p>
+      </div>
     </div>
     <div data-role="page" data-theme="a" id="search-page">
       <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -52,13 +54,15 @@
           </form>
         </div>
       </div>
-      <div data-role="content" data-theme="a" id="search-overview" class="ui-text">
+      <div data-role="content" data-theme="a" id="search-overview" class="ui-main ui-text">
         <form name="search-form" method="get" data-ajax="false" class="search">
           <input type="search" name="search" id="search-search" value="" placeholder="Search..."/>
         </form>
         <div id="results" class="ui-body"></div>
       </div>
-      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a"></div>
+      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+        <p>FoCAS is a Future and Emerging Technologies Proactive Initiative, funded by the European Commission under FP7</p>
+      </div>
     </div>
     <div data-role="page" data-theme="a" id="video">
       <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -69,8 +73,10 @@
           </form>
         </div>
       </div>
-      <div data-role="content" data-theme="a" id="video-embed"></div>
-      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a"></div>
+      <div data-role="content" data-theme="a" id="video-embed" class="ui-main"></div>
+      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+        <p>FoCAS is a Future and Emerging Technologies Proactive Initiative, funded by the European Commission under FP7</p>
+      </div>
     </div>
     <div data-role="page" data-theme="a" id="about">
       <div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false" data-theme="a">
@@ -81,24 +87,31 @@
           </form>
         </div>
       </div>
-      <div data-role="content" data-theme="a" id="about" class="ui-text">
+      <div data-role="content" data-theme="a" id="about" class="ui-text ui-main background-main">
         <div class="ui-body">
           <h2>About</h2>
           <p><i>The textbook of the future: a free, evolving, searchable and accessible collection of curated material about Collective Adaptive Systems at your fingertips.</i></p>
           <p>The FoCAS app is a knowledge base about Collective Adaptive Systems (CAS). What is a CAS? Is a colony of bees a CAS? Is the internet a CAS? How can you build a CAS from a bunch of robots? Can a CAS learn? Are they dangerous? What can I do with them? The app answers these and many other questions through a collection of papers, movies, presentations, demos, tutorials and references.</p>
           <p>Whether you’re a student looking for a definition, a researcher trying to widen your understanding of CAS research or just want to know a bit more about CASs, the material in the app will help you find out what you need.</p>
           <p>This app allows you to have material ranging from introductory descriptions to cutting edge research papers available anytime, anywhere.</p>
-          <label>Features:</label>
-          <ul>
-            <li>It’s free!</li>
-            <li>Searchable</li>
-            <li>Material curated by experts</li>
-            <li>Content regularly updated</li>
-            <li>Includes demos, tutorials, videos, etc.</li>
-          </ul>
+          <div class="ui-dark-background">
+            <label>Features:</label>
+            <ul>
+              <li>It’s free!</li>
+              <li>Searchable</li>
+              <li>Material curated by experts</li>
+              <li>Content regularly updated</li>
+              <li>Includes demos, tutorials, videos, etc.</li>
+            </ul>
+          </div>
+          <h2>Acknowledgements</h2>
+          <p>The following icons were taken from<a href="http://thenounproject.com" target="_blank">the noun project</a></p>
+          <div class="ui-dark-background acknowledgements"><a href="http://thenounproject.com/term/document/5870/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/pdf.png"/>Jamison Wieser</a><a href="http://thenounproject.com/term/film/7147/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/movie.png"/>Márcio Duarte</a><a href="http://thenounproject.com/term/external-link/45762/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/link.png"/>useiconic.com</a></div>
         </div>
       </div>
-      <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a"></div>
+    </div>
+    <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+      <p>FoCAS is a Future and Emerging Technologies Proactive Initiative, funded by the European Commission under FP7</p>
     </div>
     <div data-role="popup" id="glossary" data-theme="a" class="ui-content"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
       <form class="ui-filterable">

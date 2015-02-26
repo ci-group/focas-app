@@ -18,6 +18,7 @@ h2 {
     text-transform: uppercase;
     font-weight: normal;
     display: inline-block;
+    text-align: left;
 }
 div p:first-child {
     margin-top: 0;
@@ -69,12 +70,20 @@ p {
 .item.frontpage {
     padding: 0px;
     float: right;
-    width: 230px;
-    height: 230px;
-    margin: 58px 0px 0px 10px;
+    width: 200px;
+    height: 200px;
+    margin: 56px 10px 0px 10px;
+}
+.item.frontpage img {
+    width: 200px;
+    height: 145px;
 }
 
 /*** Main structure layout ***/
+div.ui-dark-background {
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+}
 .ui-text .ui-body {
     font-size: small;
     font-weight: lighter;
@@ -104,6 +113,10 @@ p {
 .ui-header .ui-btn-icon-notext {
     height: 1.35em;
 }
+.ui-header .controlgroup-textinput{
+    padding-top:.22em;
+    padding-bottom:.22em;
+}
 .ui-page .ui-header h1.ui-title {
     font-size: 3em;
     margin: 0;
@@ -115,9 +128,9 @@ p {
 .ui-footer .ui-grid-a {
     padding: 8px;
 }
-.ui-header .controlgroup-textinput{
-    padding-top:.22em;
-    padding-bottom:.22em;
+.ui-footer p {
+    text-align: right;
+    font-size: 0.5em;
 }
 
 /*** Page themes ***/
@@ -160,11 +173,44 @@ p {
 
 .background-main {
     background-image: url('../images/breakfast.jpg');
+    background-size: cover;
 }
 .background-0 {
     background-image: url('../images/locust-swarm.jpg');
+    background-size: cover;
 }
-
+.background-1 {
+    background-image: url('../images/control.jpg');
+    background-size: cover;
+}
+.background-2 {
+    background-image: url('../images/justice.jpg');
+    background-size: cover;
+}
+.background-3 {
+    background-image: url('../images/evolution.JPG');
+    background-size: cover;
+}
+.background-4 {
+    background-image: url('../images/ants.jpg');
+    background-size: cover;
+}
+.background-5 {
+    background-image: url('../images/globe.jpg');
+    background-size: cover;
+}
+.background-6 {
+    background-image: url('../images/fish.jpg');
+    background-size: cover;
+}
+.background-7 {
+    background-image: url('../images/human.jpg');
+    background-size: cover;
+}
+.background-8 {
+    background-image: url('../images/turtle.jpg');
+    background-size: cover;
+}
 
 /*** Item Lists ***/
 .item {
@@ -172,52 +218,110 @@ p {
     margin: 8px 0px 12px 0px;
     padding: 16px;
     color: #333;
-    width: 90%;
-    float: right;
     background-color: white;
+    clear: both;
 }
-.item-container .item {
+.item-container {
     background-color: white;
+    border-left: 4px solid white;
+    position: relative;
 }
-.item-container.featured .item {
+.item-container.featured,
+.item-container .item.featured{
     background-color: #444;
     color: white;
+}
+.item-container.featured {
+    border-left-color: #444;
+}
+.item-container.item-active {
+    border-left-color: #444;
+}
+.item-container.featured.item-active {
+    border-left-color: white;
 }
 .item h3 {
     margin: 0;
 }
+.item-container.icon-right:after,
+.item-container.icon-left:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 46px;
+    height: 62px;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 7px;
+}
+.item-container.icon-right:after {
+    right: 0;
+}
+.item-container.icon-left:after {
+    left: 0;
+}
+.item-container.icon-right {
+    padding-right: 2.5em;
+}
+.item-container.icon-left {
+    padding-left: 2.5em;
+}
+.item-container.article:after {
+    background-image: url("images/pdf.png");
+}
+.item-container.video:after {
+    background-image: url("images/movie.png");
+}
+.item-container.link:after {
+    background-image: url("images/link.png");
+}
 .description-image {
     padding: 0px;
     float: right;
-    margin: 15px 0px 0px 10px;
+    margin: 15px 0px 5px 10px;
 }
 .description-image img {
     width: 200px;
 }
 .item.frontpage h3,
 .description-image h3 {
-    padding: 18px;
+    margin: 18px 0;
     text-align: center;
 }
 .item-description {
     display: none;
 }
-.item-description .item {
-    width: 100%;
-    float: none;
+.item-description p {
+    min-height: 170px;
 }
-.arrow-left {
-    width: 0;
-    height: 0;
-    border-top: 38px solid transparent;
-    border-bottom: 38px solid transparent;
-    border-right: 20px solid white;
-    float: right;
-    margin: 8px 0px 12px 0px;
-    display: none;
+
+.background-0 .item-container.icon-right:after {
+    background-color: rgb(111, 124, 178);
 }
-.featured .arrow-left {
-    border-right-color: #444;
+.background-1 .item-container.icon-right:after {
+    background-color: rgb(89, 160, 68);
+}
+.background-2 .item-container.icon-right:after {
+    background-color: rgb(215, 8, 97);
+}
+.background-3 .item-container.icon-right:after {
+    background-color: rgb(48, 136, 130);
+}
+.background-4 .item-container.icon-right:after {
+    background-color: rgb(166, 185, 37);
+}
+.background-5 .item-container.icon-right:after {
+    background-color: rgb(205, 47, 37);
+}
+.background-6 .item-container.icon-right:after {
+    background-color: rgb(205, 47, 37);
+}
+.background-7 .item-container.icon-right:after {
+    background-color: rgb(53, 116, 51);
+}
+.background-8 .item-container.icon-right:after {
+    background-color: rgb(245, 127, 24);
 }
 
 /**     NAVIGATION     **/
@@ -363,4 +467,26 @@ p {
     min-width: 30%;
     width: 30%;
     border-right: solid 1px;
+}
+
+/*** About page ***/
+.acknowledgements img {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/*** Video page ***/
+#video-embed video {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

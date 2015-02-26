@@ -1,15 +1,4 @@
 {
-    "categories" : [
-        {"id": "cas", "name": "CAS in Nature", "color": "0"},
-        {"id": "controllability", "name": "Controllability", "color": "1"},
-        {"id": "ethics", "name":  "Ethical & Legal Issues", "color": "2"},
-        {"id": "evosystems", "name":  "Evolutionary Systems", "color": "3"},
-        {"id": "instances", "name":  "Instances of CAS", "color": "4"},
-        {"id": "localglobal", "name":  "Local-Global Properties of CAS", "color": "5"},
-        {"id": "modelling", "name":  "Modelling of CAS", "color": "6"},
-        {"id": "humanintheloop", "name":  "Putting the Human in the Loop", "color": "7"},
-        {"id": "realworldapps", "name":  "Real-World Applications", "color": "8"}
-    ],
     "pages": [
         {
             "id": "cas",
@@ -39,35 +28,14 @@
                     "image": ""
                 },
                 {
-                    "title": "The Genetic Evolution of Social Behavior",
-                    "type": "article",
-                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour",
-                    "year": "1964",
-                    "author": "Hamilton",
-                    "description": "",
-                    "image": ""
-                },
-                {
-                    "title": "Hierarchical group dynamics in pigeon flocks",
-                    "type": "article",
-                    "url": "HierarchyPigeons_NatureLetters.pdf",
-                    "name": "HierarchyPigeons_NatureLetters",
-                    "year": "2010",
-                    "author": "Nagy et al.",
-                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
-                    "image": "Pigeon.jpg",
-                    "featured": "true"
-                },
-                {
-                    "title": "Simulating dynamical features of escape panic",
-                    "type": "article",
-                    "url": "EscapePanic_LettersToNature.pdf",
-                    "name": "EscapePanic_LettersToNature",
-                    "year": "2000",
-                    "author": "Helbing et al.",
-                    "description": "",
-                    "image": ""
+                    "title": "Focas Promotional Film",
+                    "type": "video",
+                    "url": "focas-promo-film.mp4",
+                    "name": "Focaspromofilm",
+                    "year": "2012",
+                    "author": "",
+                    "description": "This is the focas promotional film again",
+                    "image": "focas-promo-film.jpg"
                 },
                 {
                     "title": "The Genetic Evolution of Social Behavior",
@@ -99,6 +67,27 @@
                     "author": "Helbing et al.",
                     "description": "",
                     "image": ""
+                },
+                {
+                    "title": "The Genetic Evolution of Social Behavior",
+                    "type": "article",
+                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
+                    "year": "1964",
+                    "author": "Hamilton",
+                    "description": "",
+                    "image": ""
+                },
+                {
+                    "title": "Hierarchical group dynamics in pigeon flocks",
+                    "type": "article",
+                    "url": "HierarchyPigeons_NatureLetters.pdf",
+                    "name": "HierarchyPigeons_NatureLetters",
+                    "year": "2010",
+                    "author": "Nagy et al.",
+                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
+                    "image": "Pigeon.jpg",
+                    "featured": "true"
                 },
                 {
                     "title": "The Genetic Evolution of Social Behavior",
@@ -148,6 +137,65 @@
             "name": "Controllability",
             "color": "1",
             "description": "<p>In general, a system is controllable if it can be driven from any given state to any other desired state through manipulating a number of “knobs”, i.e., input parameters. Controllability depends on two system properties. First, the <b>system architecture</b>, that is, the abstract network spanned by the possible interactions between the components (units, agents) of the system. Second, the <b>system drivers</b>, that include the local rules (a.k.a. policies or strategies or controllers) that determine the behavior of the individual units, as well as global rules that specify system behavior on a higher level, e.g., the frequency of interactions. The fundamental challenge in controlling (adaptive) collective systems is caused by the fact that the effect of controllable system parameters (e.g., links between units or behavioral rules) on system behavior is, in general, unknown.  Worse yet, the system architecture and/or the drivers may not be fully known and they may change over time.</p>",
+            "items": [
+                {
+                    "title": "Google",
+                    "type": "link",
+                    "url": "http://www.google.com",
+                    "name": "google",
+                    "year": "2000",
+                    "description": "This is teh google",
+                    "image": ""
+                }
+            ]
+        },
+        {
+            "id": "ethics",
+            "name": "Ethical & Legal Issues",
+            "color": "2",
+            "description": "<p>The history of computing has followed a trajectory of increasing decentralization, miniaturization, proliferation, penetration and delegation. We are, of course, still some way from the supposed “singularity”, the point at which artificial intelligence exceeds human competence. The actuality is much more prosaic and mundane; but needs to be taken seriously nonetheless. Software engineering is no longer concerned with the verification of correctness for a single, deterministic system with well-defined functional requirements; but instead with systems whose components, structures, processes, rules and even purpose changes over time. Moreover, these system are embedded in natural environments, may be hybrid in that they symbiotically include people and computers (devices, sensors, robots, etc.), and may deal with issues of qualitative human concern – like health, comfort, laws, culture, relationships and so on.</p><p>They may therefore take decisions which have a direct impact on financial gain/loss, entitlement to benefits or health care, access control, surveillance, and a whole host of issues of social concern. Therefore, it is appropriate to evaluate the social, legal and ethical issues concerning the gradual (but rapidly accelerating) imposition of collective adaptive systems (CAS) on human society. For example, who is responsible for the decision-making of a CAS when all the components are distributed? Or when that functionality has been changed, altered, or adapted over time? Who, or what, is going to ensure that CAS concerned with resource distribution, for example, produce outcomes which are fair, equitable and sustainable? More generally, how can we tell that systems concerned with qualitative human concerns, or having such profound impact on human society and culture, are either right or wrong.</p><p>The papers in this section are concerned with such legal and ethical issues as they pertain to collective adaptive systems.</p>",
+            "items": []
+        },
+        {
+            "id": "evosystems",
+            "name": "Evolutionary Systems",
+            "color": "3",
+            "description": "<p>An important property of Collective Adaptive Systems (CAS) is adaptation, which allows the overall system to adjust its behaviour over time based on external feedback. Two prominent forms of adaptation are evolution and learning, which can be differentiated based on the timescales they operate on. Both forms of learning are integral to the success of many organisms in nature.</p><p>The basic idea behind evolution is that some organisms are more adapted to their environment than others and the ones able to adapt pass their genes on to the next generation. The weak organisms die out, gradually changing the population to be better adapted to their environment. For example, an animal that can run faster than other animals of its species might have a higher chance of escaping predators and therefore a higher chance to reproduce. If this trait is also heritable, then in the next generation there will be a higher proportion of faster animals. Even if the selection pressure is not very high, over many generations slight differences in reproductive advantages will lead to a gradual change of the population.</p><p>Learning on the other hand is a form of adaptation that allows an individual to react much faster to environmental changes by adjusting its behavior during its lifetime. For example, we can learn how to ride a bike or a new language, and are able to change our behavior based on experiences. Learning is based on the ability of natural brains to change throughout life, by modifying synaptic connections, creating new connections or neurons.</p>",
+            "items": []
+        },
+        {
+            "id": "instances",
+            "name": "Instances of CAS",
+            "color": "4",
+            "description": "<p>Collective Adaptive Systems (CASs) come in many different shapes and sizes. There are many examples of CASs in nature, ranging from ant colonies that appear intelligent when viewed as a whole to human societies with their different cultures. Artificial CASs are similarly varied and are used for many different purposes.</p><p>An early example of an artificial CAS that was implemented in a computer is Conway’s Game of Life. It creates a virtual grid-like world where four very simple rules determine how a cell in the grid reacts to the state of its neighbours (cells that are horizontally, vertically, or diagonally adjacent) by setting its own state state (live or dead). Although the rules are very simple, Conway's Game of Life has attracted much interest because of the surprising ways in which the patterns can evolve. It provides an instructive example of emergence and self-organisation.</p><p>A well known example of a collective adaptive system with an application in optimisation is the particle swarm optimiser. Here, the units that make up the CAS are virtual particles that obey simple laws of attraction that determine (and depend on) each particle’s  position and velocity. Each particle represents  a candidate solution for an optimisation problem and the rules that govern the movement of the individual particles cause the ‘cloud’ of particles to converge on the best, or at least a good, solution.</p><p>Collectives of robots that collaborate -- for instance physically linking together to be able reach something that individual robots cannot -- to achieve a joint task. Examples of this are modular robots (robots that consist of smaller robots linked together, rather like lego bricks) and robot swarms that mimic ant behaviour to determine the shortest navigable path between two locations.</p>",
+            "items": []
+        },
+        {
+            "id": "localglobal",
+            "name": "Local-Global Properties of CAS",
+            "color": "5",
+            "description": "<p>Collective adaptive systems (CAS) are composed of a diversity of active units that interact among themselves and with the environment in a way that is modified over time as a result of those interactions.</p><p>In general, it is rather difficult to map a global behaviour of a population into the specification of individual behaviours.  The other way round is also a complex problem, meaning that from the individual specification it may not be viable to compute the global behaviour of the collective.  This is due to the non-linearities that occur in global behaviour as a result of individual behaviour and the propagation of its influence through local neighbourhood.  When multiplying by a large number of units the result of a small change in some individual behaviour parameter may produce a qualitative modification in global properties.  Therefore the local vs. global keyword well characterises the dualistic nature of CAS from the local properties of the units to the global properties of the collective.</p><p>Local properties are known to have significant effects on the global behaviour of a CAS.  Communication is one of them.  It is considered a local property since the units are not able, in general, to communicate beyond a close range.  However, if local communication is disrupted, the global properties of the CAS will be affected and may outright cease to exist.</p><p>Besides communication capabilities, such as range, number of simultaneous receivers, other local properties may include timing parameters of behaviours, the type of behaviour (aggregation, avoidance, following,...), etc.  Global parameters include self-organisation, stability, pattern formation, information spreading, among others.</p>",
+            "items": []
+        },
+        {
+            "id": "modelling",
+            "name": "Modelling of CAS",
+            "color": "6",
+            "description": "<p>This category deals with modelling adaptive collective systems. Modelling is what you do when you want to understand how something is ticking.</p><p>It is also critical to distinguish between the target of the study, and the model(s), as it may happen that the same object can be used as a target or as model depending on the motivation at end. Let's consider what a robot is. On the one hand, robots can be used a model to study coordination behaviors in animals. On the other, computer simulations can be used as a model to design robot behaviours. In these two examples, the robotic setup is used either as a model (to understand animal behavior), or as the final objective (to design a robotic setup).</p><p>Models can be defined at different levels of abstraction. The e-coli bacteria is often used as a general model for studying bacterial evolution, computer simulations can be used to model collective motion and differential equations have been used to study predator-prey interactions in the last 100 years. The different levels of abstraction encompass both implementations (analytics, computer simulation, physics-based experiments) and methods (mathematical models, individual-based models, physics-based experimentation, in vitro experiments, in vivo experiments or observation from nature).</p><p>In this category, we present several examples of models, from using robots to executing computer software, from using mathematical models to performing in vitro experiments.</p>",
+            "items": []
+        },
+        {
+            "id": "humanintheloop",
+            "name": "Putting the Human in the Loop",
+            "color": "7",
+            "description": "<p>The idea of combining research on how humans work, communicate and cooperate and the research on how computer systems can efficiently support such collaborations led to the creation of an interdisciplinary research area known as computer-supported cooperative work (CSCW) in the 1980s. Initially, the research was focused on small-scale collaborations, e.g., within companies or interest groups. With the wide adoption of Internet technologies, service-oriented architectures (SOA), mobile and cloud computing, and especially social networks, it was possible to move the focus of the research onto  large-scale collaborations, possibly involving thousands of collaborators across boundaries of multiple organizations and countries.</p><p>Most social computing systems today are based around patterns of work that can be predictably modeled before execution, e.g., with a workflow. However, there are many cases where a traditional workflow approach is too rigid to address the dynamic an unpredictable nature of the tasks at hand, and more flexible crowd working systems need to be developed. Perhaps the most frequently used keyword today (or buzzword, indeed) to describe (a subclass of) such systems is the 'crowdsourcing'. Ever since the term crowdsourcing was coined in 2005 there has been a debate as to what exactly it should comprise. After a decade of research and commercial exploitation, the debate seems livelier than ever. When most of the community tacitly started applying the term to a family of micro-task or creativity-task platforms a range of novel systems emerged attempting to leverage humans for more complex, intellectually challenging tasks. These novel systems involved longer lasting worker engagement and complex collaborations, often integrating the notion of team programmability. Whether the emerging systems are called 'social machines' (a term coined by Sir Tim Berners-Lee), 'socio-technical', 'social computing', or simply 'crowdsourcing systems', their principal trait is that they need to manage and integrate interactions with and among human elements, referred to as 'workers', 'agents', 'human services' or 'peers', performing different 'tasks' ('jobs') or 'collaborative workflows' thereof.</p><p>Designing a social computing system requires understanding of individual and group human behavior alongside technical expertise, and a view of the system as an interconnected whole containing both human and computational elements.  Furthermore, such systems must respond to the exigencies of unfolding situations, requiring human creativity in the face of unpredictability. In such cases it is important not to over-regulate participating humans, but to let them play an active role in shaping the collaboration during runtime. This includes leveraging human creativity and embracing the uncertainty that comes with it. On the other hand, it is often necessary to impose certain coordination and quality constraints for these collaborations in order to manage them. The constraints delimit the decision space within which the humans are allowed to self-organize.</p><p>A fundamental property of these complex collaborations is that they are unpredictable, requiring dynamic adaptations of the peer collectives executing them. The adaptability can be reflected in a variety of aspects, such as: changes in peer relationship topology, replacement of individual peers with more fitting ones, scaling in size, human-driven adaptations of the execution patterns or communication channels, different choice of applied incentives, interchangeability of human-based and software-based peers. Furthermore, since engaging human experts is not as easy as offering a simple task to a crowd of anonymous, unqualified workers, additional novel challenges include developing strategies and algorithms for locating, motivating and negotiating with the peers (workers) to join a collective.</p><p>Although inherently complex, socio-technical systems are promising to enable fairer and more competitive virtual labor markets which could compete with traditional markets in terms of the complexity of labour they can support, but with added benefits of web-scale, tailored expertise provisioned at request, complemented with machine support when appropriate.</p>",
+            "items": []
+        },
+        {
+            "id": "realworldapps",
+            "name": "Real-World Applications",
+            "color": "8",
+            "description": "<p>This category includes material on concrete applications of collective adaptive systems (CASs). Items in this category are meant to be of interest for the general public, for scientists interested in understanding the potential impacts on technology of their research as well as to practitioners working in specific domains.In general, we can classify real-world applications of CASs into three broad categories.</p><p>The first one relates to robotics, and in particular to the emerging fields of distributed, collective and swarm robotic systems, where a number of robots cooperate (by forming purposeful collectives) to achieve the ability of completing a given task. These systems are characterised by the emergence of a given collective behaviour (at the ‘macro’ level) by means of (at least partially) programmed interactions among single robots (the ‘micro’ level). The robots can be terrestrial, underwater of flying ones. In particular the last one is receiving growing attention, due to the widespread emergence of rather inexpensive drones, in this context understood as unmanned aerial vehicles employing autonomous control.</p><p>The second class of real-world applications relates to self-managing IT systems, and to autonomic computing in particular. Application scenarios in this category include software systems able to re-configure to adapt to external changes or to a security threat, autonomous resource allocation in large-scale distributed IT systems and applications, network management systems able to automatically reconfigure in response to a node failure etc.</p><p>The third class of real-world applications refer to socio-technical systems, i.e., systems where technology (in particular information and communication technology) is so interwoven into the social fabric that the two layers (technology and society) cannot be any longer dealt with in isolation. Application scenarios tackled include smart energy systems (whereby the role of prosumers in a smart grid is emphasized and social dynamics impact the overall energy consumption/storage pattern), integrated health and care (whereby a new generation of socially-aware technologies can promote the emergence of a more sustainable and effective way of delivering personalised and context-aware health and care services), mobility and transportation (whereby individuals, supported by advanced ICT, self-organise into effective form of collective transportation), supporting complex engineering/creative labor, etc. Most scenarios in this second class can be also referred to as ‘smart city’ or ‘smart society’ one, depending on the specific focus.</p>",
             "items": []
         }
     ]

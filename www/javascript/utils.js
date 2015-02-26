@@ -21,13 +21,15 @@ var Utilities = function () {
      * @file - Name of the file for the id of the video
      * @fileUrl - Url of the video
      */
-    this.embedVideo = function (file, fileUrl) {
+    this.embedVideo = function (file, fileUrl, poster) {
         $.getScript("templates/video.js", function () {
+            var posterUrl = 'content/images/'+poster;
             var text = template({
                 "item": {
                     "name": file,
                     "url": fileUrl,
-                    "id": file
+                    "id": file,
+                    "poster": posterUrl
                 }
             });
 
@@ -123,7 +125,7 @@ var Utilities = function () {
         fileTransfer.download(uri,
             tempFileUri,
             function (entry) {
-                console.log("download complete: " + entry.toNativeURL());
+                console.log("download complete: " + entry.toURL());
 
                 Utilities.progressCircle.stop();
                 downloadInProgress = false;
@@ -131,7 +133,7 @@ var Utilities = function () {
                 window.resolveLocalFileSystemURL(parentDirectory, function (parentDirEntry) {
                     parentDirEntry.getDirectory(fileDirectory, {create: true}, function (dirEntry) {
                         entry.moveTo(dirEntry, fileName, function (fileEntry) {
-                            onSuccess(fileName, fileEntry.toNativeURL());
+                            onSuccess(fileName, fileEntry.toURL());
                         }, onFailure);
                     }, onFailure);
                 },

@@ -1,5 +1,5 @@
 div.ui-column-right
     ul(data-role="listview")
-        for category, index in categories
+        for page, index in pages
             li
-                a(class="color-"+category.color, href="#"+category.id, data-role="link")= category.name
+                a(class="color-"+page.color, href="#"+page.id, data-role="link")= page.name
