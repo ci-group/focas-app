@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="eu.focas.focas" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="eu.focas.focas" version="0.99" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Focas</name>
     <description>
         The textbook of the future: a free, evolving, searchable and accessible collection of curated material about Collective Adaptive Systems at your fingertips.
@@ -34,6 +34,21 @@
     <platform name="android">
         <plugin name="File" value="org.apache.cordova.FileUtils" />
         <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+
+        <icon src="res/android/icon/ldpi.png" density="ldpi" />
+        <icon src="res/android/icon/mdpi.png" density="mdpi" />
+        <icon src="res/android/icon/hdpi.png" density="hdpi" />
+        <icon src="res/android/icon/xhdpi.png" density="xhdpi" />
+        <icon src="res/android/icon/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/android/icon/xxxhdpi.png" density="xxxhdpi" />
+
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/android/splash/hdpi.png" density="land-hdpi"/>
+        <splash src="res/android/splash/ldpi.png" density="land-ldpi"/>
+        <splash src="res/android/splash/mdpi.png" density="land-mdpi"/>
+        <splash src="res/android/splash/xhdpi.png" density="land-xhdpi"/>
+        <splash src="res/android/splash/xxhdpi.png" density="land-xxhdpi"/>
+        <splash src="res/android/splash/xxxhdpi.png" density="land-xxxhdpi"/>
     </platform>
 
     <platform name="ios">
@@ -41,27 +56,32 @@
         <plugin name="FileTransfer" value="CDVFileTransfer" />
 
         <!-- iOS 7.0+ -->
-              <!-- iPhone / iPod Touch  -->
-              <icon src="res/ios/focas-60.png" width="60" height="60" />
-              <icon src="res/ios/focas-60@2x.png" width="120" height="120" />
-              <!-- iPad -->
-              <icon src="res/ios/focas-76.png" width="76" height="76" />
-              <icon src="res/ios/focas-76@2x.png" width="152" height="152" />
-              <!-- iOS 6.1 -->
-              <!-- Spotlight Icon -->
-              <icon src="res/ios/focas-40.png" width="40" height="40" />
-              <icon src="res/ios/focas-40@2x.png" width="80" height="80" />
-              <!-- iPhone / iPod Touch -->
-              <icon src="res/ios/focas-57.png" width="57" height="57" />
-              <icon src="res/ios/focas-57@2x.png" width="114" height="114" />
-              <!-- iPad -->
-              <icon src="res/ios/focas-72.png" width="72" height="72" />
-              <icon src="res/ios/focas-72@2x.png" width="144" height="144" />
-              <!-- iPhone Spotlight and Settings Icon -->
-              <icon src="res/ios/focas-29.png" width="29" height="29" />
-              <icon src="res/ios/focas-29@2x.png" width="58" height="58" />
-              <!-- iPad Spotlight and Settings Icon -->
-              <icon src="res/ios/focas-50.png" width="50" height="50" />
-              <icon src="res/ios/focas-50@2x.png" width="100" height="100" />
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/ios/focas-60.png" width="60" height="60" />
+        <icon src="res/ios/focas-60@2x.png" width="120" height="120" />
+        <icon src="res/ios/focas-60@3x.png" width="180" height="180" />
+        <!-- iPad -->
+        <icon src="res/ios/focas-76.png" width="76" height="76" />
+        <icon src="res/ios/focas-76@2x.png" width="152" height="152" />
+        <!-- iOS 6.1 -->
+        <!-- Spotlight Icon -->
+        <icon src="res/ios/focas-40.png" width="40" height="40" />
+        <icon src="res/ios/focas-40@2x.png" width="80" height="80" />
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/ios/focas-57.png" width="57" height="57" />
+        <icon src="res/ios/focas-57@2x.png" width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/ios/focas-72.png" width="72" height="72" />
+        <icon src="res/ios/focas-72@2x.png" width="144" height="144" />
+        <!-- iPhone Spotlight and Settings Icon -->
+        <icon src="res/ios/focas-29.png" width="29" height="29" />
+        <icon src="res/ios/focas-29@2x.png" width="58" height="58" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="res/ios/focas-50.png" width="50" height="50" />
+        <icon src="res/ios/focas-50@2x.png" width="100" height="100" />
+
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/ios/Default-Landscape.png" width="1024" height="768"/>
+        <splash src="res/ios/Default-Landscape@2x.png" width="2048" height="1536"/>
     </platform>
 </widget>

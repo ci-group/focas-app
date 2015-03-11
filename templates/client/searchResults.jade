@@ -1,5 +1,17 @@
-h2 Results
-for item, index in items
-    div(class="item "+item.type, data-file=item.url data-id=item.id)
-        h3= item.title
-        span= item.author + " | " + item.year
+include ../includes/mixins/description.jade
+
+div.ui-block-a
+    div.ui-text.ui-column-left
+        div.ui-body
+            for item, index in items
+                +description(item,"-search")
+div(class="ui-block-b")
+    div.ui-grid-c
+    for item, index in items
+        - var active = ""
+        if index === 0
+            - active = "item-active"
+        div(class="item-container item-switcher icon-right "+item.type+" "+active, data-id="search-"+item.name, id="button-search-"+item.name)
+            div(class="item")
+                h3= item.title
+                span= item.author + " | " + item.year

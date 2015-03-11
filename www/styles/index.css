@@ -215,7 +215,6 @@ div.ui-dark-background {
 /*** Item Lists ***/
 .item {
     color: #fff;
-    margin: 8px 0px 12px 0px;
     padding: 16px;
     color: #333;
     background-color: white;
@@ -225,6 +224,12 @@ div.ui-dark-background {
     background-color: white;
     border-left: 4px solid white;
     position: relative;
+    margin: 8px 0px 12px 0px;
+    overflow: hidden;
+    min-height: 100px;
+}
+.item-container.description-item {
+    min-height: initial;
 }
 .item-container.featured,
 .item-container .item.featured{
@@ -249,11 +254,16 @@ div.ui-dark-background {
     position: absolute;
     display: block;
     width: 46px;
-    height: 62px;
+    height: 86px;
     top: 0;
     background-position: center center;
     background-repeat: no-repeat;
     padding: 7px;
+}
+.ui-block-a .item-container.icon-right:after,
+.ui-block-a .item-container.icon-left:after {
+    width: 43px;
+    height: 37px;
 }
 .item-container.icon-right:after {
     right: 0;
@@ -262,10 +272,10 @@ div.ui-dark-background {
     left: 0;
 }
 .item-container.icon-right {
-    padding-right: 2.5em;
+    padding-right: 4em;
 }
 .item-container.icon-left {
-    padding-left: 2.5em;
+    padding-left: 4em;
 }
 .item-container.article:after {
     background-image: url("images/pdf.png");
@@ -275,6 +285,9 @@ div.ui-dark-background {
 }
 .item-container.link:after {
     background-image: url("images/link.png");
+}
+.item-container.presentation:after {
+    background-image: url("images/presentation.png");
 }
 .description-image {
     padding: 0px;
@@ -296,6 +309,9 @@ div.ui-dark-background {
     min-height: 170px;
 }
 
+.item-container.icon-right:after {
+    background-color: #444;
+}
 .background-0 .item-container.icon-right:after {
     background-color: rgb(111, 124, 178);
 }
@@ -420,11 +436,6 @@ div.ui-dark-background {
     margin-left: 22px;
     text-align: center;
     width: 60px;
-}
-
-/*** Search Page ***/
-#results h2 {
-    margin: 5px 2px;
 }
 
 /*** Search Box ***/

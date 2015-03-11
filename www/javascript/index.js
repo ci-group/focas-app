@@ -40,8 +40,23 @@ var App = function () {
                 if (self.items === null) {
                     self.items = page.items;
                 } else {
-                    self.items.concat(page.items);
+                    self.items = self.items.concat(page.items);
                 }
+            });
+
+            // Initialise search index
+            self.index = lunr(function () {
+                this.field('title', {boost: 10});
+                this.field('tags', {boost: 5});
+                this.field('description');
+                this.ref('id');
+            });
+
+            // Add all the items to the index
+            $.each(app.items, function(idx, item) {
+                var t = item;
+                t.id = idx;
+                self.index.add(t);
             });
         });
         $.ajaxSetup({async : true});
@@ -80,23 +95,25 @@ var App = function () {
 
         app.bindDownloadOnClick();
 
-        $(".header-search-button").off().on("click", function() {
+        $(document).on("click", ".header-search-button", function() {
             if($(".ui-page-active .ui-header .ui-input-search").is(":visible")){
                 $(".ui-page-active .ui-header .ui-input-search").fadeOut("slow");
             }else{
-                $(".ui-page-active .ui-header .ui-input-search").fadeIn("slow").css("display","inline-block");
+                $(".ui-page-active .ui-header .ui-input-search").css("display","inline-block").fadeIn("slow", function() {
+                    $(".ui-page-active .ui-header .ui-input-search .search-field").focus();
+                });
             }
         });
 
-        $(".item-container").off().on("click",function() {
+        $(document).on("click", ".item-switcher", function() {
             var id = $(this).attr("data-id");
             if ($("#description-"+id).is(":visible")){
                 $(".ui-page-active .description-active").removeClass("description-active").hide();
-                $(".ui-page-active .item-container.item-active").removeClass("item-active");
+                $(".ui-page-active .item-switcher.item-active").removeClass("item-active");
                 $(".ui-page-active .page-description").show().addClass("description-active");
             } else {
                 $(".ui-page-active .description-active").removeClass("description-active").hide();
-                $(".ui-page-active .item-container.item-active").removeClass("item-active");
+                $(".ui-page-active .item-switcher.item-active").removeClass("item-active");
                 $("#description-"+id).show().addClass("description-active");
                 $("#button-"+id).addClass("item-active");
             }
@@ -108,24 +125,20 @@ var App = function () {
 
             $(".ui-page-active .ui-header .ui-input-search").fadeOut();
 
-            var options = {
-                keys: ['author', 'title', 'year'],   // keys to search in
-            };
-
-
             var searchTerm = this.search.value;
-            var f = new Fuse(app.items, options);
-            var result = f.search(searchTerm);
+            var searchResults = app.index.search(searchTerm);
+
+            var result = searchResults.map(function(item){
+                return app.items[item.ref];
+            });
 
             $.ajaxSetup({async : false});
             $.getScript("templates/searchResults.js", function () {
                 var text = template({"items" : result});
-                $("#search-overview div#results").html(text).enhanceWithin();
+                $("#search-overview div#results").html(text);
                 $(".search input").each(function() {
-                    $(this).attr("value", searchTerm);
+                    this.value = searchTerm;
                 });
-
-                app.bindDownloadOnClick();
 
                 $.mobile.pageContainer.pagecontainer("change", "#search-page");
             });
@@ -156,20 +169,10 @@ var App = function () {
         });
 
         $(document).on("click", ".article-opener", function () {
-            utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
-                function (file, fileUrl) {
-                    if ($("#progress-dialog").is(":visible")) {
-                        $("#progress-dialog").popup("close");
-                    }
-                    if(device.platform === "iOS") {
-                        window.open(fileUrl, '_blank', 'toolbarposition=top,location=no,closebuttoncaption=Close');
-                    }else if(device.platform === "Android") {
-                        window.plugins.fileOpener.open(fileUrl);
-                    }
-                },
-                function (error) {
-                   utilities.showCouldNotDownloadDialog(error);
-                });
+            app.downloadFile();
+        });
+        $(document).on("click", ".presentation-opener", function () {
+            app.downloadFile();
         });
 
         $(document).on("click", ".link-opener", function () {
@@ -181,6 +184,23 @@ var App = function () {
             }else if(device.platform === "browser") {
                 window.open(url, '_blank');
             }
+        });
+    };
+
+    this.downloadFile = function() {
+        utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
+                                   function (file, fileUrl) {
+            if ($("#progress-dialog").is(":visible")) {
+                $("#progress-dialog").popup("close");
+            }
+            if(device.platform === "iOS") {
+                window.open(fileUrl, '_blank', 'toolbarposition=top,location=no,closebuttoncaption=Close');
+            }else if(device.platform === "Android") {
+                window.plugins.fileOpener.open(fileUrl);
+            }
+        },
+                                   function (error) {
+            utilities.showCouldNotDownloadDialog(error);
         });
     };
 

@@ -9,7 +9,8 @@
                 {
                     "title": "Hierarchical group dynamics in pigeon flocks",
                     "type": "article",
-                    "url": "HierarchyPigeons_NatureLetters.pdf",
+                    "preview": "HierarchyPigeons_NatureLetters.pdf",
+                    "url": "http://arxiv.org/pdf/1010.5394",
                     "name": "HierarchyPigeons_NatureLetters",
                     "year": "2010",
                     "author": "Nagy et al.",
@@ -24,111 +25,38 @@
                     "name": "EscapePanic_LettersToNature",
                     "year": "2000",
                     "author": "Helbing et al.",
-                    "description": "",
-                    "image": ""
+                    "description": "This paper presents a simulation based on a model of pedestrian behaviour to investigate the mechanisms of (and preconditions for) panic and jamming by uncoordinated motion in crowds. Moreover, the authors suggest an optimal strategy for escape from a smoke-filled room, involving a mixture of individualistic behaviour and collective `herding' instinct, among other practical ways to prevent dangerous crowd pressures.",
+                    "image": "Crowd_1.jpg"
                 },
                 {
-                    "title": "Focas Promotional Film",
-                    "type": "video",
-                    "url": "focas-promo-film.mp4",
-                    "name": "Focaspromofilm",
-                    "year": "2012",
+                    "title": "The Genetic Evolution of Social Behavior",
+                    "type": "article",
+                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
+                    "year": "1964",
+                    "author": "Hamilton",
+                    "description": "This seminal paper from W.D. Hamilton introduces the idea of inclusive fitness, which state that the success of a particular organism depends on its number of viable offspring. This has important implications as a particular individual may have a direct interest in helping genetically close relatives to survive and to spread copies of themselves.",
+                    "image": "elephants.jpg"
+                },
+                {
+                    "title": "The Social Compute Unit",
+                    "type": "article",
+                    "url": "TheSocialComputeUnit.pdf",
+                    "name": "TheSocialComputeUnit",
+                    "year": "2011",
+                    "author": "Schahram Dustdar, Kamal Bhattacharya",
+                    "description": "The article introduces the concept of the Social Compute Unit, and ad-hoc provisioned team of human and machine-based agents, with the properties of computing power, elasticity and embracing human fallibility.",
+                    "image": "TheSocialComputeUnit.jpg"
+                },
+                {
+                    "title": "Life (a BBC documentary)",
+                    "type": "link",
+                    "url": "http://www.bbc.co.uk/programmes/b00lbpcy",
+                    "name": "BBC_Life",
+                    "year": "2009",
                     "author": "",
-                    "description": "This is the focas promotional film again",
-                    "image": "focas-promo-film.jpg"
-                },
-                {
-                    "title": "The Genetic Evolution of Social Behavior",
-                    "type": "article",
-                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour",
-                    "year": "1964",
-                    "author": "Hamilton",
-                    "description": "",
-                    "image": ""
-                },
-                {
-                    "title": "Hierarchical group dynamics in pigeon flocks",
-                    "type": "article",
-                    "url": "HierarchyPigeons_NatureLetters.pdf",
-                    "name": "HierarchyPigeons_NatureLetters",
-                    "year": "2010",
-                    "author": "Nagy et al.",
-                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
-                    "image": "Pigeon.jpg",
-                    "featured": "true"
-                },
-                {
-                    "title": "Simulating dynamical features of escape panic",
-                    "type": "article",
-                    "url": "EscapePanic_LettersToNature.pdf",
-                    "name": "EscapePanic_LettersToNature",
-                    "year": "2000",
-                    "author": "Helbing et al.",
-                    "description": "",
-                    "image": ""
-                },
-                {
-                    "title": "The Genetic Evolution of Social Behavior",
-                    "type": "article",
-                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour",
-                    "year": "1964",
-                    "author": "Hamilton",
-                    "description": "",
-                    "image": ""
-                },
-                {
-                    "title": "Hierarchical group dynamics in pigeon flocks",
-                    "type": "article",
-                    "url": "HierarchyPigeons_NatureLetters.pdf",
-                    "name": "HierarchyPigeons_NatureLetters",
-                    "year": "2010",
-                    "author": "Nagy et al.",
-                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
-                    "image": "Pigeon.jpg",
-                    "featured": "true"
-                },
-                {
-                    "title": "The Genetic Evolution of Social Behavior",
-                    "type": "article",
-                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour",
-                    "year": "1964",
-                    "author": "Hamilton",
-                    "description": "",
-                    "image": ""
-                },
-                {
-                    "title": "Hierarchical group dynamics in pigeon flocks",
-                    "type": "article",
-                    "url": "HierarchyPigeons_NatureLetters.pdf",
-                    "name": "HierarchyPigeons_NatureLetters",
-                    "year": "2010",
-                    "author": "Nagy et al.",
-                    "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
-                    "image": "Pigeon.jpg",
-                    "featured": "true"
-                },
-                {
-                    "title": "Simulating dynamical features of escape panic",
-                    "type": "article",
-                    "url": "EscapePanic_LettersToNature.pdf",
-                    "name": "EscapePanic_LettersToNature",
-                    "year": "2000",
-                    "author": "Helbing et al.",
-                    "description": "",
-                    "image": ""
-                },
-                {
-                    "title": "The Genetic Evolution of Social Behavior",
-                    "type": "article",
-                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour",
-                    "year": "1964",
-                    "author": "Hamilton",
-                    "description": "",
-                    "image": ""
+                    "description": "Life is a series of ten episodes produced by the BBC, and aired in 2009. It features astounding images of life on earth, with a particular emphasis on survival strategies in a vast amount of species, within a vast number of different environments. The commentary and content makes a high quality introduction to the complexity of life on earth.<br /><br />It is available on various support, including in DVD or Bluray.",
+                    "image": "BBC_Life.png"
                 }
             ]
         },
@@ -137,24 +65,102 @@
             "name": "Controllability",
             "color": "1",
             "description": "<p>In general, a system is controllable if it can be driven from any given state to any other desired state through manipulating a number of “knobs”, i.e., input parameters. Controllability depends on two system properties. First, the <b>system architecture</b>, that is, the abstract network spanned by the possible interactions between the components (units, agents) of the system. Second, the <b>system drivers</b>, that include the local rules (a.k.a. policies or strategies or controllers) that determine the behavior of the individual units, as well as global rules that specify system behavior on a higher level, e.g., the frequency of interactions. The fundamental challenge in controlling (adaptive) collective systems is caused by the fact that the effect of controllable system parameters (e.g., links between units or behavioral rules) on system behavior is, in general, unknown.  Worse yet, the system architecture and/or the drivers may not be fully known and they may change over time.</p>",
-            "items": [
-                {
-                    "title": "Google",
-                    "type": "link",
-                    "url": "http://www.google.com",
-                    "name": "google",
-                    "year": "2000",
-                    "description": "This is teh google",
-                    "image": ""
-                }
-            ]
+            "items": []
         },
         {
             "id": "ethics",
             "name": "Ethical & Legal Issues",
             "color": "2",
             "description": "<p>The history of computing has followed a trajectory of increasing decentralization, miniaturization, proliferation, penetration and delegation. We are, of course, still some way from the supposed “singularity”, the point at which artificial intelligence exceeds human competence. The actuality is much more prosaic and mundane; but needs to be taken seriously nonetheless. Software engineering is no longer concerned with the verification of correctness for a single, deterministic system with well-defined functional requirements; but instead with systems whose components, structures, processes, rules and even purpose changes over time. Moreover, these system are embedded in natural environments, may be hybrid in that they symbiotically include people and computers (devices, sensors, robots, etc.), and may deal with issues of qualitative human concern – like health, comfort, laws, culture, relationships and so on.</p><p>They may therefore take decisions which have a direct impact on financial gain/loss, entitlement to benefits or health care, access control, surveillance, and a whole host of issues of social concern. Therefore, it is appropriate to evaluate the social, legal and ethical issues concerning the gradual (but rapidly accelerating) imposition of collective adaptive systems (CAS) on human society. For example, who is responsible for the decision-making of a CAS when all the components are distributed? Or when that functionality has been changed, altered, or adapted over time? Who, or what, is going to ensure that CAS concerned with resource distribution, for example, produce outcomes which are fair, equitable and sustainable? More generally, how can we tell that systems concerned with qualitative human concerns, or having such profound impact on human society and culture, are either right or wrong.</p><p>The papers in this section are concerned with such legal and ethical issues as they pertain to collective adaptive systems.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "Ethical Governance for Collective Adaptive Systems",
+                    "type": "article",
+                    "preview": "EthicalGovernance.pdf",
+                    "url": "http://link.springer.com/article/10.1023/A:1006250627410",
+                    "name": "EthicalGovernance",
+                    "year": "1999",
+                    "author": "M. Hartswood and M. Jirotka",
+                    "description": "In this article M. Hartswood and M. Jirotka from the SmartSociety Consortium deal with governance aspects in collective adaptive systems. In particular they focus on hybrid and diversity-aware collective adaptive systems, and provide foundations for the design of a framework for the ethical governance of complex socio-technical systems.",
+                    "image": "EthicalGovernance.jpg",
+                    "tags": "governance ethics responsible research and innovation socio-technical systems social aspects"
+                },
+                {
+                    "title": "Revisiting Asimov: the Ethical Roboticist",
+                    "type": "link",
+                    "url": "http://alanwinfield.blogspot.com.es/2011/05/revisiting-asimov-ethical-roboticist.html",
+                    "name": "RevisitingAsimov",
+                    "year": "2011",
+                    "author": "A. Winfield",
+                    "description": "Revisiting Asimov: the Ethical Roboticist",
+                    "tags": "ethics robotics"
+                },
+                {
+                    "title": "When fridges attack: the new ethics of the Internet of Things",
+                    "type": "article",
+                    "preview": "WhenFridgesAttack.pdf",
+                    "url": "http://www.theguardian.com/science/alexs-adventures-in-numberland/2014/sep/08/when-fridges-attack-the-new-ethics-of-the-internet-of-things",
+                    "name": "WhenFridgesAttack",
+                    "year": "2014",
+                    "author": "Peter McOwan",
+                    "description": "Pop science article about a misbehaving fridge and how the Internet of Things implies new ethical dilemmas.",
+                    "tags": "etthics"
+                },
+                {
+                    "title": "Robotics and AI section of the Ethics + Emerging Sciences Group",
+                    "type": "link",
+                    "url": "http://ethics.calpoly.edu/robots.htm",
+                    "name": "EmerginSciencesGroup",
+                    "year": "",
+                    "author": "",
+                    "description": "The Ethics + Emerging Sciences Group is a non-partisan organization focused on the risk, ethical, and social impact of emerging sciences and technologies. Their Robotics/AI section offers many links to related publications.",
+                    "tags": "ethics robotics"
+                },
+                {
+                    "title": "Robot Cars With Adjustable Ethics Settings",
+                    "type": "link",
+                    "url": "http://www.wired.com/2014/08/heres-a-terrible-idea-robot-cars-with-adjustable-ethics-settings/",
+                    "name": "RobotCars",
+                    "year": "2014",
+                    "author": "Patrick Lin",
+                    "description": "An article in WIRED elaborates on ethics and manufacturers' liability concerning robot cars. In particular, he discusses the idea of \"ethics settings\" that are adjustable by users.",
+                    "tags": "ethics robotics",
+                    "featured": "true"
+                },
+                {
+                    "title": "Ethical Blowback from Emerging Technologies",
+                    "type": "article",
+                    "preview": "EthicalBlowback.pdf",
+                    "url": "http://cyberlaw.stanford.edu/blog/2010/12/robots-ethics-war",
+                    "name": "EthicalBlowback",
+                    "year": "2010",
+                    "author": "Patrick Lin",
+                    "description": "This paper discusses the often unpredictable dual uses and widespread civilian impact (‘blowback’) of new military technology. Ethical and policy concerns arising from such technologies can have great implications for society at large as well. This paper focusses on two technology areas making headlines at present: human enhancement technologies and robotics.",
+                    "tags": "ethics"
+                },
+                {
+                    "title": "Machines are taking control of the world, so why stop them?",
+                    "type": "article",
+                    "preview": "MachinesControlWorld.pdf",
+                    "url": "http://thenextweb.com/dd/2014/08/26/machines-taking-control-world-stop",
+                    "name": "MachinesControlWorld",
+                    "year": "2014",
+                    "author": "Wojtek Borowicz",
+                    "description": "Quote: \"if we want our technology to become smarter (and I guess we do), we also need to grant it more freedom and control \".",
+                    "image": "MachinesControlWorld.jpg",
+                    "tags": "ethics robotics"
+                },
+                {
+                    "title": "Roboethics",
+                    "type": "presentation",
+                    "file": "Roboethics.pdf",
+                    "name": "Roboethics",
+                    "year": "2005",
+                    "author": "Veruggio",
+                    "description": "In this 2006 presentation Veruggio provides an overview of ethical issues related to robotics",
+                    "tags": "ethics robotics"
+                }
+            ]
         },
         {
             "id": "evosystems",

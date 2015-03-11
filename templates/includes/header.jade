@@ -7,6 +7,6 @@ div(data-role="header", data-id="header",data-position="fixed", data-tap-toggle=
     span.ui-title
     div(data-role="controlgroup", data-type="horizontal",  class="ui-mini ui-btn-right")
         form(name="search-form", method="get", class="search", data-ajax="false")
-            input(type="search", name="search", id="search-search", value="", placeholder="Search...", data-wrapper-class="controlgroup-textinput ui-btn")
+            input(type="search", name="search", value="", placeholder="Search...", maxlength="32", data-wrapper-class="controlgroup-textinput ui-btn", class="search-field")
             a(href="", data-corners="false", data-role="button", data-iconpos="notext", data-icon="search", title="Search", class="ui-nodisc-icon header-search-button")
                 span.ui-btn-text= Search

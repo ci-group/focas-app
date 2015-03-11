@@ -1,0 +1,9 @@
+mixin itemButton(item)
+    - var featured = ""
+    if item.featured
+        - featured = "featured"
+    div(class="item-container item-switcher "+featured+" icon-right "+item.type, data-id=item.name, id="button-"+item.name)
+        div(class="item "+featured)
+            h3= item.title
+            if item.author || item.year
+                span= item.author + " | " + item.year

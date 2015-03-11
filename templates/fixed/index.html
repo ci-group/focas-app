@@ -8,8 +8,8 @@
     <title>FoCAS | Fundamentals of Collective Adaptive Systems</title>
     <meta name="keywords" content=""/>
     <link rel="stylesheet" href="styles/blackness.css"/>
-    <link rel="stylesheet" href="styles/jquery.mobile.icons.min.css"/>
-    <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.css"/>
+    <link rel="stylesheet" href="styles/jquery.mobile.icons-1.4.5.min.css"/>
+    <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.min.css"/>
     <link rel="stylesheet" href="styles/index.css"/>
   </head>
   <body data-theme="a">
@@ -18,7 +18,7 @@
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left"><a href="" data-role="button" data-corners="false" data-icon="back" data-rel="back" data-direction="reverse" data-mini="true" title="Back" class="ui-nodisc-icon">Back</a><a href="#main-page" data-role="button" data-corners="false" data-icon="home" title="Home" data-mini="true" class="ui-nodisc-icon">Home</a><a href="#about" data-role="button" data-corners="false" data-icon="info" data-mini="true" title="About" class="ui-nodisc-icon">About</a><a href="#glossary" data-role="button" data-transition="slideup" data-rel="popup" data-corners="false" data-icon="tag" data-mini="true" title="Glossary" data-position-to=".ui-page-active .ui-footer" class="ui-nodisc-icon">Glossary</a></div><span class="ui-title"></span>
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
           <form name="search-form" method="get" data-ajax="false" class="search">
-            <input type="search" name="search" id="search-search" value="" placeholder="Search..." data-wrapper-class="controlgroup-textinput ui-btn"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
+            <input type="search" name="search" value="" placeholder="Search..." maxlength="32" data-wrapper-class="controlgroup-textinput ui-btn" class="search-field"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
           </form>
         </div>
       </div>
@@ -32,7 +32,7 @@
                 <div data-file="focas-promo-film.mp4" data-id="focas-promo-film" data-poster="focas-promo-film.jpg" data-type="local" class="item frontpage video-opener">
                   <h3>Focas Promotional Film</h3><img src="content/images/focas-promo-film.jpg"/>
                 </div>
-                <p>This App is a collective adaptive textbook on Collective Adaptive Systems. It is collective, because it is based on the contributions of a group of experts. It is adaptive, because its contents are not finalized, but are continually extended and adjusted. In Section X you can find information on how you can become a contributor.</p>
+                <p>This App is a collective adaptive textbook on Collective Adaptive Systems. It is collective, because it is based on the contributions of a group of experts. It is adaptive, because its contents are not finalized, but are continually extended and adjusted. In About you can find information on how you can become a contributor.</p>
                 <p>Why then, is this a textbook? Although the form of this App is unconventional for a textbook, its function is the usual one: it provides an introduction to a scientific / technical field called Collective Adaptive Systems (CAS). The target audience includes students, PhD students and researchers in all areas that are concerned with some aspects of CAS. Inherently to the novel form, this textbook is not finalized because it is constantly evolving.</p>
                 <p>This App offers contents of various types and levels. Content types include scientific publications, presentations, tutorials, videos, interactive demo software, and links to miscellaneous external material, such as books or relevant websites. Importantly, the whole content of the App is not loaded immediately, but is retrieved from the Internet as you go. This ensures that local copies do not become unnecessarily big, but it implies that an Internet connection is necessary for optimal usage.</p>
               </div>
@@ -50,15 +50,17 @@
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left"><a href="" data-role="button" data-corners="false" data-icon="back" data-rel="back" data-direction="reverse" data-mini="true" title="Back" class="ui-nodisc-icon">Back</a><a href="#main-page" data-role="button" data-corners="false" data-icon="home" title="Home" data-mini="true" class="ui-nodisc-icon">Home</a><a href="#about" data-role="button" data-corners="false" data-icon="info" data-mini="true" title="About" class="ui-nodisc-icon">About</a><a href="#glossary" data-role="button" data-transition="slideup" data-rel="popup" data-corners="false" data-icon="tag" data-mini="true" title="Glossary" data-position-to=".ui-page-active .ui-footer" class="ui-nodisc-icon">Glossary</a></div><span class="ui-title"></span>
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
           <form name="search-form" method="get" data-ajax="false" class="search">
-            <input type="search" name="search" id="search-search" value="" placeholder="Search..." data-wrapper-class="controlgroup-textinput ui-btn"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
+            <input type="search" name="search" value="" placeholder="Search..." maxlength="32" data-wrapper-class="controlgroup-textinput ui-btn" class="search-field"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
           </form>
         </div>
       </div>
       <div data-role="content" data-theme="a" id="search-overview" class="ui-main ui-text">
-        <form name="search-form" method="get" data-ajax="false" class="search">
-          <input type="search" name="search" id="search-search" value="" placeholder="Search..."/>
-        </form>
-        <div id="results" class="ui-body"></div>
+        <div data-role="content" data-theme="a" class="ui-text">
+          <form name="search-form" method="get" data-ajax="false" class="search">
+            <input type="search" name="search" id="search-search" value="" placeholder="Search..." maxlength="32"/>
+          </form>
+        </div>
+        <div id="results" class="ui-grid-e"></div>
       </div>
       <div data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
         <p>FoCAS is a Future and Emerging Technologies Proactive Initiative, funded by the European Commission under FP7</p>
@@ -69,7 +71,7 @@
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left"><a href="" data-role="button" data-corners="false" data-icon="back" data-rel="back" data-direction="reverse" data-mini="true" title="Back" class="ui-nodisc-icon">Back</a><a href="#main-page" data-role="button" data-corners="false" data-icon="home" title="Home" data-mini="true" class="ui-nodisc-icon">Home</a><a href="#about" data-role="button" data-corners="false" data-icon="info" data-mini="true" title="About" class="ui-nodisc-icon">About</a><a href="#glossary" data-role="button" data-transition="slideup" data-rel="popup" data-corners="false" data-icon="tag" data-mini="true" title="Glossary" data-position-to=".ui-page-active .ui-footer" class="ui-nodisc-icon">Glossary</a></div><span class="ui-title"></span>
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
           <form name="search-form" method="get" data-ajax="false" class="search">
-            <input type="search" name="search" id="search-search" value="" placeholder="Search..." data-wrapper-class="controlgroup-textinput ui-btn"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
+            <input type="search" name="search" value="" placeholder="Search..." maxlength="32" data-wrapper-class="controlgroup-textinput ui-btn" class="search-field"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
           </form>
         </div>
       </div>
@@ -83,7 +85,7 @@
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left"><a href="" data-role="button" data-corners="false" data-icon="back" data-rel="back" data-direction="reverse" data-mini="true" title="Back" class="ui-nodisc-icon">Back</a><a href="#main-page" data-role="button" data-corners="false" data-icon="home" title="Home" data-mini="true" class="ui-nodisc-icon">Home</a><a href="#about" data-role="button" data-corners="false" data-icon="info" data-mini="true" title="About" class="ui-nodisc-icon">About</a><a href="#glossary" data-role="button" data-transition="slideup" data-rel="popup" data-corners="false" data-icon="tag" data-mini="true" title="Glossary" data-position-to=".ui-page-active .ui-footer" class="ui-nodisc-icon">Glossary</a></div><span class="ui-title"></span>
         <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
           <form name="search-form" method="get" data-ajax="false" class="search">
-            <input type="search" name="search" id="search-search" value="" placeholder="Search..." data-wrapper-class="controlgroup-textinput ui-btn"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
+            <input type="search" name="search" value="" placeholder="Search..." maxlength="32" data-wrapper-class="controlgroup-textinput ui-btn" class="search-field"/><a href="" data-corners="false" data-role="button" data-iconpos="notext" data-icon="search" title="Search" class="ui-nodisc-icon header-search-button"><span class="ui-btn-text"></span></a>
           </form>
         </div>
       </div>
@@ -104,9 +106,11 @@
               <li>Includes demos, tutorials, videos, etc.</li>
             </ul>
           </div>
+          <h2>Contributing</h2>
+          <p>If you would like your work to be included in this app, or to contribute in any other way please send an email to <a href="mailto:b.weel@vu.nl"> b.weel@vu.nl</a></p>
           <h2>Acknowledgements</h2>
           <p>The following icons were taken from<a href="http://thenounproject.com" target="_blank">the noun project</a></p>
-          <div class="ui-dark-background acknowledgements"><a href="http://thenounproject.com/term/document/5870/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/pdf.png"/>Jamison Wieser</a><a href="http://thenounproject.com/term/film/7147/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/movie.png"/>Márcio Duarte</a><a href="http://thenounproject.com/term/external-link/45762/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/link.png"/>useiconic.com</a></div>
+          <div class="ui-dark-background acknowledgements"><a href="http://thenounproject.com/term/document/5870/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/pdf.png"/>Jamison Wieser</a><a href="http://thenounproject.com/term/film/7147/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/movie.png"/>Márcio Duarte</a><a href="http://thenounproject.com/term/external-link/45762/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/link.png"/>useiconic.com</a><a href="http://thenounproject.com/term/presentation/3059/" target="_blank" data-role="button" data-inline="true"><img src="styles/images/presentation.png"/>Joris Hoogendoorn</a></div>
         </div>
       </div>
     </div>
@@ -164,12 +168,12 @@
         <p>This file cannot be downloaded from the server. Please try again later.</p><a data-role="button" data-rel="back" data-theme="e">Ok</a>
       </div>
     </div>
-    <script src="javascript/jquery-2.1.3.js"></script>
-    <script src="javascript/jquery.mobile-1.4.5.js"></script>
+    <script src="javascript/jquery-2.1.3.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
     <script src="cordova.js"></script>
     <script src="javascript/jCProgress-1.0.3.js"></script>
     <script src="javascript/jade-runtime.js"></script>
-    <script src="javascript/Fuse.js"></script>
+    <script src="javascript/lunr.min.js"></script>
     <script src="javascript/utils.js"></script>
     <script src="javascript/index.js"></script>
   </body>

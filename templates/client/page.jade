@@ -1,3 +1,6 @@
+include ../includes/mixins/description.jade
+include ../includes/mixins/itemButton.jade
+
 for page in pages
     div(class="background-"+page.color data-role="page", data-theme="a", id=page.id, data-title=page.name)
         include ../includes/header.jade
@@ -12,22 +15,14 @@ for page in pages
                             div.page-description.description-active
                                 !=page.description
                             for item, index in page.items
-                                div(id="description-"+item.name, class="item-description")
-                                    h2= item.title
-                                    if item.image
-                                        div(class="description-image")
-                                            img(src="content/images/"+item.image)
-                                    p= item.description
-                                    div(class="item "+item.type+"-opener", data-file=item.url data-id=item.name, data-poster=item.image)
-                                        h3 Open
+                                +description(item, false)
                 div(class="ui-block-b")
                     div.ui-grid-c
                         for item, index in page.items
-                            - var featured = ""
                             if item.featured
-                                - featured = "featured"
-                            div(class="item-container "+featured+" icon-right "+item.type, data-id=item.name, id="button-"+item.name)
-                                div(class="item "+featured)
-                                    h3= item.title
-                                    span= item.author + " | " + item.year
-        include ../includes/footer.jade
+                                +itemButton(item)
+                        for item, index in page.items
+                            if !item.featured
+                                +itemButton(item)
+
+include ../includes/footer.jade
