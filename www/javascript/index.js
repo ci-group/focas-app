@@ -18,7 +18,7 @@
  */
 
 /*jslint browser:true */
-/*global  $, utilities, template, Fuse, device, cordova */
+/*global  $, utilities, template, Fuse, device, cordova, lunr */
 var App = function () {
     // Application Constructor
     this.initialize = function () {
@@ -168,11 +168,17 @@ var App = function () {
             }
         });
 
+        $(document).on("click", ".youtube-opener", function () {
+            var fileUrl = $(this).attr('data-file');
+            utilities.embedYoutubeVideo(fileUrl);
+            $.mobile.pageContainer.pagecontainer("change", "#video");
+        });
+
         $(document).on("click", ".article-opener", function () {
-            app.downloadFile();
+            app.downloadFile($(this).attr('data-file'), "pdf/");
         });
         $(document).on("click", ".presentation-opener", function () {
-            app.downloadFile();
+            app.downloadFile($(this).attr('data-file'), "presentation/");
         });
 
         $(document).on("click", ".link-opener", function () {
@@ -184,12 +190,13 @@ var App = function () {
             }else if(device.platform === "browser") {
                 window.open(url, '_blank');
             }
+            $("#cannot-download-dialog").popup("close");
         });
     };
 
-    this.downloadFile = function() {
-        utilities.checkAndDownload($(this).attr('data-file'), "pdf/",
-                                   function (file, fileUrl) {
+    this.downloadFile = function(file, remotedir) {
+        utilities.checkAndDownload(file, remotedir,
+        function (file, fileUrl) {
             if ($("#progress-dialog").is(":visible")) {
                 $("#progress-dialog").popup("close");
             }
@@ -199,13 +206,13 @@ var App = function () {
                 window.plugins.fileOpener.open(fileUrl);
             }
         },
-                                   function (error) {
+        function (error) {
             utilities.showCouldNotDownloadDialog(error);
         });
     };
 
     this.getRealContentHeight = function () {
-        var headers = $(".ui-page-active div[data-role='header']:visible");
+        var headers = $(".ui-page-active div[data-role='page'] div[data-role='header']:visible");
         var footer = $(".ui-page-active div[data-role='footer']:visible");
         var content = $.mobile.activePage.find(".ui-page-active  div[data-role='content']:visible");
         var viewport_height = $(window).height();
@@ -237,7 +244,12 @@ var App = function () {
     this.onPageHideVideo = function () {
         // There should be only 1 video player at a time...
         var video = $('.videoplayer')[0];
-        video.pause();
+
+        if(typeof(video) !== 'undefined'){
+            video.pause();
+        }
+
+        $("#video-embed").html("");
     };
 
     this.onPageShow = function () {

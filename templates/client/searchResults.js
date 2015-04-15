@@ -116,29 +116,40 @@ text = "View"
 jade_debug.shift();
 jade_debug.shift();
 }
-else if ( item.type === "link")
+else if ( item.type === "youtube")
 {
 jade_debug.unshift({ lineno: 25, filename: "templates/includes/mixins/description.jade" });
 jade_debug.unshift({ lineno: 25, filename: "templates/includes/mixins/description.jade" });
-text = "Open link"
+text = "View"
 jade_debug.shift();
 jade_debug.unshift({ lineno: 26, filename: "templates/includes/mixins/description.jade" });
+file = item.embed
+jade_debug.shift();
+jade_debug.shift();
+}
+else if ( item.type === "link")
+{
+jade_debug.unshift({ lineno: 28, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 28, filename: "templates/includes/mixins/description.jade" });
+text = "Open link"
+jade_debug.shift();
+jade_debug.unshift({ lineno: 29, filename: "templates/includes/mixins/description.jade" });
 file = item.url
 jade_debug.shift();
 jade_debug.shift();
 }
 jade_debug.shift();
-jade_debug.unshift({ lineno: 27, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 30, filename: "templates/includes/mixins/description.jade" });
 buf.push("\n  ");
 buf.push.apply(buf, jade_indent);
 buf.push("<div" + (jade.attr("data-id", searchPrefix+item.name, true, false)) + (jade.cls(["item-container description-item icon-right "+item.type], [true])) + ">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
-jade_debug.unshift({ lineno: 28, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 31, filename: "templates/includes/mixins/description.jade" });
 buf.push("\n    ");
 buf.push.apply(buf, jade_indent);
 buf.push("<div" + (jade.attr("data-file", file, true, false)) + (jade.attr("data-id", item.name, true, false)) + (jade.attr("data-poster", item.image, true, false)) + (jade.cls(["item "+item.type+"-opener"], [true])) + ">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
-jade_debug.unshift({ lineno: 29, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 32, filename: "templates/includes/mixins/description.jade" });
 buf.push("\n      ");
 buf.push.apply(buf, jade_indent);
 buf.push("<h3>" + (jade.escape(null == (jade_interp = text) ? "" : jade_interp)));
@@ -156,26 +167,26 @@ buf.push("\n  ");
 buf.push.apply(buf, jade_indent);
 buf.push("</div>");
 jade_debug.shift();
-jade_debug.unshift({ lineno: 30, filename: "templates/includes/mixins/description.jade" });
-if ( item.type === "article" && item.url)
+jade_debug.unshift({ lineno: 33, filename: "templates/includes/mixins/description.jade" });
+if ( item.type === "article" || item.type === "youtube" && item.url)
 {
-jade_debug.unshift({ lineno: 31, filename: "templates/includes/mixins/description.jade" });
-jade_debug.unshift({ lineno: 31, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 34, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 34, filename: "templates/includes/mixins/description.jade" });
 buf.push("\n  ");
 buf.push.apply(buf, jade_indent);
 buf.push("<div" + (jade.attr("data-id", searchPrefix+item.name, true, false)) + " class=\"item-container description-item icon-right link\">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
-jade_debug.unshift({ lineno: 32, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 35, filename: "templates/includes/mixins/description.jade" });
 buf.push("\n    ");
 buf.push.apply(buf, jade_indent);
 buf.push("<div" + (jade.attr("data-file", item.url, true, false)) + (jade.attr("data-id", item.name, true, false)) + (jade.attr("data-poster", item.image, true, false)) + " class=\"item link-opener\">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
-jade_debug.unshift({ lineno: 33, filename: "templates/includes/mixins/description.jade" });
+jade_debug.unshift({ lineno: 36, filename: "templates/includes/mixins/description.jade" });
 buf.push("\n      ");
 buf.push.apply(buf, jade_indent);
 buf.push("<h3>");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
-jade_debug.unshift({ lineno: 33, filename: jade_debug[0].filename });
+jade_debug.unshift({ lineno: 36, filename: jade_debug[0].filename });
 buf.push("Open Link");
 jade_debug.shift();
 jade_debug.shift();

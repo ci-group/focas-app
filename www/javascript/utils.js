@@ -37,10 +37,22 @@ var Utilities = function () {
         });
     };
 
+    this.embedYoutubeVideo = function (fileUrl) {
+        $.getScript("templates/youtube.js", function () {
+            var text = template({
+                "item": {
+                    "url": fileUrl
+                }
+            });
+
+            $("#video-embed").html(text);
+        });
+    };
+
     this.showCouldNotDownloadDialog = function (error) {
         console.log("Error occured during download: " + error);
         if ($("#progress-dialog").is(":visible")) {
-            $("#progress-dialog").on("popupafterclose", function () {
+            $("#progress-dialog").off("popupafterclose").on("popupafterclose", function () {
                 $("#cannot-download-dialog").popup("open");
             });
             $("#progress-dialog").popup("close");
@@ -64,7 +76,7 @@ var Utilities = function () {
                 PIStep: 0.1, // every step foreground area is bigger about this val
                 limit: 0,
                 loop: false, //if true, no matter if limit is set, progressbar will be running
-                showPercent: true //show hide percent
+                showPercent: true //show percent
             });
         } else {
             var goToOptions = {

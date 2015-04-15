@@ -1,4 +1,18 @@
 {
+    "template": {
+        "title": "",
+        "type": "",
+        "file": "",
+        "preview": "",
+        "url": "",
+        "name": "",
+        "year": "",
+        "author": "",
+        "description": "",
+        "tags": "",
+        "image": "",
+        "featured": ""
+    },
     "pages": [
         {
             "id": "cas",
@@ -6,6 +20,182 @@
             "color": "0",
             "description": "<p>In this category we focus on collecting all the materials related to complex organization in natural systems. An eukaryote cell, a butterly, a tulip, a football team or the society will live in are all examples of such adaptive collective systems. Each of them can be affected by the environment and is structured in a more or less complex fashion.</p><p>Adaptive collective systems are prominent in nature. Many biologists, ethologists, chemists, physicists, computer scientists, historians (to name a few disciplines) share a common interest for such systems, though from different perspectives, with different tools and different questions. Indeed, adaptation in collective systems can be observed at multiple levels, from molecules to societies, and at multiple time-scales, from the time it takes for a cell to die, for a seed to grow into a tree, for a fertilized egg to turn into a full grown organism, or for a society to rise and fall.</p><p>A mesmerizing fact is that highly complex behaviors observed at the level of a group can arise from very simple interactions between its elements. For example, group formation in animals such as schools of fishes, flock of birds or herd of mammals can be explained with very simple behaviors at the level of individuals. Similarly, the evolution of altruistic cooperation in animals can be explained with very basic mathematics highlighting the critical influence of relatedness between individuals on cooperation behaviors.</p><p>Of course, adaptive collective systems are not flawless: the existence of evolutionary dead-ends (ie. species extinction) and collapsing societies demonstrate if need be that complex systems in nature are not doomed to succeed, whatever this means (though survival is usually what we imply).</p>",
             "items": [
+                {
+                    "title": "Social semantics: altruism, cooperation, mutualism, strong reciprocity and group selection.",
+                    "type": "article",
+                    "preview": "SocialSemantics.pdf",
+                    "url": "http://www.zoo.ox.ac.uk/group/gardner/publications/WestGriffinGardner_2007.pdf",
+                    "name": "SocialSemantics",
+                    "year": "2007",
+                    "author": "West, S. A., Griffin, A. S., & Gardner",
+                    "description": "This paper provides a summary of the many aspects of cooperation in biological systems, from an evolutionary perspective. It discusses topics sur as kin selection, mutualistic cooperation, altruism, group selection and so on, in a comprehensive and rigorous fashion.",
+                    "tags": "CAS in nature",
+                    "image": "SocialSemantics.jpg"
+                },
+                {
+                    "title": "Rousseau's whale hunt? Coordination among Big-Game Hunters",
+                    "type": "article",
+                    "preview": "Whalehunt.pdf",
+                    "url": "http://www.bec.ucla.edu/papers/AlvardPaper1.pdf",
+                    "name": "Whalehunt",
+                    "year": "2002",
+                    "author": "Alvard, M. S. & Nolin, D. A.",
+                    "description": "A comprehensive review of mutualist cooperation among fishermen from the village of Lamalera, Indonesia, for sperm whale hunting. The paper describes the complex social norms and adaptive process by which the rules for collaborative hunting and for sharing the benefits are revised year after year to ensure fairness and to maximize the payoffs of each participant (from the harpooner to the carpenter).",
+                    "tags": "CAS in nature",
+                    "image": "whalehunt.jpg"
+                },
+                {
+                    "title": "Course on Animal Behavior",
+                    "type": "link",
+                    "url": "https://www.coursera.org/course/animalbehav",
+                    "name": "AnimalBehavior",
+                    "description": "An on-line course on animal behavior. It provides mesmerizing examples of animal behaviors, focussing on how natural and sexual selection shaped these behaviors. Teachers are from to the University of Melbourne. Course is available on Coursera.",
+                    "tags": "CAS in nature",
+                    "image": "TheGreatTit.jpg"
+                },
+                {
+                    "title": "Collective Motion",
+                    "type": "article",
+                    "preview": "CollectiveMotion.pdf",
+                    "url": "http://arxiv.org/pdf/1010.5017.pdf",
+                    "name": "CollectiveMotion",
+                    "year": "2012",
+                    "author": "Tamás Vicsek and Anna Zafeiris",
+                    "description": "Collective motion is one of the most spectacular phenomena in nature, where the local behavior of many similar, autonomous individuals results in complex motion patterns, creating fluctuating meta-organisms. The attached science paper gives an extensive and detailed overview on the subject including observations, experiments, basic models, statistical mechanics of flocking and modelling of actual systems.",
+                    "tags": "CAS in nature modelling of CAS CAS properties",
+                    "image": "Fish.png"
+                },
+                {
+                    "title": "Evolution of Cooperation among Mammalian Carnivores and Its Relevance to Hominin Evolution",
+                    "type": "article",
+                    "preview": "CooperationCarnivores.pdf",
+                    "url": "http://www.mills.edu/academics/faculty/bio/jesmith/Mammalian%20Carnivores.pdf",
+                    "name": "EvolutionOfCooperation",
+                    "year": "2012",
+                    "author": "Smith, J. E., Swanson, E. M., Reed, D., & Holekamp, K. E.",
+                    "description": "Quoted from the text: \"spotted hyenas differ from most carnivores, because most species of mammalian carnivores allow only their kin to feed at kills\".</p><p>This paper focuses on the evolution of cooperation between unrelated individuals. This is one of the big issues in the evolution of cooperation because (1) it differs from the vast majority of cooperative behaviors, which are usually displayed between related individuals and (2) we, humans, are one of the few species that displays cooperative behaviors between unrelated individuals.</p><p>Hyenas provide another rare example of such cooperation: affinity between frequent collaborators turns out to be much more important than relatedness between individuals.",
+                    "tags": "CAS in nature",
+                    "image": "hyena.png"
+                },
+                {
+                    "title": "Boids! Flocks, herds and schools: A distributed behavioral model",
+                    "type": "article",
+                    "preview": "FlocksHerdsandSchools.pdf",
+                    "url": "http://robots.cs.tamu.edu/dshell/cs643/papers/reynolds87flocks.pdf",
+                    "name": "Boids",
+                    "year": "1987",
+                    "author": "Reynolds, C. W.",
+                    "description": "This seminal paper presents a simple model for simulating synchronized group behaviors, similar to a flock of birds, a school of fishes and a herd of animals. With only simple rules, complex group behaviors can be observed.</p><p>While this model -- termed BOIDS -- is quite old, it yielded a great amount of research and applications, from studying animal collective behaviors to simulating coordination behaviors in artificial systems (e.g. animation of crowd in movies or video games).",
+                    "tags": "CAS in nature modelling of CAS",
+                    "image": "boids.png"
+                },
+                {
+                    "title": "Collective cognition in animal groups",
+                    "type": "article",
+                    "preview": "collectivecognition.pdf",
+                    "url": "http://icouzin.princeton.edu/wp-content/uploads/2010/05/couzin09.pdf",
+                    "name": "CollectiveCognition",
+                    "year": "2009",
+                    "author": "Iain D. Couzin",
+                    "description": "Underlying principles of collective decision-making in animal groups and exploring the study of collective animal behavior related to the framework of cognitive science.",
+                    "tags": "CAS in nature emergence self-organisation"
+                },
+                {
+                    "title": "How Societies Choose to Fail or Succeed",
+                    "type": "link",
+                    "url": "http://www.mstudios.net/read/Collapse.pdf",
+                    "name": "SocietiesFail",
+                    "year": "2005",
+                    "author": "Diamond, J.",
+                    "description": "This book focuses on the many examples of collapsing human societies through the ages. It tries to provide an analysis for the multiple causes of such collapsing, from environmental problems to lack of adaptation, from internal structural problems to unstable relations with neighboring societies.",
+                    "tags": "CAS in nature",
+                    "image": "Collapse.jpg"
+                },
+                {
+                    "title": "The perfect swarm",
+                    "type": "link",
+                    "url": "https://books.google.nl/books?hl=en&lr=&id=gy7NUv_hmz8C&oi=fnd&pg=PR7&ots=YUgF44QvQA&sig=XjRzEfwy82uqI5E6Y5MTi-52tTo#v=onepage&q&f=false",
+                    "name": "PerfectSwarm",
+                    "year": "2011",
+                    "author": "Len Fisher",
+                    "description": "The organisation of societies, human and other animal ones, is described covering different forms of collective decision and providing extensive examples and anecdotes.",
+                    "tags": "CAS in nature",
+                    "image": "perf-swarm-cover.jpg"
+                },
+                {
+                    "title": "Bio-hybrid societies: putting robots and animals together",
+                    "type": "link",
+                    "url": "http://nautil.us/issue/10/mergers--acquisitions/animals-bow-to-their-mechanical-overlords",
+                    "name": "BiohybridSocieties",
+                    "year": "2014",
+                    "author": "Emily Anthes",
+                    "description": "This article summarizes the effort of european team of researchers to build robots that can be accepted by animals. Once accepted, these robots can be used to influence the behavior of this whole bio-hybrid society to match particular, user-defined, goals.",
+                    "tags": "CAS in nature human in the loop",
+                    "image": "robotchicken.png"
+                },
+                {
+                    "title": "The Genetical Evolution of Social Behavior",
+                    "type": "article",
+                    "preview": "The_genetic_evolution_of_social_behaviour.pdf",
+                    "url": "http://www.uvm.edu/~pdodds/teaching/courses/2009-08UVM-300/docs/others/everything/hamilton1964b.pdf",
+                    "name": "The_genetic_evolution_of_social_behaviour",
+                    "year": "1964",
+                    "author": "W.D. Hamilton",
+                    "description": "This seminal paper from W.D. Hamilton introduces the idea of inclusive fitness, which state that the success of a particular organism depends on its number of viable offspring. This has important implications as a particular individual may have a direct interest in helping genetically close relatives to survive and to spread copies of themselves.",
+                    "tags": "CAS in nature modelling of CAS evolution",
+                    "image": "elephants.jpg"
+                },
+                {
+                    "title": "Simulating dynamical features of escape panic",
+                    "type": "article",
+                    "preview": "EscapePanic_LettersToNature.pdf",
+                    "url": "http://arxiv.org/pdf/cond-mat/0009448.pdf",
+                    "name": "EscapePanic_LettersToNature",
+                    "year": "2000",
+                    "author": "Dirk Helbing, Illés Farkas and Tamás Vicsek",
+                    "description": "This paper presents a simulation based on a model of pedestrian behaviour to investigate the mechanisms of (and preconditions for) panic and jamming by uncoordinated motion in crowds. Moreover, the authors suggest an optimal strategy for escape from a smoke-filled room, involving a mixture of individualistic behaviour and collective `herding' instinct, among other practical ways to prevent dangerous crowd pressures.",
+                    "tags": "CAS in nature collective behavior panic public safety crowd management",
+                    "image": "Crowd_1.jpg"
+                },
+                {
+                    "title": "Avida software",
+                    "type": "link",
+                    "url": "http://avida.devosoft.org/",
+                    "name": "Avida",
+                    "description": "Quoted from the website: \"Avida is a (...) software platform for conducting and analyzing experiments with self-replicating and evolving computer programs\". It has also been used to study evolutionary dynamics in bacterial evolution.</p><p>Originally developed in the mid-1990's, it is now developed and maintained by members of the Michigan State University Digital Evolution Laboratory.",
+                    "tags": "evolution and learning modelling of CAS CAS in nature",
+                    "image": "AvidaPetriDish.jpg"
+                },
+                {
+                    "title": "AEvol software",
+                    "type": "link",
+                    "url": "http://www.aevol.fr/",
+                    "name": "AEvol",
+                    "description": "AEvol is a software platform that makes it possible to study bacterial evolution, with a particular emphasis on structural changes occurring at the genome level during evolution.</p><p>Originally developed in the early 2000’s, it is currently developed and maintained by members of LIRIS/INRIA Beagle team in France.",
+                    "image": "aevol-genes.png"
+                },
+                {
+                    "title": "Origins of Order: Self-Organization and Selection in Evolution",
+                    "type": "link",
+                    "url": "https://books.google.nl/books?hl=en&lr=&id=j7mq5QNszLwC&oi=fnd&pg=PR13&ots=2Ghs1CYIQR&sig=psWTh4pEerz7ecFrVCmvV4i5PZA#v=onepage&q&f=false",
+                    "name": "OriginsOfOrder",
+                    "year": "1993",
+                    "author": "Kauffman, S.",
+                    "description": "This very important book studies complex biological systems from the mathematical viewpoint. In particular, it deals with evolutionary dynamics, molecular evolution, morphogenesis. Though very dense, the content is worth reading!",
+                    "tags": "CAS in nature",
+                    "image": "theoriginoforder.jpg"
+                },
+                {
+                    "title": "The major transitions in evolution",
+                    "type": "link",
+                    "url": "http://ukcatalogue.oup.com/product/9780198502944.do",
+                    "name": "MajorTransitions",
+                    "year": "1995",
+                    "author": "Maynard Smith, J., Szathmáry, E.",
+                    "description": "This highly influential book is best summarize by its title: it describes the major transitions in evolution, from chemical evolution to the origins of societies.</p><p>The same authors later published a similar book, titled \"The Origins of Life: From the Birth of Life to the Origin of Language\", which is targeted towards the general audience.",
+                    "tags": "CAS in nature",
+                    "image": "majortransitionsbook.jpeg"
+                },
                 {
                     "title": "Hierarchical group dynamics in pigeon flocks",
                     "type": "article",
@@ -15,38 +205,8 @@
                     "year": "2010",
                     "author": "Nagy et al.",
                     "description": "This paper presents the results of experiments in which track logs of homing pigeons flying in flocks have been obtained by high-resolution lightweight GPS devices and analysed using a variety of correlation functions inspired by approaches common in statistical physics.",
-                    "image": "Pigeon.jpg",
-                    "featured": "true"
-                },
-                {
-                    "title": "Simulating dynamical features of escape panic",
-                    "type": "article",
-                    "url": "EscapePanic_LettersToNature.pdf",
-                    "name": "EscapePanic_LettersToNature",
-                    "year": "2000",
-                    "author": "Helbing et al.",
-                    "description": "This paper presents a simulation based on a model of pedestrian behaviour to investigate the mechanisms of (and preconditions for) panic and jamming by uncoordinated motion in crowds. Moreover, the authors suggest an optimal strategy for escape from a smoke-filled room, involving a mixture of individualistic behaviour and collective `herding' instinct, among other practical ways to prevent dangerous crowd pressures.",
-                    "image": "Crowd_1.jpg"
-                },
-                {
-                    "title": "The Genetic Evolution of Social Behavior",
-                    "type": "article",
-                    "url": "The_genetic_evolution_of_social_behaviour.pdf",
-                    "name": "The_genetic_evolution_of_social_behaviour",
-                    "year": "1964",
-                    "author": "Hamilton",
-                    "description": "This seminal paper from W.D. Hamilton introduces the idea of inclusive fitness, which state that the success of a particular organism depends on its number of viable offspring. This has important implications as a particular individual may have a direct interest in helping genetically close relatives to survive and to spread copies of themselves.",
-                    "image": "elephants.jpg"
-                },
-                {
-                    "title": "The Social Compute Unit",
-                    "type": "article",
-                    "url": "TheSocialComputeUnit.pdf",
-                    "name": "TheSocialComputeUnit",
-                    "year": "2011",
-                    "author": "Schahram Dustdar, Kamal Bhattacharya",
-                    "description": "The article introduces the concept of the Social Compute Unit, and ad-hoc provisioned team of human and machine-based agents, with the properties of computing power, elasticity and embracing human fallibility.",
-                    "image": "TheSocialComputeUnit.jpg"
+                    "tags": "CAS in nature hierarchy in nature pigeons flocking",
+                    "image": "Pigeon.jpg"
                 },
                 {
                     "title": "Life (a BBC documentary)",
@@ -56,6 +216,7 @@
                     "year": "2009",
                     "author": "",
                     "description": "Life is a series of ten episodes produced by the BBC, and aired in 2009. It features astounding images of life on earth, with a particular emphasis on survival strategies in a vast amount of species, within a vast number of different environments. The commentary and content makes a high quality introduction to the complexity of life on earth.<br /><br />It is available on various support, including in DVD or Bluray.",
+                    "tags": "CAS in nature",
                     "image": "BBC_Life.png"
                 }
             ]
@@ -65,7 +226,71 @@
             "name": "Controllability",
             "color": "1",
             "description": "<p>In general, a system is controllable if it can be driven from any given state to any other desired state through manipulating a number of “knobs”, i.e., input parameters. Controllability depends on two system properties. First, the <b>system architecture</b>, that is, the abstract network spanned by the possible interactions between the components (units, agents) of the system. Second, the <b>system drivers</b>, that include the local rules (a.k.a. policies or strategies or controllers) that determine the behavior of the individual units, as well as global rules that specify system behavior on a higher level, e.g., the frequency of interactions. The fundamental challenge in controlling (adaptive) collective systems is caused by the fact that the effect of controllable system parameters (e.g., links between units or behavioral rules) on system behavior is, in general, unknown.  Worse yet, the system architecture and/or the drivers may not be fully known and they may change over time.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "ASSISIbf project",
+                    "type": "link",
+                    "url": "http://assisi-project.eu/",
+                    "name": "ASSISIbf",
+                    "description": "EU project under the frame of FoCAS initiative</p><p>It focuses on interacting groups of robots with groups of animals of different species, in particular bees and fish",
+                    "tags": "CAS in nature social aspects evolution and learning controllability",
+                    "image": "fig-ASSISIbf.png"
+                },
+                {
+                    "title": "CONTROLLABILITY OF MULTI-AGENT SYSTEMS FROM A GRAPH-THEORETIC PERSPECTIVE",
+                    "type": "article",
+                    "url": "http://users.ece.gatech.edu/~magnus/Papers/rmme-siam.pdf",
+                    "preview": "ControllabilityMultiAgentSystems.pdf",
+                    "name": "controllabilityofmas",
+                    "year": "2009",
+                    "author": "RAHMANI et al.",
+                    "description": "A very theoretical treatment of controllability of MAS.",
+                    "tags": "CAS properties controllability"
+                },
+                {
+                    "title": "Structure and dynamics affect the controllability of complex systems: a Preliminary Study",
+                    "type": "article",
+                    "preview": "StructureDynamics.pdf",
+                    "url": "http://mitpress.mit.edu/sites/default/files/titles/content/alife14/978-0-262-32621-6-ch070.pdf",
+                    "name": "StructureDynamics",
+                    "year": "2014",
+                    "author": "Gates et al.",
+                    "description": "Complex systems are typically understood as large non- linear multivariate systems. Their organization and behavior are commonly modeled by representations such as graphs and automata networks. Graphs, where nodes representing variables lack intrinsic dynamics, capture the structure or or- ganization of complex systems. The simplest way to study multi-variate dynamics, is to allow network nodes to have states and update them with automata; for instance, Boolean networks (BN) are canonical models of complex systems and exhibit a wide range of dynamical behaviors",
+                    "tags": "CAS properties controllability emergence",
+                    "featured": "true"
+                },
+                {
+                    "title": "Controllability of complex networks",
+                    "type": "article",
+                    "url": "http://ccsb.dfci.harvard.edu/web/export/sites/default/ccsb/publications/papers/2011/LiuSlotineBarabasi_Nature2011.pdf",
+                    "preview": "ControllabilityComplexNetworks.pdf",
+                    "name": "ControllabilityComplexNetworks",
+                    "year": "2011",
+                    "author": "Liu et al.",
+                    "description": "A Nature paper about the controllability of complex networks.",
+                    "tags": "CAS properties emergence controllability"
+                },
+                {
+                    "title": "Video demo of the Controllability of Complex Networks",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/9-q2qpOJfkg",
+                    "name": "ControllabililityComplexNetworksVideo",
+                    "year": "2011",
+                    "author": "Liu et al.",
+                    "description": "This movie demonstrates vividly the essence of the network controllability paper: How to control a complex network with minimum number of nodes? For a given directed network, we calculate its maximum matching: a largest set of edges without common heads or tails. From it we identify the minimum set of driver nodes to control. By injecting signals to those driver nodes, we can fully control the network. There is a \"cactus\" structure underlying the controlled network, which is the \"skeleton\" for maintaining controllability. We show the cactus structures for both random networks and real-world networks in the movie.",
+                    "tags": "CAS properties emergence controllability"
+                },
+                {
+                    "title": "Robots that fly as a flock of birds",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/n_qRuHkD5lc",
+                    "name": "RobotThatFly",
+                    "year": "2011",
+                    "author": "Hauert et al.",
+                    "description": "This video shows a group of fixed-wing robots flying in a structured group formation. The algorithm is inspired from the boids algorithm (see related entry), a set of very simple individual behaviors that result in very stable group formation.</p><p>Video is provided by EPFL.",
+                    "tags": "real world applications controllability"
+                }
+            ]
         },
         {
             "id": "ethics",
@@ -73,18 +298,6 @@
             "color": "2",
             "description": "<p>The history of computing has followed a trajectory of increasing decentralization, miniaturization, proliferation, penetration and delegation. We are, of course, still some way from the supposed “singularity”, the point at which artificial intelligence exceeds human competence. The actuality is much more prosaic and mundane; but needs to be taken seriously nonetheless. Software engineering is no longer concerned with the verification of correctness for a single, deterministic system with well-defined functional requirements; but instead with systems whose components, structures, processes, rules and even purpose changes over time. Moreover, these system are embedded in natural environments, may be hybrid in that they symbiotically include people and computers (devices, sensors, robots, etc.), and may deal with issues of qualitative human concern – like health, comfort, laws, culture, relationships and so on.</p><p>They may therefore take decisions which have a direct impact on financial gain/loss, entitlement to benefits or health care, access control, surveillance, and a whole host of issues of social concern. Therefore, it is appropriate to evaluate the social, legal and ethical issues concerning the gradual (but rapidly accelerating) imposition of collective adaptive systems (CAS) on human society. For example, who is responsible for the decision-making of a CAS when all the components are distributed? Or when that functionality has been changed, altered, or adapted over time? Who, or what, is going to ensure that CAS concerned with resource distribution, for example, produce outcomes which are fair, equitable and sustainable? More generally, how can we tell that systems concerned with qualitative human concerns, or having such profound impact on human society and culture, are either right or wrong.</p><p>The papers in this section are concerned with such legal and ethical issues as they pertain to collective adaptive systems.</p>",
             "items": [
-                {
-                    "title": "Ethical Governance for Collective Adaptive Systems",
-                    "type": "article",
-                    "preview": "EthicalGovernance.pdf",
-                    "url": "http://link.springer.com/article/10.1023/A:1006250627410",
-                    "name": "EthicalGovernance",
-                    "year": "1999",
-                    "author": "M. Hartswood and M. Jirotka",
-                    "description": "In this article M. Hartswood and M. Jirotka from the SmartSociety Consortium deal with governance aspects in collective adaptive systems. In particular they focus on hybrid and diversity-aware collective adaptive systems, and provide foundations for the design of a framework for the ethical governance of complex socio-technical systems.",
-                    "image": "EthicalGovernance.jpg",
-                    "tags": "governance ethics responsible research and innovation socio-technical systems social aspects"
-                },
                 {
                     "title": "Revisiting Asimov: the Ethical Roboticist",
                     "type": "link",
@@ -159,6 +372,37 @@
                     "author": "Veruggio",
                     "description": "In this 2006 presentation Veruggio provides an overview of ethical issues related to robotics",
                     "tags": "ethics robotics"
+                },
+                {
+                    "title": "Computational Justice: A Tutorial",
+                    "type": "presentation",
+                    "file": "CompJustTutorial.pdf",
+                    "name": "CompJustTutorial",
+                    "year": "2013",
+                    "author": "Jeremy Pitt, Dídac Busquets & Régis Riveret",
+                    "description": "This document contains a tutorial on Computational Justice, presented by Jeremy Pitt, Didac Busquets and Regis Riveret at the Seventh IEEE International Conference on Self-Adapting and Self-Organising Systems (SASO), Philadelphia, September 2013. This is accompanied by a survey paper on the research programme of computational justice, which appeared in AI & Society journal in 2013.",
+                    "tags": "self-organisation ethics fairness"
+                },
+                {
+                    "title": "The RoboLaw project (EU FP7)",
+                    "type": "link",
+                    "url": "http://www.robolaw.eu",
+                    "name": "RoboLawProject",
+                    "year": "",
+                    "author": "",
+                    "description": "The RoboLaw project (funded by the EU under FP7) ran between 2012-2014. The main objective of the RoboLaw project was to investigate the ways in which emerging technologies in the field of (bio-) robotics (e.g. bionics, neural interfaces and nanotechnologies) have a bearing on the content, meaning and setting of the law. The most important outcome of the RoboLaw project is the \"Guidelines on Regulating Robotics\" document, containing regulatory suggestions for the European Commission, in order to establish of a solid framework of 'robolaw' in Europe.",
+                    "tags": "ethics robotics"
+                },
+                {
+                    "title": "Robot Ethics",
+                    "type": "article",
+                    "preview": "RobotEthics.pdf",
+                    "url": "http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6678596",
+                    "name": "RobotEthics",
+                    "year": "2013",
+                    "author": "Matthias Scheutz",
+                    "description": "The Technical Committee (TC) on Robot Ethics of the IEEE Robotics and Automation Society (RAS) aims to provide framework for raising and addressing the urgent ethical questions prompted by and associated with robot- ics research and technology.",
+                    "tags": "robotics ethics"
                 }
             ]
         },
@@ -167,42 +411,399 @@
             "name": "Evolutionary Systems",
             "color": "3",
             "description": "<p>An important property of Collective Adaptive Systems (CAS) is adaptation, which allows the overall system to adjust its behaviour over time based on external feedback. Two prominent forms of adaptation are evolution and learning, which can be differentiated based on the timescales they operate on. Both forms of learning are integral to the success of many organisms in nature.</p><p>The basic idea behind evolution is that some organisms are more adapted to their environment than others and the ones able to adapt pass their genes on to the next generation. The weak organisms die out, gradually changing the population to be better adapted to their environment. For example, an animal that can run faster than other animals of its species might have a higher chance of escaping predators and therefore a higher chance to reproduce. If this trait is also heritable, then in the next generation there will be a higher proportion of faster animals. Even if the selection pressure is not very high, over many generations slight differences in reproductive advantages will lead to a gradual change of the population.</p><p>Learning on the other hand is a form of adaptation that allows an individual to react much faster to environmental changes by adjusting its behavior during its lifetime. For example, we can learn how to ride a bike or a new language, and are able to change our behavior based on experiences. Learning is based on the ability of natural brains to change throughout life, by modifying synaptic connections, creating new connections or neurons.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "Evolutionary Game Theory, Natural Selection and Darwinian Dynamics ",
+                    "type": "article",
+                    "preview": "EvolutionaryGameTheory.pdf",
+                    "url": "http://www.cambridge.org/9780521841702",
+                    "name": "EvolutionaryGameTheory",
+                    "year": "2005",
+                    "author": "T. Vincent and J. Brown",
+                    "description": "This book, by T. Vincent and J. Brown, develops mathematics for the evolutionary game based on Darwin’s postulates leading to the concept of a fitness generating function (G-function). The book builds a bridge between approaches in game theory, ecology and biology, and represents a good introduction for those interested in applying such concepts to collective adaptive systems.",
+                    "tags": "evolutionary dynamics game theorye volutionary games evolutionary systems",
+                    "image": "darwin.png",
+                    "featured": "true"
+                },
+                {
+                    "title": "Compositional Pattern Producing Networks: A Novel Abstraction of Developmen",
+                    "type": "article",
+                    "preview": "CompositionalPatternProducingNetworks.pdf",
+                    "url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.342&rep=rep1&type=pdf",
+                    "name": "CompositionalPatternProducingNetworks",
+                    "year": "2007",
+                    "author": "K. Stanley",
+                    "description": "An important property of many CAS are local interaction and temporal unfolding, which through self-organisation give rise to global organisation. This paper raises interesting questions on the necessity of these properties by presenting a system that can directly describe the structural relationships of a developmental process.",
+                    "tags": "evolutionary algorithms neural networks local interaction development",
+                    "image": "picbreeder_montage.jpg",
+                    "featured": "true"
+                },
+                {
+                    "title": "Investigating Biological Assumptions through Radical Reimplementation",
+                    "type": "article",
+                    "preview": "RadicalReimplementation.pdf",
+                    "url": "http://eplex.cs.ucf.edu/papers/lehman_alife14.pdf",
+                    "name": "RadicalReimplementation",
+                    "year": "2014",
+                    "author": "J. Lehman and K. Stanley",
+                    "description": "This paper suggests to investigate a biological hypothesis by intentionally aiming to reimplementing its main principles in a way to maximally diverge from the existing natural example. This process of radical reimplementation can help to gain a deeper insights into the fundamental principles behind CAS such as development or natural evolution.",
+                    "tags": "evolutionary algorithms neural networks artificial life",
+                    "image": "radical_reimplementation.png"
+                },
+                {
+                    "title": "Evolutionary Conditions for the Emergence of Communication in Robots",
+                    "type": "article",
+                    "preview": "EvolutionCommunication.pdf",
+                    "url": "http://users.ox.ac.uk/~bioc1048/Research_files/floreanoetal07.pdf",
+                    "name": "EvolutionCommunication",
+                    "year": "2007",
+                    "author": "D. Floreano et al.",
+                    "description": "This paper explores under what conditions communication evolves in a group of simulated robots.",
+                    "tags": "evolutionary algorithms emergence neural networks",
+                    "image": "robots2.jpg"
+                },
+                {
+                    "title": "Evolving Neural Networks through Augmenting Topologies",
+                    "type": "article",
+                    "preview": "neat.pdf",
+                    "url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.28.5457&rep=rep1&type=pdf",
+                    "name": "neat",
+                    "year": "2002",
+                    "author": "K. Stanley and R. Miikkulainen",
+                    "description": "This is one of the seminal papers in the CAS related field of neuroevolution, which tries to evolve artificial neural networks through artificial evolution.</p><p>An important goal of neuroevolution is to abstract the essential properties of natural evolution to create more complex artificial brains.",
+                    "tags": "neural networks evolutionary algorithms neuroevolution",
+                    "image": "neat.png"
+                },
+                {
+                    "title": "Resilient Machines Through Continuous Self-Modeling",
+                    "type": "article",
+                    "preview": "ResilientMachines.pdf",
+                    "url": "http://sclab.yonsei.ac.kr/courses/11cognitive/11cognitive.files/referred/10.pdf",
+                    "name": "ResilientMachines",
+                    "year": "2006",
+                    "author": "J. Bongard et al.",
+                    "description": "CAS such as the brain allow us to maintain a consistent self-model, enabling us to compensate for unexpected morphological changes. This paper explores the question if we can create similarly resilient machines.",
+                    "tags": "evolutionary algorithms neural networks",
+                    "image": "TalkingRobotsDamageResilientRobot.jpg"
+                },
+                {
+                    "title": "Robots that evolve cooperation",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/a52u7SsjRMs",
+                    "name": "RobotsEvolveCooperation",
+                    "year": "2009",
+                    "author": "Waibel et al.",
+                    "description": "This video shows how robots can evolve cooperative behaviors. Selection pressure is explicitly driven by the foraging task, where big items provide a larger reward, but cannot be gathered with one robot only. Here, evolution of cooperation is shown to be quite straight-forward as all robots within a group are clones, ie. the share the same genome. Hence, selection pressure for this genome applies to performance of the group of clones, rather than one separate individuals.</p><p>A detailed description of this work can be found in: Waibel, M., Keller, L., & Floreano, D. (2009). Genetic Team Composition and Level of Selection in the Evolution of Cooperation. IEEE Transactions on Evolutionary Computation, 13(3), 648–660.",
+                    "tags": "evolution and learningembodied evolution"
+                },
+                {
+                    "title": "Artificial evolutionary ecology: an example with mobile robots",
+                    "type": "youtube",
+                    "embed": "https://www.youtube.com/embed/_ilRGcJN2nA",
+                    "url": "http://pages.isir.upmc.fr/~bredeche/MyBiblio/2011-MCMDS-EvolutionaryAdaptation.pdf",
+                    "name": "ArtificialEvolutionaryEcology",
+                    "year": "2012",
+                    "author": "Bredeche et al.",
+                    "description": "This video illustrates how the environment shapes the evolution of particular behaviors. Each robot is driven by a genome, and send (mutated) copies of its own genome to robots that are nearby. Each genome controls a robot for a limited time, after what the genome is replaced by randomly picking one of the genomes received from other robots. Thus, the only way for a genome to survive is to drive its vehicle (ie. the robot) to meet as many other vehicles as possible, and spread itself. At the level of the population, this means that the genome which is the most successful at driving the vehicle it controls to meet with other robots will increase its chances to have generate offsprings.</p><p>In this video, one particular landmark is located in the environment, which can be seen from anywhere. What happens is that most of the robots end up aggregating around the landmark. This can be easily explained by the obvious gain each genome get by spreading more copies of itself, even though competition is more fierce around the landmark (many genomes are competing for accessing robots) than when far away (where genome can be lost due to a lack of mating opportunity).</p>",
+                    "tags": "modelling of CAS evolution and learning embodied evolution"
+                },
+                {
+                    "title": "Abandoning Objectives: Evolution Through the Search for Novelty Alone",
+                    "type": "article",
+                    "preview": "AbandoningObjectives.pdf",
+                    "url": "http://eplex.cs.ucf.edu/papers/lehman_ecj10.pdf",
+                    "name": "AbandoningObjectives",
+                    "year": "2011",
+                    "author": "J. Lehman and K. Stanley",
+                    "description": "Novelty search is an approach to evolutionary computation that is rapidly gaining popularity. The most important idea behind novelty search is that the diversity of solutions is better maintained if, instead of either explicitly seeking an objective, evolution is directed to search for behavioral novelty.</p><p>In this paper, Lehman and Stanley introduce the concept and report some initial results that show that novelty search does in fact improve the quality of solutions and the speed at which they are discovered.",
+                    "tags": "evolution and learning",
+                    "image": "AbandoningObjectives.png"
+                },
+                {
+                    "title": "Allow Ensembles project",
+                    "type": "link",
+                    "url": "http://www.allow-ensembles.eu/",
+                    "name": "AllowEnsembles",
+                    "description": "EU project under the FoCAS initiative</p><p>The overall goal of Allow Ensembles is to develop a new design principle and establish a new foundational framework for collective adaptive systems (CAS) based on the concept of cell ensembles",
+                    "tags": "evolution and learning cells",
+                    "image": "allow_ensembles.png"
+                }
+            ]
         },
         {
             "id": "instances",
             "name": "Instances of CAS",
             "color": "4",
             "description": "<p>Collective Adaptive Systems (CASs) come in many different shapes and sizes. There are many examples of CASs in nature, ranging from ant colonies that appear intelligent when viewed as a whole to human societies with their different cultures. Artificial CASs are similarly varied and are used for many different purposes.</p><p>An early example of an artificial CAS that was implemented in a computer is Conway’s Game of Life. It creates a virtual grid-like world where four very simple rules determine how a cell in the grid reacts to the state of its neighbours (cells that are horizontally, vertically, or diagonally adjacent) by setting its own state state (live or dead). Although the rules are very simple, Conway's Game of Life has attracted much interest because of the surprising ways in which the patterns can evolve. It provides an instructive example of emergence and self-organisation.</p><p>A well known example of a collective adaptive system with an application in optimisation is the particle swarm optimiser. Here, the units that make up the CAS are virtual particles that obey simple laws of attraction that determine (and depend on) each particle’s  position and velocity. Each particle represents  a candidate solution for an optimisation problem and the rules that govern the movement of the individual particles cause the ‘cloud’ of particles to converge on the best, or at least a good, solution.</p><p>Collectives of robots that collaborate -- for instance physically linking together to be able reach something that individual robots cannot -- to achieve a joint task. Examples of this are modular robots (robots that consist of smaller robots linked together, rather like lego bricks) and robot swarms that mimic ant behaviour to determine the shortest navigable path between two locations.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "The Social Compute Unit",
+                    "type": "article",
+                    "preview": "TheSocialComputeUnit.pdf",
+                    "url": "http://www.infosys.tuwien.ac.at/staff/sd/papers/Zeitschriftenartikel%20SD%20The%20Social%20Compute%20Unit.pdf",
+                    "name": "TheSocialComputeUnit",
+                    "year": "2011",
+                    "author": "Schahram Dustdar, Kamal Bhattacharya",
+                    "description": "The article introduces the concept of the Social Compute Unit, and ad-hoc provisioned team of human and machine-based agents, with the properties of computing power, elasticity and embracing human fallibility.",
+                    "tags": "social compute unit social computing socio-technical systems programming fallibility tolerance instances of CAS",
+                    "image": "TheSocialComputeUnit.jpg"
+                },
+                {
+                    "title": "Diversify Project",
+                    "type": "link",
+                    "url": "http://diversify-project.eu/",
+                    "name": "diversify",
+                    "description": "EU project under the frame of FoCAS initiative</p><p>DIVERSIFY explores diversity as the foundation for a novel software design principle and increased adaptive capacities in collaborative adaptive systems",
+                    "tags": "instances of CAS real world applications software design",
+                    "image": "diversify.png"
+                }
+            ]
         },
         {
             "id": "localglobal",
             "name": "Local-Global Properties of CAS",
             "color": "5",
             "description": "<p>Collective adaptive systems (CAS) are composed of a diversity of active units that interact among themselves and with the environment in a way that is modified over time as a result of those interactions.</p><p>In general, it is rather difficult to map a global behaviour of a population into the specification of individual behaviours.  The other way round is also a complex problem, meaning that from the individual specification it may not be viable to compute the global behaviour of the collective.  This is due to the non-linearities that occur in global behaviour as a result of individual behaviour and the propagation of its influence through local neighbourhood.  When multiplying by a large number of units the result of a small change in some individual behaviour parameter may produce a qualitative modification in global properties.  Therefore the local vs. global keyword well characterises the dualistic nature of CAS from the local properties of the units to the global properties of the collective.</p><p>Local properties are known to have significant effects on the global behaviour of a CAS.  Communication is one of them.  It is considered a local property since the units are not able, in general, to communicate beyond a close range.  However, if local communication is disrupted, the global properties of the CAS will be affected and may outright cease to exist.</p><p>Besides communication capabilities, such as range, number of simultaneous receivers, other local properties may include timing parameters of behaviours, the type of behaviour (aggregation, avoidance, following,...), etc.  Global parameters include self-organisation, stability, pattern formation, information spreading, among others.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "Flocking algorithm for autonomous flying robots ",
+                    "type": "article",
+                    "preview": "FlockingAlgorithm.pdf",
+                    "url": "http://arxiv.org/pdf/1310.3601",
+                    "name": "FlockingAlgorithm",
+                    "year": "2014",
+                    "author": "C. Virágh, G. Vásárhelyi et al.",
+                    "description": "The attached science paper is recommended for two reasons. It demonstrates a working control algorithm for collaborative aerial robot operation (flocking). It gives a good example of testing a robot control algorithm on a purpose made mathematical model prior the real-world application tests. The reader can follow how the relevant properties of the real robot and the effect of its environment are formalised while still keeping the model simple.",
+                    "tags": "modelling of CAS CAS properties",
+                    "image": "Virtualflock.png"
+                },
+                {
+                    "title": "TEDx - Building Blocks and Innovation",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/nzHVGd22vak",
+                    "name": "BuildingBlocks",
+                    "year": "2010",
+                    "author": "J. Holland",
+                    "description": "The \"father of genetic algorithms\" talks about Complex Adaptive Systems, where adaptation is the source of emergence. Quotes: \"The whole is more than the sum of the parts\". \"Adaptation occurs when agents learn from interactions and change strategies on the basis of experience.\"",
+                    "tags": "complex systems CAS properties emergence"
+                },
+                {
+                    "title": "Complex adaptive systems: an introduction",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/rl0yFwcGx_o",
+                    "name": "ComplexAdaptiveSystemsIntroduction",
+                    "year": "2014",
+                    "author": "Complexity Lab",
+                    "description": "A five minutes video introduction to Complex Adaptive Systems. Quote: \"Adaptation is the process or capability through which systems can change in response to some event in their environment.\"",
+                    "tags": "complex systems CAS properties adaptivity"
+                },
+                {
+                    "title": "QUANTICOL project",
+                    "type": "link",
+                    "url": "http://blog.inf.ed.ac.uk/quanticol/",
+                    "name": "Quanticol",
+                    "description": "Eu project under the framework of the FoCAS initiative</p><p>The main objective of the QUANTICOL project is the development of an innovative formal design framework that provides a specification language for collective adaptive systems (CAS) and a large variety of tool-supported, scalable analysis and verification techniques",
+                    "tags": "modelling of CAS CAS properties",
+                    "image": "quanticol.jpg"
+                },
+                {
+                    "title": "TED - Who controls the world?",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/NgbqXsA62Qs",
+                    "name": "ControlsWorld",
+                    "year": "2013",
+                    "author": "J. Glattfelder",
+                    "description": "A TED talk on complex systems in the world of economy. Ownership networks shed light on the overal distribution of control. In other words: who controls the world?",
+                    "tags": "CAS properties economy",
+                    "featured": "true"
+                }
+            ]
         },
         {
             "id": "modelling",
             "name": "Modelling of CAS",
             "color": "6",
             "description": "<p>This category deals with modelling adaptive collective systems. Modelling is what you do when you want to understand how something is ticking.</p><p>It is also critical to distinguish between the target of the study, and the model(s), as it may happen that the same object can be used as a target or as model depending on the motivation at end. Let's consider what a robot is. On the one hand, robots can be used a model to study coordination behaviors in animals. On the other, computer simulations can be used as a model to design robot behaviours. In these two examples, the robotic setup is used either as a model (to understand animal behavior), or as the final objective (to design a robotic setup).</p><p>Models can be defined at different levels of abstraction. The e-coli bacteria is often used as a general model for studying bacterial evolution, computer simulations can be used to model collective motion and differential equations have been used to study predator-prey interactions in the last 100 years. The different levels of abstraction encompass both implementations (analytics, computer simulation, physics-based experiments) and methods (mathematical models, individual-based models, physics-based experimentation, in vitro experiments, in vivo experiments or observation from nature).</p><p>In this category, we present several examples of models, from using robots to executing computer software, from using mathematical models to performing in vitro experiments.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "Smart Society project",
+                    "type": "link",
+                    "url": "http://www.smart-society-project.eu/",
+                    "name": "SmartSocietyProject",
+                    "description": "EU project under the framework of the FoCAS initiative</p><p>The goal of this project is to move towards hybrid systems where people and machines tightly work together to build a smarter society. We envision a new generation of Collective Adaptive Systems where humans and machines synergically complement each other and operate collectively to achieve their, possibly conflicting, goals, but which also exhibit an emergent behaviour that is in line with their designers’ objectives",
+                    "tags": "human in the loop modelling of CAS",
+                    "image": "logo_smartsociety.jpg"
+                },
+                {
+                    "title": "CASSTING project",
+                    "type": "link",
+                    "url": "http://www.cassting-project.eu/",
+                    "name": "cassting",
+                    "description": "EU project under the frame of FoCAS initiative</p><p>CASSTING is focused on the development of a novel approach for analysing and designing collective adaptive systems in their totality, by setting up a game theoretic framework",
+                    "tags": "modelling of CAS game theory",
+                    "image": "cassting.png"
+                },
+                {
+                    "title": "FoCAS coordination action",
+                    "type": "link",
+                    "url": "http://focas.eu/",
+                    "name": "FoCASWebsite",
+                    "description": "Website of the EU coordination action Fundamentals of Complex Adaptive Systems (FoCAS)</p><p>The FoCAS coordination action is an umbrella project which aims to integrate, coordinate and help increase visibility for research carried out in the FOCAS Proactive Initiative and in research fields related to collective adaptive systems",
+                    "tags": "modelling of CAS",
+                    "image": "focas-web-logo.png"
+                },
+                {
+                    "title": "SwarmOrgan project",
+                    "type": "link",
+                    "url": "http://www.swarm-organ.eu/",
+                    "name": "swarmorgan",
+                    "description": "EU project in the framework of the FoCAS initiative</p><p>This project focuses on systems containing large numbers of autonomous but relatively simple agents, whose goal is to collectively organise themselves into complex spatial arrangements despite each agent having only local awareness",
+                    "tags": "modelling of CAS controllability",
+                    "image": "logo-swarm-organ.png"
+                }
+            ]
         },
         {
             "id": "humanintheloop",
             "name": "Putting the Human in the Loop",
             "color": "7",
             "description": "<p>The idea of combining research on how humans work, communicate and cooperate and the research on how computer systems can efficiently support such collaborations led to the creation of an interdisciplinary research area known as computer-supported cooperative work (CSCW) in the 1980s. Initially, the research was focused on small-scale collaborations, e.g., within companies or interest groups. With the wide adoption of Internet technologies, service-oriented architectures (SOA), mobile and cloud computing, and especially social networks, it was possible to move the focus of the research onto  large-scale collaborations, possibly involving thousands of collaborators across boundaries of multiple organizations and countries.</p><p>Most social computing systems today are based around patterns of work that can be predictably modeled before execution, e.g., with a workflow. However, there are many cases where a traditional workflow approach is too rigid to address the dynamic an unpredictable nature of the tasks at hand, and more flexible crowd working systems need to be developed. Perhaps the most frequently used keyword today (or buzzword, indeed) to describe (a subclass of) such systems is the 'crowdsourcing'. Ever since the term crowdsourcing was coined in 2005 there has been a debate as to what exactly it should comprise. After a decade of research and commercial exploitation, the debate seems livelier than ever. When most of the community tacitly started applying the term to a family of micro-task or creativity-task platforms a range of novel systems emerged attempting to leverage humans for more complex, intellectually challenging tasks. These novel systems involved longer lasting worker engagement and complex collaborations, often integrating the notion of team programmability. Whether the emerging systems are called 'social machines' (a term coined by Sir Tim Berners-Lee), 'socio-technical', 'social computing', or simply 'crowdsourcing systems', their principal trait is that they need to manage and integrate interactions with and among human elements, referred to as 'workers', 'agents', 'human services' or 'peers', performing different 'tasks' ('jobs') or 'collaborative workflows' thereof.</p><p>Designing a social computing system requires understanding of individual and group human behavior alongside technical expertise, and a view of the system as an interconnected whole containing both human and computational elements.  Furthermore, such systems must respond to the exigencies of unfolding situations, requiring human creativity in the face of unpredictability. In such cases it is important not to over-regulate participating humans, but to let them play an active role in shaping the collaboration during runtime. This includes leveraging human creativity and embracing the uncertainty that comes with it. On the other hand, it is often necessary to impose certain coordination and quality constraints for these collaborations in order to manage them. The constraints delimit the decision space within which the humans are allowed to self-organize.</p><p>A fundamental property of these complex collaborations is that they are unpredictable, requiring dynamic adaptations of the peer collectives executing them. The adaptability can be reflected in a variety of aspects, such as: changes in peer relationship topology, replacement of individual peers with more fitting ones, scaling in size, human-driven adaptations of the execution patterns or communication channels, different choice of applied incentives, interchangeability of human-based and software-based peers. Furthermore, since engaging human experts is not as easy as offering a simple task to a crowd of anonymous, unqualified workers, additional novel challenges include developing strategies and algorithms for locating, motivating and negotiating with the peers (workers) to join a collective.</p><p>Although inherently complex, socio-technical systems are promising to enable fairer and more competitive virtual labor markets which could compete with traditional markets in terms of the complexity of labour they can support, but with added benefits of web-scale, tailored expertise provisioned at request, complemented with machine support when appropriate.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "The Future of Crowd Work",
+                    "type": "article",
+                    "preview": "FutureCrowdWork.pdf",
+                    "url": "http://www2.cs.siu.edu/~dche2/files/futureofcrowdwork-cscw2013.pdf",
+                    "name": "FutureCrowdWork",
+                    "year": "2013",
+                    "author": "A. Kittur et al.",
+                    "description": "The paper by a number of prominent researcher in the area of social computing/crowdsourcing discusses important issues and new research questions that need to be explored in order to build socio-technical systems in which humans could express themselves more naturally.",
+                    "tags": "social computing crowd sourcing human in the loop socio-technical systems human-based services incentives programming"
+                },
+                {
+                    "title": "Incentives and rewarding in social computing",
+                    "type": "article",
+                    "preview": "Incentives.pdf",
+                    "url": "http://dsg.tuwien.ac.at/staff/truong/publications/2013/truong-cacm2013.pdf",
+                    "name": "incentives",
+                    "year": "2013",
+                    "author": "O. Scekic et al.",
+                    "description": "Incentives are an important collective adaptation mechanism for indirectly influencing human elements in a CAS system, whether individually, or in target groups. The paper presents a survey and categorization of incentive mechanism used commercial and research social computing systems. It discusses how these can be generalized and modeled.",
+                    "tags": "social computing human systems incentives rewards human in the loop socio-technical systems sociologically-inspired  computing fallibility tolerance cooperation",
+                    "image": "Drawin2.png",
+                    "featured": "true"
+                },
+                {
+                    "title": "A Presentation on Basic Incentive Elements in Socio-Technical Systems",
+                    "type": "presentation",
+                    "file": "IncentivesRewardingSociaComputing.pdf",
+                    "name": "IncentivesRewardingSociaComputing",
+                    "description": "An informal PowerPoint presentation presenting concepts and constituent parts of a possible model for incentives for socio-technical CAS'es.",
+                    "tags": "social computing incentives rewarding human in the loop socio-technical systems gamification cooperation",
+                    "image": "IncentivesRewardingSociaComputing.png"
+                },
+                {
+                    "title": "Conceptualizing and Programming Hybrid Human/Machine Service Collectives",
+                    "type": "article",
+                    "preview": "ConceptualizingProgrammingHybridServices.pdf",
+                    "url": "http://dsg.tuwien.ac.at/staff/truong/publications/2013/truong-ijcis2013-submitted.pdf",
+                    "name": "ConceptualizingProgrammingHybridServices",
+                    "year": "Truong et al.",
+                    "author": "2013",
+                    "description": "This paper describes the concepts of \"programming\" adaptable collectives of human- and machine-based services. The term programming is not meant to imply that the collective's elements are explicitly given sequences of actions to perform, but rather the managing system is programmed to build CAS collectives that are most likely to be capable of solving a given task/problem by mutual collaboration. The programming here also implies the notion of elasticity, referring to the concept of adaptive composition of the collective in order to maintain certain constraints or achieve some goals with respect to metrics like cost, productivity, or time. As such, these concepts exhibit the fundamental CAS properties.",
+                    "tags": "social computing social compute unit human in the loop programming modelling programming models socio-technical systems fallibility tolerance crowd sourcing cooperation adaptivity elasticity scalability heterogeneity incentives",
+                    "image": "ConceptualizingProgrammingHybridServices.png"
+                },
+                {
+                    "title": "The rise of human-computer cooperation",
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/embed/ltelQ3iKybU",
+                    "name": "RiseOfHumanComputerCooperation",
+                    "year": "2012",
+                    "author": "Shyam Sankar",
+                    "description": "TED talk. Brute computing force alone can’t solve the world’s problems. Data mining innovator Shyam Sankar explains why solving big problems (like catching terrorists or identifying huge hidden trends) is not a question of finding the right algorithm, but rather the right symbiotic relationship between computation and human creativity.",
+                    "tags": "human in the loop social computing"
+                },
+                {
+                    "title": "Social Machines",
+                    "type": "link",
+                    "url": "http://en.wikipedia.org/wiki/Social_machine",
+                    "name": "SocialMachines",
+                    "description": "A Wikipedia entry referencing literature explaining the term 'social machines', used in a part of the research community due to historical reasons, which is closely related, if not synonymous with the term socio-technical systems.",
+                    "tags": "human in the loop social computing socio-technical systems"
+                }
+            ]
         },
         {
             "id": "realworldapps",
             "name": "Real-World Applications",
             "color": "8",
             "description": "<p>This category includes material on concrete applications of collective adaptive systems (CASs). Items in this category are meant to be of interest for the general public, for scientists interested in understanding the potential impacts on technology of their research as well as to practitioners working in specific domains.In general, we can classify real-world applications of CASs into three broad categories.</p><p>The first one relates to robotics, and in particular to the emerging fields of distributed, collective and swarm robotic systems, where a number of robots cooperate (by forming purposeful collectives) to achieve the ability of completing a given task. These systems are characterised by the emergence of a given collective behaviour (at the ‘macro’ level) by means of (at least partially) programmed interactions among single robots (the ‘micro’ level). The robots can be terrestrial, underwater of flying ones. In particular the last one is receiving growing attention, due to the widespread emergence of rather inexpensive drones, in this context understood as unmanned aerial vehicles employing autonomous control.</p><p>The second class of real-world applications relates to self-managing IT systems, and to autonomic computing in particular. Application scenarios in this category include software systems able to re-configure to adapt to external changes or to a security threat, autonomous resource allocation in large-scale distributed IT systems and applications, network management systems able to automatically reconfigure in response to a node failure etc.</p><p>The third class of real-world applications refer to socio-technical systems, i.e., systems where technology (in particular information and communication technology) is so interwoven into the social fabric that the two layers (technology and society) cannot be any longer dealt with in isolation. Application scenarios tackled include smart energy systems (whereby the role of prosumers in a smart grid is emphasized and social dynamics impact the overall energy consumption/storage pattern), integrated health and care (whereby a new generation of socially-aware technologies can promote the emergence of a more sustainable and effective way of delivering personalised and context-aware health and care services), mobility and transportation (whereby individuals, supported by advanced ICT, self-organise into effective form of collective transportation), supporting complex engineering/creative labor, etc. Most scenarios in this second class can be also referred to as ‘smart city’ or ‘smart society’ one, depending on the specific focus.</p>",
-            "items": []
+            "items": [
+                {
+                    "title": "A swarm cognition realization of attention, action selection, and spatial memory",
+                    "type": "article",
+                    "preview": "SwarmCognition.pdf",
+                    "url": "http://home.iscte-iul.pt/~pfsao/papers/ab_2010.pdf",
+                    "name": "SwarmCognition",
+                    "year": "2010",
+                    "author": "P. Santana and L. Correia",
+                    "description": "In line with the active vision approach, the interaction with the action selection process is exploited by the model to deploy visual attention in a by-need way. Additionally, the multiple focuses of attention considered in the proposed model interact in a way that their collective behavior robustly self-organizes for a proper handling of the speed–accuracy trade-off inherent to visual search tasks. Besides the self-organization of a global spatiotemporal visual attention policy, the model also produces parallel, sparse, and active spatial working memories, that is, local maps of the environment. The underlying mechanisms of the model are based on the well known formalism that describes the self-organization of collective foraging strategies in social insects.",
+                    "tags": "swarm cognition robots real world applications",
+                    "featured": "true"
+                },
+                {
+                    "title": "Outdoor flocking and formation flight with autonomous aerial robots",
+                    "type": "article",
+                    "preview": "OutdoorFlockingWithAerialRobots.pdf",
+                    "url": "http://arxiv.org/pdf/1402.3588",
+                    "name": "OutdoorFlockingWithAerialRobots",
+                    "year": "2014",
+                    "author": "G Vásárhelyi et al.",
+                    "description": "The paper leads through the theoretical and technical aspects of the creation of a group of aerial robots that can fly together in a loose group without collisions. The system works outdoor (by the aid of GPS signal), and needs no centralised, external control.",
+                    "tags": "real world applications collective motion flocking robotics aerial",
+                    "image": "OutdoorFlockingWithAerialRobots.png",
+                    "featured": ""
+                },
+                {
+                    "title": "The Autonomic Power System",
+                    "type": "link",
+                    "url": "http://autonomicpowersystem.org.uk/",
+                    "name": "AutonomicPowerSystem",
+                    "description": "This UK EPSRC Grand Challenge project investigates how collective intelligence and a distributed control approach can deliver the future flexible grids with requisite self-* properties (in particular the self-healing of autonomic systems). These properties are required to facilitate the low carbon transition, allowing for the adoption of emerging game changing network technologies and coping with the accompanying increase in uncertainty and complexity.",
+                    "tags": "autonomic systems real world applications"
+                },
+                {
+                    "title": "The vision of autonomic computing",
+                    "type": "article",
+                    "preview": "AutonomicComputing.pdf",
+                    "url": "http://www.cs.odu.edu/~mukka/cs775s07/papers/AC_Vision_Computer_Jan_2003.pdf",
+                    "name": "AutonomicComputing",
+                    "year": "2003",
+                    "author": "J. Kephart and D. Chess",
+                    "description": "This seminal article by Kephart and Chess introduces the notion of Autonomic Computing, aiming at making IT systems able to manage themselves autonomously according to a given goal. This paper gave rise to a whole research field, which is now finding application in many leading IT services and systems.",
+                    "tags": "autonomic computing real world applications self-organisation",
+                    "image": "AutonomicComputing.png",
+                    "featured": "true"
+                },
+                {
+                    "title": "Cyber-Physical Systems (Digital Agenda)",
+                    "type": "link",
+                    "url": "https://ec.europa.eu/digital-agenda/en/cyber-physical-systems",
+                    "name": "CyberPhysicalSystems",
+                    "description": "Official EC page on cyber-physical systems. Includes links to relevant initiatives and events.",
+                    "tags": "cyber-physical systems real world applications"
+                },
+                {
+                    "title": "Cyber-Physical Systems Concept Map",
+                    "type": "link",
+                    "url": "http://cyberphysicalsystems.org/",
+                    "name": "CPSConceptmap",
+                    "description": "Concept map from cyberphysicalsystems.org",
+                    "tags": "cyber-physical systems real world applications",
+                    "image": "CPS_conceptmap.png"
+                }
+            ]
         }
     ]
 }

@@ -280,7 +280,8 @@ div.ui-dark-background {
 .item-container.article:after {
     background-image: url("images/pdf.png");
 }
-.item-container.video:after {
+.item-container.video:after,
+.item-container.youtube:after {
     background-image: url("images/movie.png");
 }
 .item-container.link:after {
@@ -295,7 +296,7 @@ div.ui-dark-background {
     margin: 15px 0px 5px 10px;
 }
 .description-image img {
-    width: 200px;
+    width: 170px;
 }
 .item.frontpage h3,
 .description-image h3 {
@@ -304,9 +305,13 @@ div.ui-dark-background {
 }
 .item-description {
     display: none;
+    background-color: rgba(0,0,0,0.7);
 }
 .item-description p {
-    min-height: 170px;
+    background-color: transparent;
+}
+.item-description .item-container {
+    clear: both;
 }
 
 .item-container.icon-right:after {
@@ -487,7 +492,7 @@ div.ui-dark-background {
 }
 
 /*** Video page ***/
-#video-embed video {
+#video-embed video, #video-embed iframe {
     height: 100%;
     width: 100%;
     max-height: 100%;

@@ -21,13 +21,16 @@ mixin description(item, search)
                 - file = item.preview
         else if item.type === "video"
             - text = "View"
+        else if item.type === "youtube"
+            - text = "View"
+            - file = item.embed
         else if item.type === "link"
             - text = "Open link"
             - file = item.url
         div(class="item-container description-item icon-right "+item.type, data-id=searchPrefix+item.name)
             div(class="item "+item.type+"-opener", data-file=file data-id=item.name, data-poster=item.image)
                 h3= text
-        if item.type === "article" && item.url
+        if item.type === "article" || item.type === "youtube" && item.url
             div(class="item-container description-item icon-right link", data-id=searchPrefix+item.name)
                 div(class="item link-opener", data-file=item.url data-id=item.name, data-poster=item.image)
                     h3 Open Link
