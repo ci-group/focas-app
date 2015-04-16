@@ -273,7 +273,7 @@
                 {
                     "title": "Video demo of the Controllability of Complex Networks",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/9-q2qpOJfkg",
+                    "embed": "https://www.youtube.com/embed/9-q2qpOJfkg",
                     "name": "ControllabililityComplexNetworksVideo",
                     "year": "2011",
                     "author": "Liu et al.",
@@ -283,7 +283,7 @@
                 {
                     "title": "Robots that fly as a flock of birds",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/n_qRuHkD5lc",
+                    "embed": "https://www.youtube.com/embed/n_qRuHkD5lc",
                     "name": "RobotThatFly",
                     "year": "2011",
                     "author": "Hauert et al.",
@@ -489,7 +489,7 @@
                 {
                     "title": "Robots that evolve cooperation",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/a52u7SsjRMs",
+                    "embed": "https://www.youtube.com/embed/a52u7SsjRMs",
                     "name": "RobotsEvolveCooperation",
                     "year": "2009",
                     "author": "Waibel et al.",
@@ -515,7 +515,7 @@
                     "name": "AbandoningObjectives",
                     "year": "2011",
                     "author": "J. Lehman and K. Stanley",
-                    "description": "Novelty search is an approach to evolutionary computation that is rapidly gaining popularity. The most important idea behind novelty search is that the diversity of solutions is better maintained if, instead of either explicitly seeking an objective, evolution is directed to search for behavioral novelty.</p><p>In this paper, Lehman and Stanley introduce the concept and report some initial results that show that novelty search does in fact improve the quality of solutions and the speed at which they are discovered.",
+                    "description": "Novelty search is an approach to evolutionary computation that is rapidly gaining popularity. The most important idea behind novelty search is that the diversity of solutions is better maintained if, instead of either explicitly seeking an objective, evolution is directed to search for behavioral novelty.</p><p>In this paper, Lehman and Stanley introduce the concept and report some initial results that show that novelty search does in fact improve the quality of solutions and the speed at which they are discovered.</p>",
                     "tags": "evolution and learning",
                     "image": "AbandoningObjectives.png"
                 },
@@ -580,7 +580,7 @@
                 {
                     "title": "TEDx - Building Blocks and Innovation",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/nzHVGd22vak",
+                    "embed": "https://www.youtube.com/embed/nzHVGd22vak",
                     "name": "BuildingBlocks",
                     "year": "2010",
                     "author": "J. Holland",
@@ -590,7 +590,7 @@
                 {
                     "title": "Complex adaptive systems: an introduction",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/rl0yFwcGx_o",
+                    "embed": "https://www.youtube.com/embed/rl0yFwcGx_o",
                     "name": "ComplexAdaptiveSystemsIntroduction",
                     "year": "2014",
                     "author": "Complexity Lab",
@@ -609,7 +609,7 @@
                 {
                     "title": "TED - Who controls the world?",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/NgbqXsA62Qs",
+                    "embed": "https://www.youtube.com/embed/NgbqXsA62Qs",
                     "name": "ControlsWorld",
                     "year": "2013",
                     "author": "J. Glattfelder",
@@ -717,7 +717,7 @@
                 {
                     "title": "The rise of human-computer cooperation",
                     "type": "youtube",
-                    "url": "https://www.youtube.com/embed/ltelQ3iKybU",
+                    "embed": "https://www.youtube.com/embed/ltelQ3iKybU",
                     "name": "RiseOfHumanComputerCooperation",
                     "year": "2012",
                     "author": "Shyam Sankar",

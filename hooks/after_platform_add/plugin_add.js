@@ -4,7 +4,11 @@ console.log("Adding plugins to platform");
 
 var pluginlist = [
     "org.apache.cordova.file",
-    "org.apache.cordova.file-transfer"
+    "org.apache.cordova.file-transfer",
+    "com.phonegap.plugins.fileopener",
+    "org.apache.cordova.device",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.statusbar"
 ];
 
 // no need to configure below

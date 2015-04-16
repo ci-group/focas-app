@@ -212,7 +212,7 @@ var App = function () {
     };
 
     this.getRealContentHeight = function () {
-        var headers = $(".ui-page-active div[data-role='page'] div[data-role='header']:visible");
+        var headers = $(".ui-page-active div[data-role='header']:visible");
         var footer = $(".ui-page-active div[data-role='footer']:visible");
         var content = $.mobile.activePage.find(".ui-page-active  div[data-role='content']:visible");
         var viewport_height = $(window).height();
