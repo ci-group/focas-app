@@ -29,7 +29,7 @@ var App = function () {
         /**
          * This url is used to download content from
          */
-        this.serverUrl = "http://mac360.few.vu.nl/focas/download/";
+        this.serverUrl = "http://www.focas.eu/app/";
 
         var self = this;
         $.ajaxSetup({async : false});
